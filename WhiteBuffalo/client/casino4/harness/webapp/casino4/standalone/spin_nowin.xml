@@ -1,0 +1,36 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>9980.85</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>9980.85</totalWithdrawableBalance>
+		<depositedFunds>9980.85</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>382996918</seed>
+		<gameSession>1064S0000002557</gameSession>
+		<gamePlayId>2724628</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291247156184</timeStamp>
+		<processTime>238</processTime>
+		<responsiblegaming rctype="2" time="91614">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="SpinReq">
+        <reels>
+            <reel id="1">7,4,1</reel>
+            <reel id="2">5,3,7</reel>
+            <reel id="3">2,4,6</reel>
+            <reel id="4">1,5,3</reel>
+            <reel id="5">7,6,4</reel>
+        </reels>
+        <lines won="0" />
+        <creditResults wagered="20" won="0" />
+        <results wagered="0.40" won="0.00" net="-0.40" />
+        <stars total="3"/>
+	</msgdata>
+</gamemessage>

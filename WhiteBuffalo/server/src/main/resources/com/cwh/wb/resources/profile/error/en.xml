@@ -1,0 +1,17 @@
+<errors>
+    <error id="TOOMANYDECIMALS">
+        <locale type = "en">Only up to 2 digits allowed after decimal</locale>
+    </error>
+
+    <error id="INVALID">
+        <locale type = "en">Coin value entered is not allowed</locale>
+    </error>
+
+	<error id="EMPTY">
+        <locale type = "en">At least one coin value must be entered</locale>
+    </error>
+
+    <error id="DUPLICATE">
+        <locale type = "en">Coin value is duplicate</locale>
+    </error>
+</errors>

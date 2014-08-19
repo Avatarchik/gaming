@@ -1,0 +1,39 @@
+<map>
+    <responses request="CheckLoginReq">
+        <response id="CheckLoginReq" file="checklogin.xml" />
+    </responses>
+	<responses request="ProfilesReq">
+		<response id="ProfilesReq" file="profile.xml" />
+	</responses>
+	<responses request="LoginReq">
+		<response id="LoginReq" file="login.xml" />
+	</responses>
+	<responses request="StartGameReq">
+		<response id="StartGameReq" file="startgame.xml" />
+	</responses>
+	<responses request="ResumeGameReq">
+		<response id="ResumeGameReq" file="preresume.xml" />
+		<response id="ResumeGameReq" file="resume.xml" />
+	</responses>
+	<responses request="ConfirmHandEndReq">
+		<response id="ConfirmHandEndReq" file="confirmhandend.xml" />
+	</responses>
+	<responses request="InitReq">
+		<response id="InitReq" file="init.xml" />
+	</responses>	
+	<responses request="SpinReq">
+		<response id="SpinReq" file="spin_freespin_1.xml" />
+		<response id="SpinReq" file="spin_freespin_2.xml" />
+		<response id="SpinReq" file="spin_win_1.xml" />
+		<response id="SpinReq" file="spin_nowin_1.xml" />		
+	</responses>
+	
+	<responses request="FreeReq">
+		<response id="FreeReq" file="freespin_3.xml" />
+		<response id="FreeReq" file="freespin_2.xml" />
+		<response id="FreeReq" file="freespin_3.xml" />
+		<response id="FreeReq" file="freespin_1.xml" />
+		<response id="FreeReq" file="freespin_3.xml" />
+	</responses>
+	
+</map>

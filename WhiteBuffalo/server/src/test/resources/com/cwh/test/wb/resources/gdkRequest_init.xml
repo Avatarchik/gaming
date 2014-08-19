@@ -1,0 +1,16 @@
+<gdkRequest>
+    <gameHeader>
+        <player id="1234" />
+        <gameState />
+        <persistentState>
+            <persistentContext>
+            </persistentContext>
+        </persistentState>
+        <profile profileId="1000" accId="2000" currCode="GBP" currScale="2" chatChannelId="3000">
+            <param coinValue="0.01,0.05,0.10,0.25" minBet="0.01" maxBet="1000.00" level="2"/>
+        </profile>
+    </gameHeader>
+    <gameRequest>
+        <msgdata reqName="InitReq" />
+    </gameRequest>
+</gdkRequest>

@@ -1,0 +1,32 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>95.00</balance>
+		<playableBalance>0</playableBalance>
+		<withdrawableBalance>0</withdrawableBalance>
+		<totalWithdrawableBalance>95.00</totalWithdrawableBalance>
+		<depositedFunds>95.00</depositedFunds>
+		<pendingBalance>0</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>337041</seed>
+		<gameSession>428724S1382981501534</gameSession>
+		<gamePlayId>2040120</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1382981509284</timeStamp>
+		<processTime>524</processTime>
+	</msgheader>
+	<msgdata reqName="SpinReq">
+		<reels>
+			<reel id="1" pos="44">6,9,7</reel>
+			<reel id="2" pos="28">13,11,9</reel>
+			<reel id="3" pos="11">9,4,3</reel>
+			<reel id="4" pos="67">4,11,6</reel>
+			<reel id="5" pos="18">8,6,12</reel>
+		</reels>
+		<lines won="0"></lines>
+		<creditResults wagered="20" won="0"></creditResults>
+		<results wagered="5.00" won="0.00" net="-5.00"></results>
+		<freeSpins total="0" used="0" won="0"></freeSpins>
+	</msgdata>
+</gamemessage>

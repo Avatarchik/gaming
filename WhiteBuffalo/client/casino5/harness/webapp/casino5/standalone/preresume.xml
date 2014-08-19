@@ -1,0 +1,28 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>14027.75</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>14027.75</totalWithdrawableBalance>
+		<depositedFunds>14027.75</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>1180438181</seed>
+		<gameSession>1064S0000002596</gameSession>
+		<gamePlayId>-1</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291313202667</timeStamp>
+		<processTime>16</processTime>
+		<responsiblegaming rctype="2" time="0">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="ResumeGameReq">
+		<data name="isResume" value="true" />
+		<data name="gameName" value="WhiteBuffalo" />
+		<data name="profileId" value="9197" />
+	</msgdata>
+</gamemessage>

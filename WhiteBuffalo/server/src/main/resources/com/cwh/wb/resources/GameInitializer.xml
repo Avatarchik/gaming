@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdkResponse version="2">
+    <gameInitialize>
+        <request name="InitReq">
+            <persistentState required="true" />
+        </request>
+        <request name="SpinReq">
+            <randomPools>
+                <pool id="mainSpinReel1_1_at_0_129" size="1" min="0" max="129" />
+                <pool id="mainSpinReel2_1_at_0_199" size="1" min="0" max="199" />
+                <pool id="mainSpinReel3_1_at_0_199" size="1" min="0" max="199" />
+                <pool id="mainSpinReel4_1_at_0_199" size="1" min="0" max="199" />
+                <pool id="mainSpinReel5_1_at_0_149" size="1" min="0" max="149" />
+                <pool id="mainSpinReelRE_1_at_0_499" size="1" min="0" max="499" />
+            </randomPools>
+            <persistentState required="true" />
+        </request>
+        <request name="FreeReq">
+            <randomPools>
+                <pool id="freeSpinReel1_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReel2_1_at_0_199" size="1" min="0" max="199" />
+                <pool id="freeSpinReel3_1_at_0_199" size="1" min="0" max="199" />
+                <pool id="freeSpinReel4_1_at_0_199" size="1" min="0" max="199" />
+                <pool id="freeSpinReel5_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReelRE_1_at_0_399" size="1" min="0" max="399" />
+            </randomPools>
+            <persistentState required="true" />
+        </request>
+    </gameInitialize>
+</gdkResponse>

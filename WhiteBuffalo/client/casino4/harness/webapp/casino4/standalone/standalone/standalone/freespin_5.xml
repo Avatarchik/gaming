@@ -1,0 +1,60 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>11984.05</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>11984.05</totalWithdrawableBalance>
+		<depositedFunds>11984.05</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>1826812616</seed>
+		<gameSession>1064S0000002566</gameSession>
+		<gamePlayId>2753082</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291278492616</timeStamp>
+		<processTime>295</processTime>
+		<responsiblegaming rctype="2" time="57907">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="FreeSpinReq">
+		<bet creditValue="0.01" betMultiplier="1"></bet>
+		<state current="FREE_SPIN" next="DONE"></state>
+		<freeSpin totalSpins="5" currentSpin="5" spinsRemaining="0" totalCreditsWon="1350"></freeSpin>
+		<spinResponse>
+			<reels>
+				<reel id="1">26</reel>
+				<reel id="2">50</reel>
+				<reel id="3">3</reel>
+				<reel id="4">63</reel>
+				<reel id="5">1</reel>
+				<rtpLevel>RTP_97</rtpLevel>
+			</reels>
+			<lines won="100">
+				<line icon="2" positions="1,1;2,4;3,1;4,1;5,1" won="50"></line>
+				<line icon="2" positions="1,1;2,3;3,1;4,1;5,1" won="50"></line>
+			</lines>
+		</spinResponse>
+		<mainSpinInfo>
+			<reels>
+				<reel id="1">38</reel>
+				<reel id="2">19</reel>
+				<reel id="3">40</reel>
+				<reel id="4">8</reel>
+				<reel id="5">23</reel>
+				<rtpLevel>RTP_97</rtpLevel>
+			</reels>
+			<creditsWonOnMainSpin>50</creditsWonOnMainSpin>
+		</mainSpinInfo>
+		<finalWinnings>
+			<creditsWon>1400</creditsWon>
+			<creditsWonOnMainSpin>50</creditsWonOnMainSpin>
+			<creditsWonOnFreeSpin>1350</creditsWonOnFreeSpin>
+			<creditsWagered>40</creditsWagered>
+		</finalWinnings>
+		<results net="13.60" wagered="0.40" won="14.00"></results>
+	</msgdata>
+</gamemessage>

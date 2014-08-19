@@ -1,0 +1,82 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>14027.75</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>14027.75</totalWithdrawableBalance>
+		<depositedFunds>14027.75</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>106363942</seed>
+		<gameSession>1064S0000002596</gameSession>
+		<gamePlayId>2783897</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291313202754</timeStamp>
+		<processTime>53</processTime>
+		<responsiblegaming rctype="2" time="0">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="ResumeGameReq">
+		<bet creditValue="150" betMultiplier="1"></bet>
+		<state current="FREE_SPIN" next="FREE_SPIN"></state>
+		<freeSpin totalSpins="5" currentSpin="2" spinsRemaining="3" totalCreditsWon="760"></freeSpin>
+		<spinResponse>
+			<reels>
+			<reel id="1">40</reel>
+			<reel id="2">45</reel>
+			<reel id="3">41</reel>
+			<reel id="4">19</reel>
+			<reel id="5">18</reel>
+			<rtpLevel>RTP_97</rtpLevel>
+			</reels>
+			<lines won="10">
+			<line icon="5" positions="1,4;2,4;3,2" won="5"></line>
+			<line icon="5" positions="1,3;2,4;3,2" won="5"></line>
+			</lines>
+		</spinResponse>
+		<data name="limits">
+			<param coinValue="0.01,0.05,0.25,1.00,2.00,5.00" level="3"></param>
+		</data>
+		<accumulator></accumulator>
+	</msgdata>
+<!--	<msgdata reqName="ResumeGameReq">
+		<bet creditValue="150" betMultiplier="1"></bet>
+		<state current="INITIAL" next="DONE"></state>
+		<spinResponse>
+			<reels>
+				<reel id="1">42</reel>
+				<reel id="2">4</reel>
+				<reel id="3">7</reel>
+				<reel id="4">23</reel>
+				<reel id="5">23</reel>
+				<rtpLevel>RTP_97</rtpLevel>
+			</reels>
+			<lines won="45">
+				<line icon="3" positions="1,4;2,1;3,3" won="5"></line>
+				<line icon="5" positions="1,2;2,3;3,2" won="5"></line>
+				<line icon="5" positions="1,1;2,3;3,2" won="5"></line>
+				<line icon="5" positions="1,2;2,1;3,2" won="5"></line>
+				<line icon="5" positions="1,1;2,1;3,2" won="5"></line>
+				<line icon="5" positions="1,2;2,3;3,1" won="5"></line>
+				<line icon="5" positions="1,1;2,3;3,1" won="5"></line>
+				<line icon="5" positions="1,2;2,1;3,1" won="5"></line>
+				<line icon="5" positions="1,1;2,1;3,1" won="5"></line>
+			</lines>
+		</spinResponse>
+		<finalWinnings>
+			<creditsWon>45</creditsWon>
+			<creditsWonOnMainSpin>45</creditsWonOnMainSpin>
+			<creditsWonOnFreeSpin>0</creditsWonOnFreeSpin>
+			<creditsWagered>40</creditsWagered>
+		</finalWinnings>
+		<results net="17.6" wagered="0.40" won="18"></results>
+		<data name="limits">
+			<param coinValue="0.01,0.05,0.25,1.00,2.00,5.00" level="3"></param>
+		</data>
+		<accumulator></accumulator>
+	</msgdata>-->
+</gamemessage>

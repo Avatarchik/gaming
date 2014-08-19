@@ -1,0 +1,45 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>9980.85</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>9980.85</totalWithdrawableBalance>
+		<depositedFunds>9980.85</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>382996918</seed>
+		<gameSession>1064S0000002557</gameSession>
+		<gamePlayId>2724628</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291247156184</timeStamp>
+		<processTime>238</processTime>
+		<responsiblegaming rctype="2" time="91614">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="SpinReq">
+		<bet creditValue="0.01" betMultiplier="1"></bet>
+		<state current="INITIAL" next="DONE"></state>
+		<spinResponse>
+			<reels>
+				<reel id="1">28</reel>
+				<reel id="2">23</reel>
+				<reel id="3">16</reel>
+				<reel id="4">65</reel>
+				<reel id="5">14</reel>
+				<rtpLevel>RTP_97</rtpLevel>
+			</reels>
+			<lines won="0"></lines>
+		</spinResponse>
+		<finalWinnings>
+			<creditsWon>0</creditsWon>
+			<creditsWonOnMainSpin>0</creditsWonOnMainSpin>
+			<creditsWonOnFreeSpin>0</creditsWonOnFreeSpin>
+			<creditsWagered>40</creditsWagered>
+		</finalWinnings>
+		<results net="-0.40" wagered="0.40" won="0.00"></results>
+	</msgdata>
+</gamemessage>

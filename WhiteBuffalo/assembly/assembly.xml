@@ -1,0 +1,24 @@
+<assembly>
+    <id>WhiteBuffalo</id>
+    <formats>
+        <format>war</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <includes>
+                <include>chartwell.games.WhiteBuffalo:server</include>
+            </includes>
+            <unpack>true</unpack>
+        </dependencySet>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <includes>
+                <include>chartwell.games.WhiteBuffalo.client:casino4:zip:*</include>
+                <include>chartwell.games.WhiteBuffalo.client:casino5:zip:*</include>
+            </includes>
+            <unpack>true</unpack>
+        </dependencySet>
+    </dependencySets>
+</assembly>

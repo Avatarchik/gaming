@@ -1,0 +1,8 @@
+<about>
+    <game name="WhiteBuffalo" type="0" desc="Legend of the White Buffalo">
+        <rtp>
+            <level id="${level}">${percentageStr}</level>
+        </rtp>
+        <version>${version}</version>
+    </game>
+</about>

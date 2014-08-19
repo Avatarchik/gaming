@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion> 
+
+	<parent>
+		<groupId>chartwell.games.WhiteBuffalo</groupId>
+		<artifactId>client</artifactId>
+		<version>2.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>chartwell.games.WhiteBuffalo.client</groupId>
+	<artifactId>casino4</artifactId>
+	<packaging>swf</packaging>
+
+	<name>Casino4 (Flash) Client</name>
+
+	<description>Casino4 (Flash) Client</description>
+
+    <properties>
+        <dep.flex40-framework.version>4.0.0.13875</dep.flex40-framework.version>
+        <!--  Flexmojos compiler options. -->
+        <compile.debug.mode>false</compile.debug.mode>
+        <compile.background.color>000000</compile.background.color>
+        <compile.framerate>30</compile.framerate>
+
+        <compile.input>com/cwh/WhiteBuffalo/Game.as</compile.input>
+
+        <compile.output>casino4/game/controller/game</compile.output>
+        <!--  Note: without the .swf file extension -->
+
+        <compile.width>865</compile.width>
+        <compile.height>550</compile.height>
+
+        <!--  quick compile: If true, do not recompile unless swc is older than source -->
+        <flexmojos.quick>false</flexmojos.quick>
+        <flexmojos.strict>true</flexmojos.strict>
+        <flexmojos.optimize>true</flexmojos.optimize>
+        <flexmojos.staticLinkRSLs>true</flexmojos.staticLinkRSLs>
+        <flexmojos.printCompilerConfig>true</flexmojos.printCompilerConfig>
+
+        <plugin.flexmojos.version>4.0-beta-7</plugin.flexmojos.version>
+        <plugin.gamemanifest.version>1.2</plugin.gamemanifest.version>
+    </properties>
+
+	<dependencies>
+        <dependency>
+            <groupId>com.adobe.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+			<version>${dep.flex40-framework.version}</version>
+            <type>pom</type>
+        </dependency>
+		<dependency>
+			<groupId>chartwell.clientlibraries</groupId>
+			<artifactId>chartwell_debug</artifactId>
+			<version>1.0.11</version>
+			<type>swc</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>flex</groupId>
+			<artifactId>fl</artifactId>
+			<version>1.0</version>
+			<type>swc</type>
+			<scope>compile</scope>
+		</dependency>
+        <dependency>
+            <groupId>chartwell.clientlibraries.casino4</groupId>
+            <artifactId>chartwell_api</artifactId>
+            <version>4.1.309</version>
+            <type>swc</type>
+        </dependency>
+        <dependency>
+            <groupId>chartwell.clientlibraries.casino4</groupId>
+            <artifactId>chartwell_coresdk</artifactId>
+            <version>4.1.309</version>
+            <type>swc</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ingenuity</groupId>
+            <artifactId>framework</artifactId>
+            <version>9020010.003</version>
+            <type>swc</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ingenuity</groupId>
+            <artifactId>slotcode</artifactId>
+            <version>902100.018</version>
+            <type>swc</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ingenuity</groupId>
+            <artifactId>amaya</artifactId>
+            <version>902205.008</version>
+            <type>swc</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ingenuity</groupId>
+            <artifactId>behavior</artifactId>
+            <version>902351.008</version>
+            <type>swc</type>
+        </dependency>        
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src/main/actionscript3</sourceDirectory>
+		<plugins>
+			<plugin>
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${plugin.flexmojos.version}</version>
+				<extensions>true</extensions>
+				<dependencies>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${dep.flex40-framework.version}</version>
+						<type>pom</type>
+						<exclusions>
+							<exclusion>
+								<groupId>com.adobe.flex.compiler</groupId>
+								<artifactId>xercesPatch</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<quick>${flexmojos.quick}</quick>
+					<debug>${compile.debug.mode}</debug>
+					<strict>${flexmojos.strict}</strict>
+					<optimize>${flexmojos.optimize}</optimize>
+					<defaultBackgroundColor>${compile.background.color}</defaultBackgroundColor>
+					<defaultFrameRate>${compile.framerate}</defaultFrameRate>
+					<defaultSize>
+						<width>${compile.width}</width>
+						<height>${compile.height}</height>
+					</defaultSize>
+					<staticLinkRuntimeSharedLibraries>${flexmojos.staticLinkRSLs}</staticLinkRuntimeSharedLibraries>
+					<dumpConfigAttach>${flexmojos.printCompilerConfig}</dumpConfigAttach>
+					<sourceFile>${compile.input}</sourceFile>
+					<finalName>${project.build.finalName}/${compile.output}</finalName>
+					<docSources>
+						<docSource>${project.build.sourceDirectory}</docSource>
+					</docSources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.cwh.maven.plugins</groupId>
+				<artifactId>gamemanifest-maven-plugin</artifactId>
+				<version>${plugin.gamemanifest.version}</version>
+				<executions>
+					<execution>
+						<id>create-manifest</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>create-manifest</goal>
+						</goals>
+						<configuration>
+							<manifestFile>${project.build.directory}/${project.build.finalName}/casino4/manifest.xml</manifestFile>
+							<type>game</type>
+							<fileSets>
+								<!-- Precompiled -->
+								
+								<fileSet>
+									<directory>${project.basedir}/src/main/webapp/casino4</directory>
+									<includes>
+										<include>**/game/**</include>
+										<include>**/framework/**</include>
+									</includes>
+								</fileSet>
+								<!-- Build-time -->
+								
+								<fileSet>
+									<directory>${project.build.directory}/${project.build.finalName}/casino4</directory>
+									<includes>
+										<include>**/game/**</include>
+										<include>**/framework/**</include>
+									</includes>
+									<excludes>
+										<exclude>**/game-configs.xml</exclude>
+										<!-- generated by compiler -->
+										
+										<exclude>**/game-link-report.xml</exclude>
+										<!-- generated by compiler -->
+										
+										<exclude>manifest.xml</exclude>
+									</excludes>
+								</fileSet>
+							</fileSets>
+						</configuration>
+					</execution>
+					<execution>
+						<id>create-remote-manifest</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>create-manifest</goal>
+						</goals>
+						<configuration>
+							<manifestFile>${project.build.directory}/${project.build.finalName}/casino4/remotemanifest.xml</manifestFile>
+							<type>remote</type>
+							<fileSets>
+								<!-- Precompiled -->
+								
+								<fileSet>
+									<directory>${project.basedir}/src/main/webapp/casino4</directory>
+									<excludes>
+										<exclude>**/game/**</exclude>
+										<exclude>**/framework/**</exclude>
+									</excludes>
+								</fileSet>
+								<!-- Build-time -->
+								
+								<fileSet>
+									<directory>${project.build.directory}/${project.build.finalName}/casino4</directory>
+									<excludes>
+										<exclude>**/game/**</exclude>
+										<exclude>**/framework/**</exclude>
+										<exclude>**/game-configs.xml</exclude>
+										<!-- generated by compiler -->
+										
+										<exclude>**/game-link-report.xml</exclude>
+										<!-- generated by compiler -->
+										
+										<exclude>manifest.xml</exclude>
+										<exclude>remotemanifest.xml</exclude>
+									</excludes>
+								</fileSet>
+							</fileSets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Zip it up for use as a war overlay -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>standalone</id>
+			<activation>
+				<property>
+					<name>standalone</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.cwh.maven.plugins</groupId>
+						<artifactId>gamemanifest-maven-plugin</artifactId>
+						<version>${plugin.gamemanifest.version}</version>
+						<executions>
+							<execution>
+								<id>create-manifest</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>create-manifest</goal>
+								</goals>
+								<configuration>
+									<fileSets combine.children="append">
+										<fileSet>
+											<directory>harness/${build.standalone.dir}</directory>
+											<includes>
+												<include>**/standalone/**</include>
+											</includes>
+										</fileSet>
+									</fileSets>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
