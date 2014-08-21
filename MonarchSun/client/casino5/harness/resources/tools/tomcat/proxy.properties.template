@@ -1,0 +1,3 @@
+#Delimited list of paths that will be matched by the filter. Semi-Colon Delimited.
+proxy.paths = {proxy.from}
+proxy.to    = {proxy.to}

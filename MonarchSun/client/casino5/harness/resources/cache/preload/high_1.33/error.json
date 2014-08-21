@@ -1,0 +1,96 @@
+{
+
+    "tfUserMessage": {
+        "font": "24px Arial,sans-serif",
+        "color": "#000",
+        "x": 1010,
+        "y": 530,
+        "lineWidth": 1020,
+        "lineHeight": 28,
+        "textAlign": "center"
+    },
+
+    "tfErrorCode": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 1470,
+        "y": 750
+    },
+
+    "tfDebugMessage": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 492,
+        "y": 976,
+        "lineWidth": 950,
+        "lineHeight": 24
+    },
+
+    "tfSessionId": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 626,
+        "y": 818
+    },
+
+    "tfTime": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 626,
+        "y": 844
+    },
+
+    "tfGamePlayId": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 626,
+        "y": 868
+    },
+
+    "tfGameName": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 626,
+        "y": 894
+    },
+
+    "tfAccount": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 1206,
+        "y": 844
+    },
+
+    "tfLanguage": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 1206,
+        "y": 866
+    },
+
+    "tfPlayerName": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 1206,
+        "y": 894
+    },
+
+    "tfSite": {
+        "font": "20px Arial,sans-serif",
+        "color": "#000",
+        "x": 1206,
+        "y": 916
+    },
+
+    "btnContactSupportData": {
+        "width": 156,
+        "height": 42
+    },
+
+    "btnContactSupport": {
+        "x": 946,
+        "y": 730
+    }
+
+}
+

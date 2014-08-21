@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MonarchSun.iml" filepath="$PROJECT_DIR$/MonarchSun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assembly/assembly.iml" filepath="$PROJECT_DIR$/assembly/assembly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/casino4/casino4.iml" filepath="$PROJECT_DIR$/client/casino4/casino4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/casino5/casino5.iml" filepath="$PROJECT_DIR$/client/casino5/casino5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
+    </modules>
+  </component>
+</project>
+

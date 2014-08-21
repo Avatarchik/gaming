@@ -1,0 +1,38 @@
+{
+
+    "tfMessage": {
+        "font": "bold 16px Helvetica,Arial,sans-serif",
+        "color": "#FFF",
+        "textAlign": "center",
+        "x": 640,
+        "y": 475,
+        "lineWidth": 400
+    }
+    ,
+
+    "tfMessageShadow": {
+        "font": "bold 16px Helvetica,Arial,sans-serif",
+        "color": "#000",
+        "textAlign": "center",
+        "x": 642,
+        "y": 477,
+        "lineWidth": 400
+    },
+
+    "tfProgress": {
+        "font": "bold 20px Helvetica,Arial,sans-serif",
+        "color": "#FFF",
+        "textAlign": "center",
+        "x": 640,
+        "y": 525
+    },
+
+    "tfProgressShadow": {
+        "font": "bold 20px Helvetica,Arial,sans-serif",
+        "color": "#000",
+        "textAlign": "center",
+        "x": 643,
+        "y": 528
+    }
+
+}

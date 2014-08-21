@@ -1,0 +1,17 @@
+{
+
+    "networkRetryData": {
+        "x": 0,
+        "y": 0,
+        "width": 50,
+        "height": 50
+    },
+
+    "networkRecoveryData": {
+        "x": 50,
+        "y": 0,
+        "width": 50,
+        "height": 50
+    }
+
+}

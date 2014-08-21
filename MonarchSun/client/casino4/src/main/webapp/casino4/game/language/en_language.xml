@@ -1,0 +1,121 @@
+<GameText>
+	<Labels>
+		<BaseGameSpinButton>SPIN</BaseGameSpinButton>
+		<BaseGameStopButton></BaseGameStopButton>
+		<BaseGameAutoSpinButton>AUTO SPIN</BaseGameAutoSpinButton>
+		<BaseGameAutoplayStopButton>STOP</BaseGameAutoplayStopButton>
+		<BaseGameHelpScreenButton>PAYS</BaseGameHelpScreenButton>
+		<BaseGameBetMaxButton>BET MAX</BaseGameBetMaxButton>
+		
+		<HelpScreenExitButton>BACK TO GAME</HelpScreenExitButton>
+		<HelpScreenBackButton></HelpScreenBackButton>
+		<HelpScreenNextButton></HelpScreenNextButton>
+		
+		<BaseGameLinesLabel>LINES</BaseGameLinesLabel>
+		<BaseGameLineBetLabel>CREDIT PER LINE</BaseGameLineBetLabel>
+		<BaseGameTotalBetLabel>TOTAL BET</BaseGameTotalBetLabel>
+		<BaseGameCreditBetLabel>CREDITS</BaseGameCreditBetLabel>
+		<BaseGamealanceLable>CREDITS</BaseGamealanceLable>
+		<BaseGameTotalWinLabel>WON</BaseGameTotalWinLabel>
+		<BaseGameDenominationLabel>CREDIT VALUE</BaseGameDenominationLabel>
+		
+		
+		
+		<BaseGameMenuButton>MENU</BaseGameMenuButton>
+		<BaseGameSettingsButton>SETTINGS</BaseGameSettingsButton>
+		<BaseGameExitSettingsPopup>EXIT</BaseGameExitSettingsPopup>
+		
+		
+		<BaseGameStartAutoPlayLabel>AUTO SPIN</BaseGameStartAutoPlayLabel>
+		<BaseGameStopAutoPlayLabel>STOP</BaseGameStopAutoPlayLabel>
+		<BaseGameAutoPlayLabel>STOP</BaseGameAutoPlayLabel>
+		
+		<FreeGameConsoleFreeSpinsLeftLable>SPINS LEFT</FreeGameConsoleFreeSpinsLeftLable>
+		<FreeGameConsoleFreeGameWinLable>PAID</FreeGameConsoleFreeGameWinLable>
+		<FreeGameConsoleFreeGameCreditsWinLable>CREDIT</FreeGameConsoleFreeGameCreditsWinLable>
+		<FreeGameConsoleTotalWinTillNowLable>FREE GAMES TOTAL</FreeGameConsoleTotalWinTillNowLable>
+		
+		<FreeGameIntroPopupText1>BALANCE</FreeGameIntroPopupText1>
+		<FreeGameIntroPopupText2>TOTAL BONUS WON</FreeGameIntroPopupText2>
+		<FreeGameIntroPopupText3>WON</FreeGameIntroPopupText3>	
+		<FreeGameIntroPopupText4>FREE GAMES</FreeGameIntroPopupText4>
+		<BonusIntroPopupText3></BonusIntroPopupText3>
+		<FreeGameIntroPopupButton></FreeGameIntroPopupButton>		
+		<FreeGameOutroPopupText1>CONGRATULATIONS YOU WON!</FreeGameOutroPopupText1>
+		<FreeGameOutroPopupText2></FreeGameOutroPopupText2>
+		<RetriggerPopupText1>EXTRA FREE SPINS</RetriggerPopupText1>
+		<RetriggerPopupText2>WON</RetriggerPopupText2>
+		
+		<FreeGameOutroPopupButton></FreeGameOutroPopupButton>
+		<RetriggerPopupButton></RetriggerPopupButton>
+		<BigWin>BIG WIN</BigWin>
+	</Labels>
+	
+	<BetMessages>
+	</BetMessages>
+	
+	<GameMessage>
+		<GameIdle>CLICK SPIN TO START</GameIdle>
+		<BetPlaced>GOOD LUCK!!</BetPlaced>
+		<TotalGameWin>TOTAL WIN %1 CREDITS!!</TotalGameWin>
+		<LineWin>LINE %1 WINS %2 CREDITS!!</LineWin>
+		<ScatterWin>%1 SCATTER SYMBOLS WIN %2 CREDITS AND %3 FREE SPINS!!</ScatterWin>
+		<ScatterWinZero>%1 SCATTER SYMBOLS WIN %2 FREE SPINS!!</ScatterWinZero>
+		<FreeGameTrigger>%1 SCATTER SYMBOLS WIN %2 CREDITS AND %3 FREE SPINS!!</FreeGameTrigger> 
+		<FreeGameTriggerWinZero>%1 SCATTER SYMBOLS WIN %2 FREE SPINS!!</FreeGameTriggerWinZero> 
+		<BonusGameTrigger>UFO Sign on Reels 1 and 5 Trigger Alien Picking Bonus!!</BonusGameTrigger> 
+		<FreeGameReTriggerZero>%1 SCATTER SYMBOLS WIN %2 MORE FREE SPINS!!</FreeGameReTriggerZero> 
+		<FreeGameReTrigger>%1 SCATTER SYMBOLS WIN %2 CREDITS AND %3 MORE FREE SPINS!!</FreeGameReTrigger> 
+		<BonusInstructionText1>PICK ONE OF THE ALIENS TO REVEAL A CREDIT AMOUNT</BonusInstructionText1>
+		<BonusInstructionText2>PICK AGAIN</BonusInstructionText2>
+	</GameMessage>
+	
+	<PromoMessage>
+		<BaseGamePromo1>2 or more consecutive Scatter Symbols starting from the leftmost reel will start the FREE GAME FEATURE!</BaseGamePromo1>
+		<FreeGamePromo1>ALL WINS DOUBLE DURING FREE SPINS</FreeGamePromo1>
+	</PromoMessage>
+	
+	<HelpScreen>
+		<Free_Game_Rules_Text1>Free Game Feature</Free_Game_Rules_Text1>
+		<Free_Game_Rules_Text2>2 or more consecutive Scatter Symbols starting from the leftmost reel will start the FREE GAME FEATURE!</Free_Game_Rules_Text2>
+		<Free_Game_Rules_Text3>Additional Free Games can be won during Free Game Feature!</Free_Game_Rules_Text3>
+		<Free_Game_Rules_Text4>pay</Free_Game_Rules_Text4>
+		<Free_Game_Rules_Text5>pay</Free_Game_Rules_Text5>
+		<Free_Game_Rules_Text6>pay</Free_Game_Rules_Text6>
+		<Free_Game_Rules_Text7>pay</Free_Game_Rules_Text7>
+		<Free_Game_Rules_Text8>Free Games</Free_Game_Rules_Text8>
+		<Free_Game_Rules_Text9>Free Games</Free_Game_Rules_Text9>
+		<Free_Game_Rules_Text10>Free Games</Free_Game_Rules_Text10>
+		<Free_Game_Rules_Text11>Free Games</Free_Game_Rules_Text11>
+		<Free_Game_Rules_Text12>Jackpot cannot be won during Free Games Feature play</Free_Game_Rules_Text12>
+		<Free_Game_Rules_Text13>Malfunction voids all pays and plays • Number of lines played and credits bet per line are the same as the game that triggered the Free Spins </Free_Game_Rules_Text13>
+		<Free_Game_Rules_Text14>ALL WINS</Free_Game_Rules_Text14>
+		<Free_Game_Rules_Text15>DOUBLE</Free_Game_Rules_Text15>
+		<Free_Game_Rules_Text16>DURING FREE SPINS</Free_Game_Rules_Text16>
+		<Paylines_1>Bet up to 10 credits per line. Bet level can be adjusted on the SETTINGS window of the main menu.</Paylines_1>
+		<Paylines_2>All lines pay left to right, starting with the left most reels, including scatters • All wins showing with credit per line at 1 • All amounts are displayed in credits • Malfunction voids all pays and plays • Multiply line wins by the number of credits bet per lines</Paylines_2>
+		<Payout_1_1>Win JACKPOT at Max Bet</Payout_1_1>
+		<Payout_1_2>5 Red Wild 7 Symbols</Payout_1_2>
+		<Payout_1_3>OR</Payout_1_3>
+		<Payout_1_4>of</Payout_1_4>
+		<Payout_1_5>of</Payout_1_5>
+		<Payout_1_6>of</Payout_1_6>
+		<Payout_1_7>or</Payout_1_7>
+		<Payout_1_8>or</Payout_1_8>
+		<Payout_1_9>or</Payout_1_9>
+		<Payout_1_10>In any combination left to right only</Payout_1_10>
+		<Payout_1_11>and</Payout_1_11>
+		<Payout_1_12>substitutes for any symbol</Payout_1_12>
+		<Payout_1_13>except</Payout_1_13>
+		<Payout_1_14>and each other</Payout_1_14>
+		<Payout_1_15>All lines pay left to right, starting with the left most reels, including scatters • All wins showing with credit per line at 1 • Win up to two ways on every payline: Highest wild-only line win paid in addition to highest wild-substituting line win • All amounts are displayed in credits • Malfunction voids all pays and plays • Multiply line wins by the number of credits bet per lines</Payout_1_15>
+		<Payout_2_1>All lines pay left to right, starting with the left most reels, including scatters • All wins showing with credit per line at 1 • All amounts are displayed in credits • Malfunction voids all pays and plays • Multiply line wins by the number of credits bet per lines</Payout_2_1>
+		<Payout_3_1>Scatter Pay</Payout_3_1>
+		<Payout_3_2>3 or more consecutive Scatter Symbols appearing from the leftmost reel will award Scatter Pay.</Payout_3_2>
+		<Payout_3_3>All lines pay left to right, starting with the left most reels, including scatters • Multiply wins by the number of credits bet on payline • Scatter wins are paid in addition to line wins • Scatter wins are multiplied by total credits bet •  Malfunction voids all pays and plays • All amounts are displayed in credits</Payout_3_3>
+		<HelpScreenBackButton>BACK</HelpScreenBackButton>
+		<HelpScreenExitButton>EXIT</HelpScreenExitButton>
+		<HelpScreenNextButton>NEXT</HelpScreenNextButton>
+	</HelpScreen>
+
+</GameText>

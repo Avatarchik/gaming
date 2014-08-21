@@ -1,0 +1,337 @@
+<project name="Harness Casino 5 (HTML5)" basedir="" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+    <!-- Setup environment variables -->
+    <property environment="env"/>
+
+	<property name="project.type"				value="maven" />
+	
+    <property name="web.dir"                    value="${basedir}/webapp" />
+
+    <property name="resources.dir"              value="${basedir}/resources" />
+    <property name="page.dir"                   value="${resources.dir}/page" />
+    <property name="cache.dir"                  value="${resources.dir}/cache" />
+    <property name="live.war.resource"          value="live.zip" />
+
+    <property name="build.game.dir"             value="${build.dir}/temp" />
+    <property name="build.game.web.dir"         value="${build.dir}/temp/webapp" />
+
+    <property file="${basedir}/webserver.properties"/>
+
+    <!-- Setup a taskdef for the AntContrib library -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+      <classpath>
+        <pathelement location="${resources.dir}/lib/ant-contrib-1.0b1.jar"/>
+      </classpath>
+    </taskdef>
+
+    <path id="maven-ant-tasks.classpath" path="${resources.dir}/lib/maven-ant-tasks-2.1.3.jar" />
+    <typedef resource="org/apache/maven/artifact/ant/antlib.xml"
+             uri="antlib:org.apache.maven.artifact.ant"
+             classpathref="maven-ant-tasks.classpath" />
+
+
+    <!-- ********** MAIN TARGETS ********** -->
+
+    <target name="build.prepare">
+        <property file="${basedir}/connection.properties"/>
+
+        <delete dir="${cache.dir}"/>
+        <mkdir dir="${cache.dir}"/>
+
+        <!-- Download the casino 5 framework config. This comes from the CGS -->
+        <mkdir dir="${cache.dir}/conf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/conf/html5config.xml" dest="${cache.dir}/conf/html5config.xml"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/conf/currencyconfig.xml" dest="${cache.dir}/conf/currencyconfig.xml"/>
+
+        <!-- Download the casino 5 about page. This comes from the remote webapp but is not in the manifest -->
+        <mkdir dir="${cache.dir}/menu"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino5/menu/about.html" dest="${cache.dir}/menu/about.html"/>
+
+        <!-- Download the manifest for the casino 5 framework -->
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino5/manifest.xml" dest="${cache.dir}/manifest.xml"/>
+
+        <!-- Read in the manifest file as properties -->
+        <xmlproperty file="${cache.dir}/manifest.xml" keeproot="false"/>
+
+        <!-- loop over the files in manifest (read in as a comma-delimited list of file node values) -->
+        <for list="${manifest.file}" param="file">
+            <sequential>
+
+                <!-- Save the file param as a var so its visible to the javascript block -->
+                <var name="file" value="@{file}"/>
+
+                <!-- Use javascript to get a substring of the directory from the file path
+                    and also check to see if this path has a lang token requiring expansion -->
+                <script language="javascript">
+                    <![CDATA[
+                        var filePath = project.getProperty("file");
+                        var dir = filePath.substring(0,filePath.lastIndexOf("/"));
+                        project.setProperty("manifest.dir",dir);
+
+                        var requiresExpansion = filePath.indexOf("${lang}") >= 0;
+                        project.setProperty("requires.expansion",requiresExpansion);
+                    ]]>
+                </script>
+
+                <!-- Make the directory we pulled out in the javascript -->
+                <mkdir dir="${cache.dir}/${manifest.dir}"/>
+
+                <!-- If this file requires lang expansion, we'll loop over the lang values and download the file in each lang.
+                 Otherwise, just download the file directly.-->
+                <if>
+                    <equals arg1="${requires.expansion}" arg2="true"/>
+                    <then>
+                        <for list="ca,cn,cz,da,de,el,en,es,fr,he,hu,it,ja,ko,nl,no,pl,pt,ro,ru,sk,sv,tr,tw" param="lang">
+                            <sequential>
+                                <var name="lang" value="@{lang}"/>
+                                <script language="javascript">
+                                    <![CDATA[
+                                        var filePath = String(project.getProperty("file"));
+                                        var expandedFilePath = filePath.replace("${lang}",project.getProperty("lang"));
+                                        project.setProperty("expanded.filepath",expandedFilePath);
+                                    ]]>
+                                </script>
+								<echo>${lang}: ${expanded.filepath}</echo>
+                                <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino5/${expanded.filepath}" dest="${cache.dir}/${expanded.filepath}"/>
+                            </sequential>
+                        </for>
+						
+						<var name="lang" value="" unset="true"/>
+                    </then>
+                    <else>
+                        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino5/@{file}" dest="${cache.dir}/@{file}"/>
+                    </else>
+                </if>
+            </sequential>
+        </for>
+    </target>
+
+
+    <target name="build.standalone">
+        <ant antfile="build.xml" target="build" inheritall="false">
+            <property file="${basedir}/standalone.properties"/>
+            <property name="build.dir" value="${tomcat.home}/webapps/standalone" />
+            <property name="standalone" value="true" />
+            <property name="live" value="false" />
+        </ant>
+    </target>
+
+    <target name="build.live">
+        <ant antfile="build.xml" target="build" inheritall="false">
+            <property file="${basedir}/live.properties"/>
+            <property name="build.dir" value="${tomcat.home}/webapps/live" />
+            <property name="standalone" value="false" />
+            <property name="live" value="true" />
+        </ant>
+    </target>
+
+    <target name="launch.standalone">
+        <openInBrowser url="http://localhost:${tomcat.start.port}/standalone/harness.html"/>
+    </target>
+
+    <target name="launch.live">
+        <openInBrowser url="http://localhost:${tomcat.start.port}/live/harness.html"/>
+    </target>
+
+    <macrodef name="openInBrowser">
+        <attribute name="url"/>
+        <sequential>
+            <exec dir="${basedir}" executable="rundll32.exe">
+                <arg line="url.dll, FileProtocolHandler"/>
+                <arg line="@{url}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <!-- ********** END MAIN TARGETS ********** -->
+
+    <!-- Runs the build based on either the standalone or live settings -->
+    <target name="build" depends="preflight,clean,assemble,configure,compile.game,copy.remote,tidy"/>
+
+    <!-- Preflight -->
+    <target name="preflight">
+        <if>
+            <not>
+                <available file="${cache.dir}" type="dir"/>
+            </not>
+            <then>
+                <fail message="Cache does not exist. You must run the 'build.prepare' target first to download the necessary files." />
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <isset property="build.dir"/>
+            </not>
+            <then>
+                <fail message="Build.dir not set. Run 'build.live' or 'build.standalone' targets." />
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <or>
+                    <equals arg1="${mode}" arg2="casino5"/>
+                </or>
+            </not>
+            <then>
+                <fail message="Invalid mode property of '${mode}' set in build properties file."/>
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <available file="${tomcat.home}" type="dir"/>
+            </not>
+            <then>
+                <ant antfile="webserver.xml" target="deploy"/>
+            </then>
+        </if>
+    </target>
+
+    <!-- Cleans the build directory -->
+    <target name="clean" if="build.dir">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Copies the CGS files (framework etc) and anything in the harness/webapp dir (standalone files) to the build directory -->
+    <target name="assemble" if="build.dir">
+        <mkdir dir="${build.dir}"/>
+
+        <if>
+            <equals arg1="${mode}" arg2="casino5"/>
+            <then>
+                <copy todir="${build.dir}/remote/FrameworkCasino5" overwrite="true">
+                    <fileset dir="${cache.dir}">
+                        <exclude name="conf/**"/>
+                    </fileset>
+                </copy>
+
+                <copy todir="${build.dir}" overwrite="true">
+                    <fileset dir="${cache.dir}">
+                        <include name="conf/*.*"/>
+                    </fileset>
+                </copy>
+            </then>
+
+            <else>
+                <fail message="Invalid mode of ${mode} @ assemble"/>
+            </else>
+        </if>
+
+        <copy todir="${build.dir}" overwrite="true">
+            <fileset dir="${page.dir}"/>
+        </copy>
+
+        <if>
+            <istrue value="${standalone}"/>
+            <then>
+                <copy todir="${build.game.web.dir}" overwrite="true">
+                    <fileset dir="${web.dir}"/>
+                </copy>
+            </then>
+            <else>
+                <!-- Unzip the live war proxy resources into the exploded webapp dir -->
+                <unzip dest="${build.dir}">
+                    <fileset dir="${resources.dir}/tools">
+                        <include name="${live.war.resource}"/>
+                    </fileset>
+                </unzip>
+            </else>
+        </if>
+    </target>
+
+    <!-- Configures the harness by copying and renaming the correct properties file and then replacing tokens with
+            the values configured by the user in the harness' "live.properties" or "standalone.properties" -->
+    <target name="configure" if="build.dir">
+        <!-- Do these things if standalone -->
+        <if>
+            <istrue value="${standalone}"/>
+            <then>
+                <move file="${build.dir}/standalone.properties.js" tofile="${build.dir}/properties.js"/>
+                <delete file="${build.dir}/live.properties.js"/>
+                <replace file="${build.dir}/properties.js" token="{displayName}" value="${displayName}" />
+                <replace file="${build.dir}/properties.js" token="{gameName}" value="${gameName}" />
+                <replace file="${build.dir}/properties.js" token="{lang}" value="${lang}" />
+                <replace file="${build.dir}/properties.js" token="{account}" value="${account}" />
+                <replace file="${build.dir}/properties.js" token="{resumedGame}" value="${resumedGame}" />
+                <replace file="${build.dir}/properties.js" token="{mode}" value="${mode}" />
+                <replace file="${build.dir}/properties.js" token="{data}" value="${data}" />
+                <replace file="${build.dir}/properties.js" token="{egiURL}" value="${egiURL}" />
+                <replace file="${build.dir}/properties.js" token="{egiExtGameId}" value="${egiExtGameId}" />
+            </then>
+        </if>
+
+        <!-- Do these things if live -->
+        <if>
+            <istrue value="${live}"/>
+            <then>
+                <move file="${build.dir}/live.properties.js" tofile="${build.dir}/properties.js"/>
+                <delete file="${build.dir}/standalone.properties.js"/>
+                <replace file="${build.dir}/properties.js" token="{playerHandle}" value="${playerHandle}" />
+                <replace file="${build.dir}/properties.js" token="{displayName}" value="${displayName}" />
+                <replace file="${build.dir}/properties.js" token="{gameName}" value="${gameName}" />
+                <replace file="${build.dir}/properties.js" token="{gameId}" value="${gameId}" />
+                <replace file="${build.dir}/properties.js" token="{lang}" value="${lang}" />
+                <replace file="${build.dir}/properties.js" token="{account}" value="${account}" />
+                <replace file="${build.dir}/properties.js" token="{mode}" value="${mode}" />
+                <replace file="${build.dir}/properties.js" token="{data}" value="${data}" />
+                <replace file="${build.dir}/properties.js" token="{egiURL}" value="${egiURL}" />
+                <replace file="${build.dir}/properties.js" token="{egiExtGameId}" value="${egiExtGameId}" />
+                <replace file="${build.dir}/properties.js" token="{tomcat.start.port}" value="${tomcat.start.port}" />
+
+                <copy file="${tomcat.home}/proxy.properties.template" tofile="${tomcat.home}/proxy.properties" overwrite="true"/>
+                <replace file="${tomcat.home}/proxy.properties" token="{proxy.from}" value="/casino/;/location/"/>
+                <replace file="${tomcat.home}/proxy.properties" token="{proxy.to}" value="${protocol}://${domain}"/>
+            </then>
+        </if>
+    </target>
+
+    <!-- Calls the RGF game's client/build.xml file to compile the game. -->
+    <target name="compile.game" if="build.dir">
+		<if>
+			<equals arg1="${project.type}" arg2="maven" />
+			<then>
+				<artifact:mvn mavenHome="${env.M2_HOME}" fork="true" dir="../">
+					<arg value="-f"/>
+					<arg value="pom.xml"/>
+					<arg value="clean"/>
+					<arg value="package"/>
+				</artifact:mvn>
+
+				<!-- Unzip the package into the temp directory -->
+				<unzip dest="${build.game.web.dir}">
+					<fileset dir="../target">
+						<include name="*.zip"/>
+					</fileset>
+				</unzip>
+			</then>
+			<elseif>
+				<equals arg1="${project.type}" arg2="ant" />
+				<then>
+					<ant antfile="../build.xml" target="build" inheritall="false">
+						<property name="build.dir" value="${build.game.dir}"/>
+						<property name="standalone" value="${standalone}"/>
+					</ant>
+				</then>
+			</elseif>
+			<else>
+				<fail>"project.type" property must be either "maven" or "ant". Current value is ${project.type}</fail>
+			</else>
+		</if>
+    </target>
+
+    <!-- Copies folders/files that are in the game's webapp directory to the flashcasino4/remote/gameName directory
+            When running the harness, any files requested using a url containing "remote", i.e. those files NOT
+            included in the URL Stream, get requested from this location. -->
+    <target name="copy.remote">
+        <copy todir="${build.dir}/remote/${gameName}">
+            <fileset dir="${build.game.web.dir}"/>
+        </copy>
+    </target>
+
+    <!-- Cleans up after the build has completed, removing any temporary artifacts -->
+    <target name="tidy" if="build.dir">
+        <delete dir="${build.game.dir}"/>
+    </target>
+
+</project>

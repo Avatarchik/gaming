@@ -1,0 +1,28 @@
+Aug 19, 2014 12:29:17 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\apache-maven-3.0.4-bin\apache-maven-3.0.4\bin;C:\Program Files (x86)\Java\jdk1.7.0\bin;D:\Development\gdk\gdk_release_v1_0_21\tools\apache-maven-3.0.5\bin;D:\Development\gdk\gdk_release_v1_0_21\tools\apache-ant-1.8.2\bin;C:\Program Files (x86)\Java\jdk1.7.0\bin;C:\Program Files (x86)\Java\jre7\bin;;.
+Aug 19, 2014 12:29:17 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-9999
+Aug 19, 2014 12:29:17 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1840 ms
+Aug 19, 2014 12:29:18 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Aug 19, 2014 12:29:18 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+Aug 19, 2014 12:29:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Aug 19, 2014 12:29:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory standalone
+Aug 19, 2014 12:29:18 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-9999
+Aug 19, 2014 12:29:18 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Aug 19, 2014 12:29:18 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/98  config=null
+Aug 19, 2014 12:29:18 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 829 ms
+Aug 19, 2014 2:46:23 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-9999
+Aug 19, 2014 2:46:25 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Aug 19, 2014 2:46:26 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-9999

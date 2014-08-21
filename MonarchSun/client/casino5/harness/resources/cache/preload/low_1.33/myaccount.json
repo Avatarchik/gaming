@@ -1,0 +1,98 @@
+{
+
+    "tfLabel": {
+        "font": "16px MyriadPro-Semibold,Helvetica,Arial,sans-serif",
+        "color": "#999",
+        "textBaseline": "ideographic",
+        "maxWidth": 270
+    },
+
+    "tfValue": {
+        "font": "20px MyriadPro-Semibold,Helvetica,Arial,sans-serif",
+        "color": "#333",
+        "textBaseline": "ideographic",
+        "x": 420,
+        "y": 1,
+        "textAlign": "right"
+    },
+
+    "tfLargeValue": {
+        "font": "26px MyriadPro-Semibold,Helvetica,Arial,sans-serif",
+        "color": "#333",
+        "textBaseline": "ideographic"
+    },
+
+    "largeValue": {
+        "verticalSpacing": 10
+    },
+
+    "accountCurrency": {
+        "x": 35,
+        "y": 55
+    },
+
+    "accountBalance": {
+        "x": 295,
+        "y": 55
+    },
+
+    "totalWithdrawable": {
+        "x": 35,
+        "y": 135
+    },
+
+    "pendingBonus": {
+        "x": 295,
+        "y": 135
+    },
+
+    "summary": {
+        "x": 35,
+        "y": 230
+    },
+
+    "depositedFunds": {
+        "x": 35,
+        "y": 280
+    },
+
+
+    "playableBonus": {
+        "x": 35,
+        "y": 310
+    },
+
+
+    "withdrawableBonus": {
+        "x": 35,
+        "y": 340
+    },
+
+
+    "voucher": {
+        "x": 35,
+        "y": 370
+    },
+
+
+    "total": {
+        "x": 35,
+        "y": 420
+    },
+
+    "summaryLine": {
+        "color": "#999",
+        "stroke": 1.5,
+        "x": 35,
+        "y": 240,
+        "width": 420
+    },
+
+    "totalLine": {
+        "color": "#999",
+        "stroke": 1.5,
+        "x": 335,
+        "y": 385,
+        "width": 120
+    }
+}

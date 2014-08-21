@@ -1,0 +1,32 @@
+{
+
+    "tfBalance": {
+        "font": "34px Arial,sans-serif",
+        "color": "#FFFFFF",
+        "x": 30,
+        "y": 14
+    },
+
+    "tfWagered": {
+        "font": "34px Arial,sans-serif",
+        "color": "#FFFFFF",
+        "x": 500,
+        "y": 14
+    },
+
+    "tfWon": {
+        "font": "34px Arial,sans-serif",
+        "color": "#FFFFFF",
+        "x": 970,
+        "y": 14
+    },
+
+    "tfGamePlayId": {
+        "font": "24px Arial,sans-serif",
+        "color": "#FFFFFF",
+        "x": 1920,
+        "y": 8,
+        "textAlign": "center"
+    }
+
+}

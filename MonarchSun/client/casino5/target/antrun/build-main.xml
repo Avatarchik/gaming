@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <concat destfile="D:\Development\Games\MonarchSun\client\casino5\target/casino5-2.0-SNAPSHOT/casino5/javascript/temp.js">
+    <filelist files="Namespace.js" dir="D:\Development\Games\MonarchSun\client\casino5/src/main/javascript"/>
+    <fileset dir="D:\Development\Games\MonarchSun\client\casino5/src/main/javascript">
+      <include name="**/*.js"/>
+      <exclude name="Namespace.js"/>
+    </fileset>
+  </concat>
+  <replaceregexp replace="" byline="true" file="D:\Development\Games\MonarchSun\client\casino5\target/casino5-2.0-SNAPSHOT/casino5/javascript/temp.js" match="goog\.(.*)"/>
+  <copy file="D:\Development\Games\MonarchSun\client\casino5\target/casino5-2.0-SNAPSHOT/casino5/javascript/temp.js" toFile="D:\Development\Games\MonarchSun\client\casino5\target/casino5-2.0-SNAPSHOT/casino5/javascript/game.min.2.0-SNAPSHOT.js">
+    <filterchain>
+      <ignoreblank/>
+    </filterchain>
+  </copy>
+  <delete file="D:\Development\Games\MonarchSun\client\casino5\target/casino5-2.0-SNAPSHOT/casino5/javascript/temp.js"/>
+</target>
+</project>

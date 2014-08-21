@@ -1,0 +1,27 @@
+{
+
+    "accountSelectArea": {
+        "width": 700,
+        "height": 230
+    },
+
+    "accountSelectButtonData": {
+        "frames": {
+            "width": 300,
+            "height": 160
+        }
+    },
+
+    "playForData": {
+        "x": 0,
+        "y": 320,
+        "width": 300,
+        "height": 40
+    },
+
+    "playFor": {
+        "regX": 150,
+        "regY": -40
+    }
+
+}

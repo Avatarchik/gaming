@@ -1,0 +1,11 @@
+<manifest type="game" date="20-08-2014_17:51:57">
+	<file>game/ui/Information.swf</file>
+	<file>game/ui/OtherAssets.swf</file>
+	<file>game/controller/game.swf</file>
+	<file>game/ui/ButtonsPanel.swf</file>
+	<file>game/ui/SymbolCollection.swf</file>
+	<file>game/ui/GameAssets.swf</file>
+	<file>game/sound/sound.swf</file>
+	<file>game/language/en_language.xml</file>
+	<file>game/ui/BackgroundCollection.swf</file>
+</manifest>

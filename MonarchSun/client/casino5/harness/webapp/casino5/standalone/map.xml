@@ -1,0 +1,54 @@
+<map>
+    <responses request="AboutReq">
+        <response id="AboutReq" file="about.xml" />
+    </responses>
+    <responses request="GeoLocationReq">
+        <response id="GeoLocationReq" file="geolocation.xml" />
+    </responses>
+    <responses request="CheckLoginReq">
+        <response id="CheckLoginReq" file="checklogin.xml" />
+    </responses>
+	<responses request="ProfilesReq">
+		<response id="ProfilesReq" file="profile.xml" />
+	</responses>
+	<responses request="LoginReq">
+		<response id="LoginReq" file="login.xml" />
+	</responses>
+	<responses request="StartGameReq">
+		<response id="StartGameReq" file="startgame.xml" />
+	</responses>
+    <responses request="InitReq">
+		<response id="InitReq" file="init.xml" />
+	</responses>
+	<responses request="ResumeGameReq">
+		<response id="ResumeGameReq" file="preresume.xml" />
+		<response id="ResumeGameReq" file="resume.xml" />
+	</responses>
+    <responses request="SpinReq">
+		<!--response id="SpinReq" file="spin_nowin.xml" /-->
+        <!--response id="SpinReq" file="spin_win.xml" />
+		<response id="SpinReq" file="spin_win3.xml" /-->
+		<!--response id="SpinReq" file="spin_win3.xml" /-->
+        <response id="SpinReq" file="spin_nowin.xml" />
+        <response id="SpinReq" file="spin_nowin.xml" />
+        <response id="SpinReq" file="spin_nowin.xml" />
+        <response id="SpinReq" file="spin_win2.xml" />
+		<response id="SpinReq" file="spin_freespin_trigger.xml" />
+	</responses>
+    <responses request="FreeReq">
+		<response id="FreeReq" file="freespin_1.xml" />
+		<response id="FreeReq" file="freespin_2.xml" />
+		<response id="FreeReq" file="freespin_3.xml" />
+		<response id="FreeReq" file="freespin_4.xml" />
+		<response id="FreeReq" file="freespin_5.xml" />
+		<!--response id="FreeReq" file="freespin_6.xml" />
+		<response id="FreeReq" file="freespin_7.xml" />
+		<response id="FreeReq" file="freespin_8.xml" />
+		<response id="FreeReq" file="freespin_9.xml" />
+		<response id="FreeReq" file="freespin_10.xml" />
+        <response id="FreeReq" file="freespin_retrig_10.xml" /-->
+	</responses>
+	<responses request="ConfirmHandEndReq">
+		<response id="ConfirmHandEndReq" file="confirmhandend.xml" />
+	</responses>		
+</map>

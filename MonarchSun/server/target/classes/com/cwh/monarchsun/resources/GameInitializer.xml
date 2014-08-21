@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdkResponse version="2">
+    <gameInitialize>
+        <request name="InitReq">
+            <persistentState required="true" />
+        </request>
+        <request name="SpinReq">
+            <randomPools>
+                <!-- Random numbers for 92% -->
+                <pool id="mainSpinReel921_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel922_1_at_0_98" size="1" min="0" max="98" />
+                <pool id="mainSpinReel923_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel924_1_at_0_98" size="1" min="0" max="98" />
+                <pool id="mainSpinReel925_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel92RE_1_at_0_98" size="1" min="0" max="98" />
+                <!-- Random numbers for 94% -->
+                <pool id="mainSpinReel941_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel942_1_at_0_97" size="1" min="0" max="97" />
+                <pool id="mainSpinReel943_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel944_1_at_0_97" size="1" min="0" max="97" />
+                <pool id="mainSpinReel945_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel94RE_1_at_0_98" size="1" min="0" max="98" />
+                <!-- Random numbers for 95% -->
+                <pool id="mainSpinReel951_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel952_1_at_0_97" size="1" min="0" max="97" />
+                <pool id="mainSpinReel953_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel954_1_at_0_97" size="1" min="0" max="97" />
+                <pool id="mainSpinReel955_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="mainSpinReel95RE_1_at_0_98" size="1" min="0" max="98" />
+            </randomPools>
+            <persistentState required="true" />
+        </request>
+        <request name="FreeReq">
+            <randomPools>
+                <pool id="freeSpinReel1_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReel2_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReel3_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReel4_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReel5_1_at_0_99" size="1" min="0" max="99" />
+                <pool id="freeSpinReelRE_1_at_0_309" size="1" min="0" max="259" />
+            </randomPools>
+            <persistentState required="true" />
+        </request>
+    </gameInitialize>
+</gdkResponse>

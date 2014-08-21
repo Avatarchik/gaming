@@ -1,0 +1,245 @@
+#game_container {
+    width: 668px;
+}
+#game_container div.section {
+    position: relative;
+    border: 2px solid #CCCCCC;
+    margin: 1px;
+    overflow: auto;
+    padding: 2px 4px 6px 4px;
+}
+#game_container div.clear {
+    clear: both;
+}
+
+
+/******************************************************************
+
+       GAME INFO
+
+******************************************************************/
+#game_info {
+}
+
+#game_info  div {
+    position: relative;
+    margin: 6px 0 6px 0;
+    padding: 0;
+    display: block;
+    clear: both;
+    overflow: auto;
+    width: 95%;
+}
+#game_info p {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+#game_info .header {
+    margin: 0;
+}
+#game_info .header p {
+    font-size: 24px;
+}
+#game_info p.label {
+    width: 200px;
+    text-align: right;
+    float: left;
+    display: block;
+}
+
+#game_info p.value{
+    position: absolute;
+    bottom: 0;
+    left: 210px;
+    width: auto;
+    float: left;
+    display: block;
+    clear: right;
+}
+
+/******************************************************************
+
+       SPIN
+
+******************************************************************/
+div.spin_div {
+}
+
+div.spin_div div.header {
+    margin: 3px;
+    font-size:17px;
+    font-weight:bold;
+
+    text-align:left;
+}
+
+div.spin_div div.panel {
+    clear: left;
+    position: relative;
+    margin: 3px;
+    width: 668px;
+    height:400px;
+    background-color:#FFFFFF;
+}
+
+div.spin_div  div.canvas_coins_won{
+    position:absolute;
+    border:1px solid #330000;
+    width:150px;
+    height:50px;
+    top:25%;
+    left:36.5%;
+    background-color:#6495ed;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    z-index:20;
+    display:none;
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    line-height: 50px;
+}
+
+div.spin_div div.reels {
+    clear: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    background-color:#FFFFFF;
+}
+div.spin_div div.reels img{
+    margin: 0;
+    height: 96px;
+    width: 128px;
+    position: absolute;
+    padding: 0;
+}
+
+div.spin_div div.payline_button{
+    position:absolute;
+    border:1px solid #000000;
+    width:18px;
+    height:20px;
+    cursor:pointer;
+    background-color:#CCCCFF;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    line-height:20px;
+    margin:0;
+    padding:0;
+    color:#000000;
+}
+
+/******************************************************************
+
+       WINNING LINES
+
+******************************************************************/
+
+#game_container div.winning_lines {
+    margin: 0;
+    padding: 10px;
+    clear: both;
+    overflow: auto;
+    position: relative;
+}
+#game_container div.winning_lines  div.title{
+    margin: 3px;
+    height: auto;
+}
+#game_container div.winning_lines  div.title p{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+
+    text-align: left;
+}
+
+#game_container div.winning_line_button,
+#game_container div.winning_line_button_fs,
+#game_container div.scatter_button {
+    border: 1px solid #000000;
+    width: auto;
+    cursor: pointer;
+    margin: 1px;
+    padding: 1px 0 1px 0;
+    background-color: #C1C6C4;
+    color: #000000;
+    float: left;
+}
+div.winning_line_button  p,
+div.winning_line_button_fs  p,
+div.scatter_button  p{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/******************************************************************
+
+       SUMMARY
+
+******************************************************************/
+
+#game_summary {
+
+}
+
+#game_summary  div {
+    position: relative;
+    margin: 4px 2px 4px 2px;
+    padding: 0;
+    overflow: auto;
+    width: 95%;
+}
+
+#game_summary div.header {
+    margin: 0 0 10px 0;
+}
+
+#game_summary div.header  p{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#game_summary  div.space_after {
+    margin-bottom: 15px;
+}
+
+#game_summary p {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+#game_summary p.label {
+    width: 200px;
+    float: left;
+}
+#game_summary p.value {
+    position: absolute;
+    bottom: 0;
+    left: 210px;
+    width: 200px;
+    float: left;
+    clear: right;
+}
+
+#game_summary p.sub_item  {
+    font-weight: normal;
+}
+
+#game_summary p.underline {
+    border-bottom: 1px solid black;
+}
+

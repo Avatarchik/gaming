@@ -1,0 +1,224 @@
+{
+
+    "menuBackgroundData": {
+        "x": 0,
+        "y": 38,
+        "width": 10,
+        "height": 10
+    },
+
+    "menuPanelBackground": {
+        "scaleX": 1
+    },
+
+    "menuPanelBackgroundData": {
+        "x": 0,
+        "y": 50,
+        "width": 302,
+        "height": 10
+    },
+
+    "subMenuHeaderBackgroundData": {
+        "x": 0,
+        "y": 480,
+        "width": 300,
+        "height": 50
+    },
+
+    "tfSubMenuHeader": {
+        "font": "20px MyriadPro-Regular,Helvetica,Arial,sans-serif",
+        "color": "#111",
+        "x": 65,
+        "y": 25,
+        "textBaseline": "middle",
+        "maxWidth": 230
+    },
+
+    "subMenuIconData": {
+        "x": 300,
+        "y": 210,
+        "width": 20,
+        "height": 50
+    },
+
+    "subMenuIcon": {
+        "x": 280,
+        "y": 0
+    },
+
+    "linkIconData": {
+        "x": 320,
+        "y": 210,
+        "width": 20,
+        "height": 50
+    },
+
+    "linkIcon": {
+        "x": 280,
+        "y": 0
+    },
+
+    "tfItemOff": {
+        "font": "20px MyriadPro-Regular,Helvetica,Arial,sans-serif",
+        "color": "#999",
+        "x": 65,
+        "y": 25,
+        "textBaseline": "middle",
+        "maxWidth": 220
+    },
+
+    "tfItemOn": {
+        "font": "20px MyriadPro-Regular,Helvetica,Arial,sans-serif",
+        "color": "#EEE",
+        "x": 65,
+        "y": 25,
+        "textBaseline": "middle",
+        "maxWidth": 220
+    },
+
+    "itemOffBackgroundData": {
+        "x": 0,
+        "y": 65,
+        "width": 300,
+        "height": 50
+    },
+
+    "itemOnBackgroundData": {
+        "x": 0,
+        "y": 120,
+        "width": 302,
+        "height": 50
+    },
+
+    "iconData": {
+        "frames": [
+            [0,260,50,50,0,0,0],
+            [0,310,50,50,0,0,0],
+            [50,260,50,50,0,0,0],
+            [50,310,50,50,0,0,0],
+            [100,260,50,50,0,0,0],
+            [100,310,50,50,0,0,0],
+            [150,260,50,50,0,0,0],
+            [150,310,50,50,0,0,0],
+            [200,260,50,50,0,0,0],
+            [200,310,50,50,0,0,0],
+            [250,260,50,50,0,0,0],
+            [250,310,50,50,0,0,0],
+            [300,260,50,50,0,0,0],
+            [300,310,50,50,0,0,0],
+            [350,260,50,50,0,0,0],
+            [350,310,50,50,0,0,0],
+            [400,260,50,50,0,0,0],
+            [400,310,50,50,0,0,0],
+            [450,260,50,50,0,0,0],
+            [450,310,50,50,0,0,0],
+            [500,260,50,50,0,0,0],
+            [500,310,50,50,0,0,0],
+            [550,260,50,50,0,0,0],
+            [550,310,50,50,0,0,0],
+            [600,260,50,50,0,0,0],
+            [600,310,50,50,0,0,0],
+            [650,260,50,50,0,0,0],
+            [650,310,50,50,0,0,0]
+        ],
+        "xOffset": 6
+    },
+
+    "iconIndex": {
+        "gameMenu": 0,
+        "gamingGuide": 1,
+        "cashier": 2,
+        "about": 3,
+        "myAccountSummary": 4,
+        "realityCheck": 5,
+        "support": 6,
+        "responsibleGamingInfo": 7,
+        "myAccountMenu": 8,
+        "myAccountPage": 9,
+        "logout": 10,
+        "responsibleGamingMenu": 11,
+        "paytable": 12,
+        "lobby": 13
+    },
+
+    "optionOffBackgroundData": {
+        "x": 150,
+        "y": 175,
+        "width": 150,
+        "height": 80
+    },
+
+    "optionOnBackgroundData": {
+        "x": 0,
+        "y": 175,
+        "width": 150,
+        "height": 80
+    },
+
+    "optionIconData": {
+        "frames": [
+            [0,360,80,60,0,40,30],
+            [80,360,80,60,0,40,30],
+            [160,360,80,60,0,40,30],
+            [240,360,80,60,0,40,30]
+        ],
+        "xOffset": 75,
+        "yOffset": 30
+    },
+
+    "optionIconIndex": {
+        "soundEffects": 0,
+        "fitToWindow": 1
+    },
+
+    "menuTabContainer": {
+        "x": 0,
+        "y": 0,
+        "iosY": 20
+    },
+
+    "menuOptionContainer": {
+        "x": 0,
+        "paddingBottom": 5
+    },
+
+    "menuContentContainer": {
+        "x": 302,
+        "y": 0,
+        "iosY": 20
+    },
+
+    "clockAreaBackgroundData": {
+        "x": 0,
+        "y": 420,
+        "width": 300,
+        "height": 40
+    },
+
+    "menuClockAreaContainer": {
+        "x": "0",
+        "paddingBottom": 0
+    },
+
+    "tfClock": {
+        "font": "17px MyriadPro-Regular,Helvetica,Arial,sans-serif",
+        "color": "#CCC",
+        "y": 4,
+        "textAlign": "center"
+    },
+
+    "tfDate": {
+        "font": "14px MyriadPro-Regular,Helvetica,Arial,sans-serif",
+        "color": "#999",
+        "y": 23,
+        "textAlign": "center"
+    },
+
+    "tfSessionClock": {
+        "font": "14px MyriadPro-Regular,Helvetica,Arial,sans-serif",
+        "color": "#CCC",
+        "y": 4,
+        "textAlign": "center",
+        "lineHeight": 16
+    }
+}

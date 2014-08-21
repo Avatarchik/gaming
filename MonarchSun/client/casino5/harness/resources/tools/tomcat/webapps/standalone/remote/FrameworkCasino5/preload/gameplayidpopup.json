@@ -1,0 +1,19 @@
+{
+
+    "popupBackgroundData": {
+        "x": 0,
+        "y": 0,
+        "width": 250,
+        "height": 100
+    },
+
+    "tfGamePlayId": {
+        "font": "26px Helvetica,Arial,sans-serif",
+        "color": "#EEE",
+        "x": 115,
+        "y": 5,
+        "textAlign": "center",
+        "maxWidth": 230
+    }
+
+}

@@ -1,0 +1,88 @@
+{
+
+    "profileMenu": {
+        "width": 900,
+        "rowSpacing": 60,
+        "headerY": 130,
+        "firstRowY": 140
+    },
+
+    "profileRowOffData": {
+        "x": 0,
+        "y": 0,
+        "width": 900,
+        "height": 50
+    },
+
+    "profileRowOnData": {
+        "x": 0,
+        "y": 50,
+        "width": 900,
+        "height": 50
+    },
+
+    "tfGameName": {
+        "font": "36px RobotoCondensed-Regular,Helvetica,Arial,sans-serif",
+        "color": "#999",
+        "x": 0,
+        "y": 0
+    },
+
+    "tfAccount": {
+        "font": "22px RobotoCondensed-Regular,Helvetica,Arial,sans-serif",
+        "color": "#999",
+        "x": 0,
+        "y": 45
+    },
+
+    "tfProfileHeader": {
+        "font": "22px RobotoCondensed-Light,Helvetica,Arial,sans-serif",
+        "color": "#999",
+        "textAlign": "right",
+        "textBaseline": "top"
+    },
+
+    "tfProfileValue": {
+        "font": "24px RobotoCondensed-Light,Helvetica,Arial,sans-serif",
+        "color": "#DDD",
+        "textAlign": "right",
+        "textBaseline": "middle"
+    },
+
+    "menuMachine": {
+        "col1": {
+            "x": 870
+        }
+    },
+
+    "menuSingleCoinMachine": {
+        "col1": {
+            "x": 870
+        }
+    },
+
+    "menuTable": {
+        "col1": {
+            "x": 680,
+            "lineWidth": 180,
+            "maxWidth": 180
+        },
+        "col2": {
+            "x": 870,
+            "lineWidth": 180,
+            "maxWidth": 180
+        }
+    },
+
+    "menuGdkTable": {
+        "col1": {
+            "x": 670,
+            "maxWidth": 190
+        },
+        "col2": {
+            "x": 870,
+            "maxWidth": 190
+        }
+    }
+
+}

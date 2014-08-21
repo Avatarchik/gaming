@@ -1,0 +1,43 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>11984.05</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>11984.05</totalWithdrawableBalance>
+		<depositedFunds>11984.05</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>1826812616</seed>
+		<gameSession>1064S0000002566</gameSession>
+		<gamePlayId>2753082</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291278492616</timeStamp>
+		<processTime>295</processTime>
+		<responsiblegaming rctype="2" time="57907">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+    <msgdata reqName="SpinReq">
+        <reels>
+            <reel id="1" pos="15">10,7,1</reel>
+            <reel id="2" pos="9">9,10,3</reel>
+            <reel id="3" pos="22">2,8,11</reel>
+            <reel id="4" pos="55">9,6,12</reel>
+            <reel id="5" pos="76">13,7,6</reel>
+        </reels>
+        <lines won="6000">
+            <line id="3" won="2" icon="3" positionsHit="1,3;2,3;3,3;4,3;5,3" />
+            <line id="5" won="5" icon="10" positionsHit="1,3;2,2;3,1;4,2;5,3" />
+            <line id="6" won="5" icon="10" positionsHit="1,1;2,2;3,1;4,2;5,1" />
+            <line id="14" won="2" icon="3" positionsHit="1,3;2,3;3,2;4,1;5,1" />
+            <line id="18" won="5" icon="10" positionsHit="1,3;2,2;3,1;4,1;5,1" />
+            <line id="20" won="2" icon="3" positionsHit="1,3;2,3;3,3;4,2;5,1" />
+        </lines>
+        <creditResults wagered="20" won="21" />
+        <results wagered="0.40" won="0.42" net="0.02" />
+        <freeSpins total="0" used="0" won="0" />
+    </msgdata>
+</gamemessage>

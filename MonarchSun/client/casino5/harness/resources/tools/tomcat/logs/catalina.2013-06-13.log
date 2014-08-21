@@ -1,0 +1,312 @@
+13-Jun-2013 10:14:41 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Progra~2\Java\jdk1.6.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\SVN\cwh_build_tools\trunk\apache-maven-3.0.3\bin;D:\SVN\cwh_build_tools\trunk\ant\bin;C:\Progra~2\Java\jdk1.6.0_45\\bin;.
+13-Jun-2013 10:14:41 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+13-Jun-2013 10:14:41 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 522 ms
+13-Jun-2013 10:14:41 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+13-Jun-2013 10:14:41 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+13-Jun-2013 10:14:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+13-Jun-2013 10:14:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+13-Jun-2013 10:14:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory host-manager
+13-Jun-2013 10:14:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory manager
+13-Jun-2013 10:14:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+13-Jun-2013 10:14:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory standalone
+13-Jun-2013 10:14:42 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+13-Jun-2013 10:14:42 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+13-Jun-2013 10:14:42 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+13-Jun-2013 10:14:42 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 678 ms
+13-Jun-2013 10:17:02 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context [/standalone]
+13-Jun-2013 10:18:22 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context [/standalone]
+13-Jun-2013 10:18:51 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Progra~2\Java\jdk1.6.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\SVN\cwh_build_tools\trunk\apache-maven-3.0.3\bin;D:\SVN\cwh_build_tools\trunk\ant\bin;C:\Progra~2\Java\jdk1.6.0_45\\bin;.
+13-Jun-2013 10:18:51 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+13-Jun-2013 10:18:51 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 203 ms
+13-Jun-2013 10:18:51 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+13-Jun-2013 10:18:51 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+13-Jun-2013 10:18:51 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+13-Jun-2013 10:18:51 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+13-Jun-2013 10:18:51 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+13-Jun-2013 10:18:51 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+13-Jun-2013 10:18:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+13-Jun-2013 10:18:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory standalone
+13-Jun-2013 10:18:52 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+13-Jun-2013 10:18:52 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+13-Jun-2013 10:18:52 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/9  config=null
+13-Jun-2013 10:18:52 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 306 ms
+13-Jun-2013 10:34:00 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Progra~2\Java\jdk1.6.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\SVN\cwh_build_tools\trunk\apache-maven-3.0.3\bin;D:\SVN\cwh_build_tools\trunk\ant\bin;C:\Progra~2\Java\jdk1.6.0_45\\bin;.
+13-Jun-2013 10:34:00 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 208 ms
+13-Jun-2013 10:34:00 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+13-Jun-2013 10:34:00 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+13-Jun-2013 10:34:00 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory standalone
+13-Jun-2013 10:34:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory WEB-INF---
+13-Jun-2013 10:34:01 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+13-Jun-2013 10:34:01 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+13-Jun-2013 10:34:01 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/9  config=null
+13-Jun-2013 10:34:01 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 320 ms
+13-Jun-2013 10:38:48 AM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server} Setting property 'port' to '${port.shutdown}' did not find a matching property.
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Progra~2\Java\jdk1.6.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\SVN\cwh_build_tools\trunk\apache-maven-3.0.3\bin;D:\SVN\cwh_build_tools\trunk\ant\bin;C:\Progra~2\Java\jdk1.6.0_45\\bin;.
+13-Jun-2013 10:38:48 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-0
+13-Jun-2013 10:38:48 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 216 ms
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+13-Jun-2013 10:38:48 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\Users\jsaelhof\Downloads\apache-tomcat-6.0.37\webapps\host-manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/host-manager] startup failed due to previous errors
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/host-manager] has not been started
+13-Jun-2013 10:38:48 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\Users\jsaelhof\Downloads\apache-tomcat-6.0.37\webapps\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/manager] startup failed due to previous errors
+13-Jun-2013 10:38:48 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/manager] has not been started
+13-Jun-2013 10:38:48 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+13-Jun-2013 10:38:49 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-0
+13-Jun-2013 10:38:49 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+13-Jun-2013 10:38:49 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/10  config=null
+13-Jun-2013 10:38:49 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 176 ms
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Progra~2\Java\jdk1.6.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\SVN\cwh_build_tools\trunk\apache-maven-3.0.3\bin;D:\SVN\cwh_build_tools\trunk\ant\bin;C:\Progra~2\Java\jdk1.6.0_45\\bin;.
+13-Jun-2013 10:40:57 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-9999
+13-Jun-2013 10:40:57 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 211 ms
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+13-Jun-2013 10:40:57 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\Users\jsaelhof\Downloads\apache-tomcat-6.0.37\webapps\host-manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/host-manager] startup failed due to previous errors
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/host-manager] has not been started
+13-Jun-2013 10:40:57 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\Users\jsaelhof\Downloads\apache-tomcat-6.0.37\webapps\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/manager] startup failed due to previous errors
+13-Jun-2013 10:40:57 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/manager] has not been started
+13-Jun-2013 10:40:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+13-Jun-2013 10:40:57 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-9999
+13-Jun-2013 10:40:57 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+13-Jun-2013 10:40:57 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/9  config=null
+13-Jun-2013 10:40:57 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 174 ms
+13-Jun-2013 10:43:47 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+13-Jun-2013 10:46:46 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Progra~2\Java\jdk1.6.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\SVN\cwh_build_tools\trunk\apache-maven-3.0.3\bin;D:\SVN\cwh_build_tools\trunk\ant\bin;C:\Progra~2\Java\jdk1.6.0_45\\bin;.
+13-Jun-2013 10:46:46 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-9999
+13-Jun-2013 10:46:46 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 212 ms
+13-Jun-2013 10:46:46 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+13-Jun-2013 10:46:46 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.37
+13-Jun-2013 10:46:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+13-Jun-2013 10:46:46 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-9999
+13-Jun-2013 10:46:47 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+13-Jun-2013 10:46:47 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/10  config=null
+13-Jun-2013 10:46:47 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 163 ms

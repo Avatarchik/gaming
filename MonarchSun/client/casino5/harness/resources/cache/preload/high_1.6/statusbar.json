@@ -1,0 +1,52 @@
+{
+
+    "tfBalance": {
+        "font": "34px Arial",
+        "color": "#FFFFFF",
+        "x": 30,
+        "y": 14
+    },
+
+    "tfWagered": {
+        "font": "34px Arial",
+        "color": "#FFFFFF",
+        "x": 500,
+        "y": 14
+    },
+
+    "tfWon": {
+        "font": "34px Arial",
+        "color": "#FFFFFF",
+        "x": 970,
+        "y": 14
+    },
+
+    "tfGamePlayId": {
+        "font": "24px Arial",
+        "color": "#FFFFFF",
+        "x": 2430,
+        "y": 8,
+        "textAlign": "center"
+    },
+
+    "tfSession": {
+        "font": "24px Arial",
+        "color": "#FFFFFF",
+        "x": 2200,
+        "y": 8,
+        "textAlign": "center"
+    },
+
+    "tfClock": {
+        "font": "32px Arial bold",
+        "color": "#FFFFFF",
+        "x": 2490,
+        "y": 14,
+        "textAlign": "center"
+    },
+
+    "clockOffset": {
+        "x": 110
+    }
+
+}

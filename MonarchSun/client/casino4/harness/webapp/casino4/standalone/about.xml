@@ -1,0 +1,8 @@
+<about>
+    <game name="MonarchSun" type="0" desc="Monarch Sun">
+        <rtp>
+            <level id="1">100.00%</level>
+        </rtp>
+        <version>Standalone</version>
+    </game>
+</about>
