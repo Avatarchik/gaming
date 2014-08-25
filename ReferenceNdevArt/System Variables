@@ -1,0 +1,14 @@
+ant home
+m2 home
+
+
+ANT_HOME = D:\Development\gdk\gdk_release_v1_0_24\tools\apache-ant-1.8.2
+
+JAVA_HOME = C:\Program Files (x86)\Java\jdk1.7.0
+
+JRE_HOME = C:\Program Files (x86)\Java\jre7
+
+M2_HOME = D:\Development\gdk\gdk_release_v1_0_24\tools\apache-maven-3.0.5
+
+Path = %SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\apache-maven-3.0.4-bin\apache-maven-3.0.4\bin;C:\Program Files (x86)\Java\jdk1.7.0\bin;%M2_HOME%\bin;%ANT_HOME%\bin;%JAVA_HOME%\bin;%JRE_HOME%\bin
+
