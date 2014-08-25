@@ -1,0 +1,186 @@
+
+<html>
+<head>
+<style>
+#dragonhead{
+	position: absolute;
+	top: 50px;
+	left: 25px;
+}
+/*#header{
+	position: absolute;
+	top: 250px;
+	left: 250px;
+}*/
+</style>
+
+<!--<script src="https://cdn.rawgit.com/sole/tween.js/master/build/tween.min.js"></script>
+<script src="https://cdn.rawgit.com/sole/tween.js/master/examples/js/RequestAnimationFrame.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+
+<script type="text/javascript" src="tween.min.js"></script>
+<script src="RequestAnimationFrame.js"></script>
+<script src="jquery.min.js"></script>
+</head>
+<!--<h3 id="header">Animate Me</h3>-->
+<div id="canvas">
+	<img id="dragonhead" src="Dragon_head.png">
+	<img id="dragonbody" src="dragon_body.png">
+	<img id="dragontail" src="Dragon_tail.png">
+</div>
+
+<script>
+var position, benpos;
+var target, bentarget;
+var headtween;
+var tween;
+var benRight, benRightUp, benDown, benRightDown, benLeft, benUp;
+var resolutionRatio;
+var symbolHeight, symbolWidth, reelSpacing;
+var dragonHead, dragonBody, dragonTail;
+
+init();
+animate();
+
+/***********************************************************************************8
+//code fully working
+
+function init(){
+	position = {x: 250, y:250, rotation:0};
+
+	target = document.getElementById('header');
+
+	headtween = new TWEEN.Tween(position)
+			.to({x:250, y:250, rotation:360}, 1500)
+			.delay(0).repeat(Infinity)
+			.onUpdate(function(){update(target, position);});
+
+	benpos = {x:25, y:50, rotation:0};
+	bentarget = document.getElementById('dragonhead');
+
+	benRight = new TWEEN.Tween(benpos)
+				.to({x:350, y:50, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	benDown = new TWEEN.Tween(benpos)
+				.to({x:350, y:350, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	benLeft = new TWEEN.Tween(benpos)
+				.to({x:25, y:350, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	benUp = new TWEEN.Tween(benpos)
+				.to({x:25, y:50, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	//make the chain
+	benRight.chain(benDown);
+	benDown.chain(benLeft);
+	benLeft.chain(benUp);
+	benUp.chain(benRight);
+
+	headtween.start();
+	benRight.start();
+
+
+	//position = {x: 0, y:0, rotation:0};
+	//target = document.getElementById('header');
+	//tween = new TWEEN.Tween(position).to({x:250, y:250, rotation:0}, 1500).onUpdate(update);
+	//tween.start();
+	
+}
+
+function animate(){
+	requestAnimationFrame(animate);
+	TWEEN.update();
+}
+
+function update(target, position){
+	target.style.left = position.x + 'px';
+	target.style.top = position.y + 'px';
+	target.style.webkitTransform = 'rotate(' + Math.floor(position.rotation) + 'deg)';
+	target.style.MozTransform = 'rotate(' + Math.floor(position.rotation) + 'deg)';
+}
+*****************************************************************************************/
+
+function init(){
+	//position = {x: 250, y:250, rotation:0};
+
+	//target = document.getElementById('header');
+
+	/*
+	headtween = new TWEEN.Tween(position)
+			.to({x:250, y:250, rotation:360}, 1500)
+			.delay(0).repeat(Infinity)
+			.onUpdate(function(){update(target, position);});
+	*/
+	benpos = {x:25, y:150, rotation:0};
+
+	bentarget = document.getElementById('dragonhead');
+
+	benRight = new TWEEN.Tween(benpos)
+				.to({x:350, y:150, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	benRightUp = new TWEEN.Tween(benpos)
+			.to({x:550, y:-50, rotation:0}, 1500)
+			.delay(1)
+			.easing(TWEEN.Easing.Quadratic.Out)
+			.onUpdate(function(){update(bentarget, benpos);});
+
+	benDown = new TWEEN.Tween(benpos)
+				.to({x:350, y:350, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	benLeft = new TWEEN.Tween(benpos)
+				.to({x:25, y:350, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	benUp = new TWEEN.Tween(benpos)
+				.to({x:25, y:50, rotation:0}, 1500)
+				.delay(1)
+				.easing(TWEEN.Easing.Quadratic.Out)
+				.onUpdate(function(){update(bentarget, benpos);});
+
+	//make the chain
+	//benRight.chain(benDown);
+	//benDown.chain(benLeft);
+	//benLeft.chain(benUp);
+	//benUp.chain(benRight);
+
+	//headtween.start();
+
+	benRight.chain(benRightUp);
+
+	benRight.start();
+
+
+}
+
+function animate(){
+	requestAnimationFrame(animate);
+	TWEEN.update();
+}
+
+function update(target, position){
+	target.style.left = position.x + 'px';
+	target.style.top = position.y + 'px';
+	target.style.webkitTransform = 'rotate(' + Math.floor(position.rotation) + 'deg)';
+	target.style.MozTransform = 'rotate(' + Math.floor(position.rotation) + 'deg)';
+}
+</script>
