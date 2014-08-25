@@ -1,0 +1,55 @@
+<project name="Webserver Casino 5 (Port 9999)" basedir="." default="start">
+    <!-- Setup environment variables -->
+    <property environment="env"/>
+
+    <property name="lib" value="resources/lib" />
+    <property name="tools" value="resources/tools" />
+
+    <property file="${basedir}/webserver.properties"/>
+
+    <!-- Setup a taskdef for the AntContrib library -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+      <classpath>
+        <pathelement location="${lib}/ant-contrib-1.0b1.jar"/>
+      </classpath>
+    </taskdef>
+
+    <target name="deploy">
+        <available file="${tomcat.home}" type="dir" property="tomcat.deployed"/>
+        <if>
+            <isfalse value="${tomcat.deployed}"/>
+            <then>
+                <echo>Deploying Tomcat...</echo>
+                <unzip src="${tools}/tomcat.zip" dest="${tomcat.home}"/>
+            </then>
+            <else>
+                <echo>Tomcat already deployed</echo>
+            </else>
+        </if>
+    </target>
+
+    <target name="start" depends="deploy,stop">
+        <exec dir="${tomcat.home}" executable="cmd">
+            <arg line='/K set "JAVA_OPTS=-Dport.shutdown=${tomcat.stop.port} -Dport.http=${tomcat.start.port}" &amp;&amp; bin\\startup.bat'/>
+        </exec>
+    </target>
+
+    <target name="stop">
+        <condition property="tomcat.started" value="true" else="false">
+            <socket server="localhost" port="${tomcat.start.port}"/>
+        </condition>
+        <echo>Server Running: ${tomcat.started}</echo>
+
+        <if>
+            <istrue value="${tomcat.started}"/>
+            <then>
+                <exec dir="${tomcat.home}" executable="cmd">
+                    <arg line='/K set "JAVA_OPTS=-Dport.shutdown=${tomcat.stop.port} -Dport.http=${tomcat.start.port}" &amp;&amp; bin\\shutdown.bat'/>
+				</exec>
+                <sleep seconds="2"/>
+            </then>
+        </if>
+    </target>
+
+
+</project>

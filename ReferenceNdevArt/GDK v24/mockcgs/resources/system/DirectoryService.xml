@@ -1,0 +1,4 @@
+<directoryService>
+    <service key="GAME_STATIC_CONTAINER">http://<<server.address>>/casino/</service>
+    <service key="GAME_CONTAINER"       >http://<<rgf.server.address>>/</service>
+</directoryService>

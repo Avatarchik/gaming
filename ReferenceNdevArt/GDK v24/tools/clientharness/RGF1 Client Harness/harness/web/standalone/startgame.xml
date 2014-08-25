@@ -1,0 +1,25 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>500.00</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>500.00</totalWithdrawableBalance>
+		<depositedFunds>500.00</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>1693808351</seed>
+		<gameSession>1064S0000002557</gameSession>
+		<gamePlayId>-1</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291247061529</timeStamp>
+		<processTime>32</processTime>
+		<responsiblegaming rctype="2" time="0">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="StartGameReq">
+	</msgdata>
+</gamemessage>

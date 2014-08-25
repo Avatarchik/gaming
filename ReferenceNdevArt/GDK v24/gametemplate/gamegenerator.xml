@@ -1,0 +1,84 @@
+<project name="Game Template" default="create.game" basedir="../">
+
+
+    <target name="create.game" depends="prompt,copy.template"/>
+
+    <target name="prompt">
+        <input message="Enter 'Start Game Name' value (ex: MySlotGame):" addproperty="prop.game.name" />
+
+        <script language="javascript">
+            <![CDATA[
+                gameName = project.getProperty("prop.game.name");
+                packageName = gameName.toLowerCase();
+                project.setProperty("prop.package.name",packageName);
+
+                if(/[^a-zA-Z0-9]/.test(gameName)){
+                    project.setProperty("invalid.game.name","Start Game Name must contain only alpha-numeric characters, no spaces");
+                }
+            ]]>
+        </script>
+
+        <property name="output.dir" value="gametemplate/${prop.game.name}"/>
+
+        <available file="${output.dir}" type="dir" property="output.dir.exists"/>
+        <fail if="output.dir.exists" message="${prop.game.name} already exists." />
+
+        <fail if="invalid.game.name" message="'${prop.game.name}' is invalid. ${invalid.game.name}" />
+
+        <input message="Enter the game's display name (ex: My Slot Game):" addproperty="prop.display.name" />
+
+        <input message="Enter the game's id (ex: 100). If a game id has not been assigned, press enter to use the default:" addproperty="prop.game.id" defaultvalue="0" />
+
+        <script language="javascript">
+            <![CDATA[
+                gameId = project.getProperty("prop.game.id");
+
+                if(/[^0-9]/.test(gameId)){
+                    project.setProperty("invalid.game.id","Game Id must be a number");
+                }
+            ]]>
+        </script>
+
+        <fail if="invalid.game.id" message="'${prop.game.id}' is invalid. ${invalid.game.id}" />
+    </target>
+
+    <target name="copy.template" unless="output.dir.exists">
+        <copy todir="${output.dir}">
+            <fileset dir="gametemplate/templateproject">
+                <include name="**/*"/>
+				<exclude name="**/*.as"/>
+				<exclude name="**/pom.xml"/>
+				<exclude name="**/*.xml"/>
+				<exclude name="**/*.properties"/>
+            </fileset>
+        </copy>
+		
+		<copy todir="${output.dir}">
+            <fileset dir="gametemplate/templateproject">
+                <include name="**/*.as"/>
+                <include name="**/pom.xml"/>
+                <include name="**/*.xml"/>
+                <include name="**/*.properties"/>
+            </fileset>
+
+            <filterset>
+                <filter token="game.name" value="${prop.game.name}"/>
+                <filter token="display.name" value="${prop.display.name}"/>
+                <filter token="game.id" value="${prop.game.id}"/>
+                <filter token="package.name" value="${prop.package.name}"/>
+                <filter token="ver.google-closure-compiler-plugin" value="1.1"/>
+                <filter token="ver.rgf-manifest-maven-plugin" value="1.7"/>
+                <filter token="ver.gamemanifest-maven-plugin" value="1.2"/>
+                <filter token="ver.casino4.libs" value="4.1.337"/>
+                <filter token="ver.casino5.libs" value="1.41"/>
+                <filter token="ver.chartwell_debug" value="1.0.11"/>
+                <filter token="ver.chartwell_lang" value="1.1.90"/>
+                <filter token="ver.fl" value="1.0"/>
+            </filterset>
+        </copy>
+
+        <move file="${output.dir}/client/casino4/src/main/actionscript3/com/cwh/@package.name@"
+            tofile="${output.dir}/client/casino4/src/main/actionscript3/com/cwh/${prop.package.name}"/>
+    </target>
+
+</project>

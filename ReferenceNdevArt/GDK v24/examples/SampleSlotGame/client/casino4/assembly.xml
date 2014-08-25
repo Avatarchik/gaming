@@ -1,0 +1,26 @@
+<assembly>
+    <id>assembly-zip</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <outputDirectory>/</outputDirectory>
+            <directory>${project.build.directory}/${project.build.finalName}</directory>
+            <includes>
+                <include>**</include>
+            </includes>
+            <excludes>
+                <exclude>**/game-configs.xml</exclude>
+                <exclude>**/game-link-report.xml</exclude>
+            </excludes>
+            <filtered>false</filtered>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/webapp</directory>
+            <outputDirectory>/</outputDirectory>
+            <filtered>false</filtered>
+        </fileSet>
+    </fileSets>
+</assembly>

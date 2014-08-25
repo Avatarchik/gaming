@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" id="vp" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="viewport" id="vp" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" media="(device-height: 568px)" />
+
+    <script type="text/javascript" src="properties.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="remote/FrameworkCasino5/css/amaya.css">
+
+    <script type="text/javascript" src="remote/FrameworkCasino5/javascript/framework/casino5scripts.js"></script>
+
+    <script>
+        $(document).bind('touchmove', false);
+
+        var amaya = amaya || {};
+        amaya.casino = amaya.casino || {};
+
+        amaya.casino = ( function () {
+            var instance = {};
+
+            // Holds all the values needed to start the game
+            var gamedata = {};
+
+            var closeGameWarningMessage;
+
+            window.onbeforeunload = handleOnBeforeUnload;
+
+            instance.loadGame = function () {
+                var qs = getQueryStringParams(window.location.search.substring(1));
+
+                for ( var a in properties ) {
+                    gamedata[a] = properties[a];
+                }
+
+                for ( var b in qs ) {
+                    gamedata[b] = qs[b];
+                }
+
+                gamedata.gameType = (qs.gameType) ? qs.gameType : "0";
+                gamedata.deviceType = (qs.deviceType) ? qs.deviceType : "web";
+
+                // If launching in standalone, the properties file won't have playerhandle, gameId or profileId.
+                // These have to have a value to pass validation in the framework so we'll set some values here.
+                if ( gamedata.playerHandle == undefined ) gamedata.playerHandle = "999999";
+                if ( gamedata.gameId == undefined && gamedata.profileId == undefined ) gamedata.gameId = "999";
+
+                if ( gamedata.data == "" ) gamedata.data = undefined;
+                if ( gamedata.egiUrl == "" ) gamedata.egiUrl = undefined;
+                if ( gamedata.egiExtGameId == "" ) gamedata.egiExtGameId = undefined;
+
+                if ( properties.harness == "live" ) {
+                    gamedata.domain = window.location.host + "/live";
+                    if ( gamedata.resumedGame !== undefined ) {
+                        loadFramework();
+                    } else {
+                        loadResumeCheck();
+                    }
+                } else {
+                    loadFramework();
+                }
+            };
+
+            function loadResumeCheck () {
+				$.get(window.location.protocol + "//" + gamedata.domain + "/casino/servlet/com.chartwelltechnology.icd.GameResumeServlet?playerHandle="+gamedata.playerHandle+"&lang="+gamedata.lang+"&account="+gamedata.account+"&devicetype="+gamedata.deviceType+"&platform=html5&nocache="+new Date().getTime())
+				.success(function ( data ) {
+					var resumeError = $(data).find("error");
+					if (resumeError.length > 0) {
+						resumeCheckError(resumeError.attr("message"));
+					} else {
+						var resumeData = $(data).find("resumableGame");
+						var resumeGameName = resumeData.attr("gameName");
+						if (resumeGameName === "none") {
+							startGame();
+						} else {
+							var resumeGameType = resumeData.attr("gameType");
+							var resumeGameId = resumeData.attr("gameId");
+							var resumeProfileId = resumeData.attr("profileId");
+							resumeGame(resumeGameName,resumeGameType,resumeGameId,resumeProfileId);
+						}
+					}
+				})
+				.error(function () {
+					resumeCheckError("Error retrieving resume games");
+				});
+            }
+
+            // Called by resumecheck when there are no games to resume
+            function startGame () {
+                gamedata.resumedGame = "0";
+                loadFramework();
+            }
+
+            // Called by resumecheck when there is a game to resume
+            function resumeGame ( gameName, gameType, gameId, profileId ) {
+                // Ignore resume game if it doesn't match this exact game.
+                if ( gameName == gamedata.gameName ) {
+                    gamedata.resumedGame = "1";
+                    gamedata.gameName = gameName;
+                    gamedata.gameType = gameType;
+                    gamedata.gameId = gameId;
+                    gamedata.profileId = profileId;
+                }
+                loadFramework();
+            }
+
+            function resumeCheckError ( message ) {
+                showError("Resume Check Error: " + message);
+            }
+
+            // Handles the data returned by the query for the framework url and loads the framework
+            function loadFramework () {
+                // Set the page title. If it's not multiplayer, use the display name from the server. For mutliplayer, the lobby will pass the name to the page.
+                document.title = decodeURIComponent(gamedata.displayName).replace(/\+/g," ");
+
+                var params = {};
+                for ( var a in gamedata ) {
+                    if (gamedata[a] != undefined) params[a] = gamedata[a];
+                }
+
+                // retina iPad pre iOS7:
+                $('head').append('<link rel="apple-touch-icon-precomposed" sizes="144x144" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-144x144-precomposed.png"/>');
+                // retina iPhone pre iOS 7:
+                $('head').append('<link rel="apple-touch-icon-precomposed" sizes="114x114" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-114x114-precomposed.png"/>');
+                // non-retina iPad pre iOS 7:
+                $('head').append('<link rel="apple-touch-icon-precomposed" sizes="72x72" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-72x72-precomposed.png"/>');
+                // non-retina iPhone pre iOS 7, and Android 2.1+ devices:
+                $('head').append('<link rel="apple-touch-icon-precomposed" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-precomposed.png"/>');
+                // non-retina iPad iOS 7:
+                $('head').append('<link rel="apple-touch-icon" sizes="76x76" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-76x76.png"/>');
+                // retina iPhone iOS 7:
+                $('head').append('<link rel="apple-touch-icon" sizes="120x120" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-120x120.png"/>');
+                // retina iPad iOS 7:
+                $('head').append('<link rel="apple-touch-icon" sizes="152x152" href="remote/'+gamedata.gameName+'/casino5/apple-touch-icon-152x152.png"/>');
+
+                if ( amaya.sdk.utils.DeviceUtils.isIOS() || amaya.sdk.utils.DeviceUtils.isAndroid() ) {
+
+                    window.addEventListener( "orientationchange", onOrientationChange );
+
+                    function onOrientationChange ( event ) {
+                        if ( window.matchMedia("(orientation: portrait)").matches ) {
+                            jqSoundWrapper.hide();
+                            jqBody.append(jqRotationWarning);
+                        } else if ( window.matchMedia("(orientation: landscape)").matches ) {
+                            jqSoundWrapper.show();
+                            jqRotationWarning.remove();
+                        }
+                    }
+
+                    var spriteSheet = "remote/FrameworkCasino5/postload/soundselect_en.png";
+
+                    var jqBody = $("body");
+
+                    var landscape = jqBody.width() >= jqBody.height();
+                    var longDimension = (landscape) ? jqBody.width() : jqBody.height();
+                    var width = (longDimension >= 600) ? 600 : longDimension;
+                    if (width < 480) width = 480;
+                    var height = 240;
+
+                    var buttonWidth = 240;
+                    var buttonHeight = 160;
+
+                    var animateMargin = (width - buttonWidth)/2;
+
+                    var jqRotationWarning = $('<div id="rotationWarning"/>');
+                    jqRotationWarning.css("width","100%");
+                    jqRotationWarning.css("height","100%");
+                    jqRotationWarning.css("background-image",'url("remote/FrameworkCasino5/postload/rotate.png")');
+                    jqRotationWarning.css("background-repeat","no-repeat");
+                    jqRotationWarning.css("background-position","center");
+
+                    var jqSoundWrapper = $('<div id="soundSelect"/>');
+                    jqSoundWrapper.css("width",width);
+                    jqSoundWrapper.css("height",height);
+                    jqSoundWrapper.css("margin-left",-width/2);
+                    jqSoundWrapper.css("margin-top",-height/2);
+                    jqSoundWrapper.css("top","50%");
+                    jqSoundWrapper.css("left","50%");
+                    jqSoundWrapper.css("position","absolute");
+
+                    var jqLabel = $("<div/>");
+                    jqLabel.css("width",480);
+                    jqLabel.css("height",40);
+                    jqLabel.css("background-image",'url("'+spriteSheet+'")');
+                    jqLabel.css("background-position",'0 -320px');
+                    jqLabel.css("margin-left",'auto');
+                    jqLabel.css("margin-right",'auto');
+                    jqLabel.css("margin-bottom",40);
+
+                    var jqButtonWrapper = $('<div/>');
+
+                    var jqYes = $("<div/>");
+                    jqYes.css("width",buttonWidth);
+                    jqYes.css("height",buttonHeight);
+                    jqYes.css("background-image",'url("'+spriteSheet+'")');
+                    jqYes.css("background-position",'0 0');
+                    jqYes.css("position","absolute");
+                    jqYes.on("click", function () {
+                        gamedata.mobileSound = 1;
+                        jqYes.css("background-position",'-'+buttonWidth+'px 0');
+                        jqYes.animate({"margin-left":animateMargin + "px"}, {duration:1000,done:function(){ setTimeout(onSelectTweenComplete,700)}});
+                        jqNo.animate({"opacity":"0"},{duration:350,done:function(){ jqNo.remove()}});
+                    });
+
+                    var jqNo = $("<div/>");
+                    jqNo.css("width",buttonWidth);
+                    jqNo.css("height",buttonHeight);
+                    jqNo.css("background-image",'url("'+spriteSheet+'")');
+                    jqNo.css("background-position",'0 -'+buttonHeight+'px');
+                    jqNo.css("position","absolute");
+                    jqNo.css("margin-left",width - buttonWidth);
+                    jqNo.on("click", function () {
+                        gamedata.mobileSound = 0;
+                        jqNo.css("background-position",'-'+buttonWidth+'px -'+buttonHeight+'px');
+                        jqNo.animate({"margin-left":animateMargin + "px"}, {duration:1000,done:function(){ setTimeout(onSelectTweenComplete,700)}});
+                        jqYes.animate({"opacity":"0"},{duration:350,done:function(){ jqYes.remove() }});
+                    });
+
+
+                    jqButtonWrapper.append(jqYes);
+                    jqButtonWrapper.append(jqNo);
+
+                    jqSoundWrapper.append(jqLabel);
+                    jqSoundWrapper.append(jqButtonWrapper);
+
+                    jqBody.append(jqSoundWrapper);
+                    jqBody.css("background-color","#222");
+
+                    onOrientationChange();
+
+                    function onSelectTweenComplete () {
+                        jqSoundWrapper.animate({"opacity":"0"},500);
+                        setTimeout(loadGame,500);
+                    }
+
+                    function loadGame (event) {
+                        jqBody.css("background-color","#000");
+                        jqSoundWrapper.remove();
+                        jqSoundWrapper = undefined;
+                        jqLabel = undefined;
+                        jqYes = undefined;
+                        jqNo = undefined;
+                        jqButtonWrapper = undefined;
+                        jqRotationWarning = undefined;
+                        window.onresize = undefined;
+                        window.removeEventListener( "orientationchange", onOrientationChange );
+                        var thisApp = amaya.framework.Main(gamedata);
+                    }
+                } else {
+                    amaya.framework.Main(gamedata);
+                }
+            }
+
+            function getQueryStringParams( queryString ) {
+                var qsParm = new Array();
+                var parms = queryString.split('&');
+                for (var i=0; i<parms.length; i++) {
+                    var pos = parms[i].indexOf('=');
+                    if (pos > 0) {
+                        var key = parms[i].substring(0,pos);
+                        var val = parms[i].substring(pos+1);
+                        qsParm[key] = val;
+                    }
+                }
+                return qsParm;
+            }
+
+            instance.openNormalWindow = function ( url, windowId ) {
+                alert("Open Normal Window: " + url);
+            };
+
+            instance.openPopUpWindow = function ( url, windowId, windowWidth, windowHeight, resizable ) {
+                alert("Open Pop Up Window: " + url);
+            };
+
+            instance.enableCloseGameWarning = function ( message ) {
+                closeGameWarningMessage = message;
+            };
+
+            instance.disableCloseGameWarning = function () {
+                closeGameWarningMessage = undefined;
+            };
+
+            function handleOnBeforeUnload ( event ) {
+                // If the game has set a close game warning message, return it so that it is displayed.
+                if ( closeGameWarningMessage ) {
+                    return closeGameWarningMessage;
+                }
+            }
+
+            function showError ( message ) {
+				$("body").empty();
+				var error = $("<div id='error'>"+message+"</div>")
+				$("body").append(error);
+            }
+
+            return instance;
+        } ) ();
+
+        $(function () {
+            amaya.casino.loadGame();
+        });
+    </script>
+</head>
+
+<body>
+</body>
+</html>

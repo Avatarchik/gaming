@@ -1,0 +1,79 @@
+{
+
+    "tfWon": {
+        "color": "#000",
+        "font": "bold 60px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1206",
+        "y": "620"
+    },
+
+    "tfWonShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 60px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1210",
+        "y": "624"
+    },
+
+    "tfStars": {
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1205",
+        "y": "215"
+    },
+
+    "tfStarsShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1207",
+        "y": "217"
+    },
+
+    "tfCounter": {
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1205",
+        "y": "350"
+    },
+
+    "tfCounterShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1207",
+        "y": "352"
+    },
+
+    "iconsData": {
+        "framerate": 1,
+        "image": "device/images/icons.png",
+        "frames": {
+            "width":"180",
+            "height":"180",
+            "count":"9"
+        },
+        "animations": {
+            "star": {
+                "frames": [8,6],
+                "next": "star"
+            },
+            "freespin": {
+                "frames": [7,5],
+                "next": "freespin"
+            }
+        }
+    },
+
+    "reels": {
+        "x": 59,
+        "y": 142
+    }
+
+}

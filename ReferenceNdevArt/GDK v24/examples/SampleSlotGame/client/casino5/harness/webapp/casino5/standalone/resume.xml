@@ -1,0 +1,54 @@
+<gamemessage>
+	<msgheader>
+		<failed>false</failed>
+		<balance>14027.75</balance>
+		<playableBalance>0.00</playableBalance>
+		<withdrawableBalance>0.00</withdrawableBalance>
+		<totalWithdrawableBalance>14027.75</totalWithdrawableBalance>
+		<depositedFunds>14027.75</depositedFunds>
+		<pendingBalance>0.00</pendingBalance>
+		<couponBalance>0</couponBalance>
+		<playableLock>false</playableLock>
+		<seed>106363942</seed>
+		<gameSession>1064S0000002596</gameSession>
+		<gamePlayId>2783897</gamePlayId>
+		<lastMsgId>0</lastMsgId>
+		<timeStamp timeZoneOffset="0">1291313202754</timeStamp>
+		<processTime>53</processTime>
+		<responsiblegaming rctype="2" time="0">
+			<rgrealitycheck display="false" />
+			<rgplayersessionlimit display="false" />
+		</responsiblegaming>
+	</msgheader>
+	<msgdata reqName="ResumeGameReq">
+		<reels>
+			<reel id="1" pos="11">1,7,2</reel>
+			<reel id="2" pos="2">1,1,2</reel>
+			<reel id="3" pos="14">1,1,1</reel>
+			<reel id="4" pos="3">1,2,1</reel>
+			<reel id="5" pos="11">1,7,4</reel>
+		</reels>
+		<lines won="100">
+			<line id="2" won="100" icon="1" positions="0,0;1,0;2,0;3,0;4,0" />
+		</lines>
+		<creditResults wagered="5" won="100" />
+		<results wagered="0.05" won="1.00" net="0.95" />
+		<initialWager coinValue="0.05" creditsPerLine="1" />
+		<stars total="28" />
+		<freeSpins total="0" used="0" won="0" />
+		<accumulator exist="1">
+			<persistentContext>
+				<numberSeven count="28" />
+			</persistentContext>
+		</accumulator>
+		<data name="limits">
+			<param coinValue="0.01,0.05,0.25,1,2,5" minBet="0.02" maxBet="100.00" />
+		</data>
+		<data name="inputAccIds">
+			<value>1</value>
+		</data>
+		<data name="outputAccId">
+			<value>1</value>
+		</data>
+	</msgdata>
+</gamemessage>

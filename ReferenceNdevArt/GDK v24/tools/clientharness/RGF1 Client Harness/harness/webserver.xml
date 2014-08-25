@@ -1,0 +1,54 @@
+<project name="Webserver" basedir=".">
+    <!-- Setup environment variables -->
+    <property environment="env"/>
+
+    <!-- Setup a taskdef for the AntContrib library -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+      <classpath>
+        <pathelement location="${env.ANT_HOME}/lib/ant-contrib-1.0b1.jar"/>
+      </classpath>
+    </taskdef>
+
+    <property name="jetty.home" location="resources/tools/jetty"/>
+
+    <macrodef name="status">
+        <sequential>
+            <condition property="jetty.started" value="true" else="false">
+                <socket server="localhost" port="8081"/>
+            </condition>
+            <echo>Server Running: ${jetty.started}</echo>
+        </sequential>
+    </macrodef>
+
+    <target name="start">
+        <antcall target="stop"/>
+        <!-- This code starts the server without opening a command window -->
+        <java jar="${jetty.home}/start.jar" fork="true" dir="${jetty.home}">
+            <jvmarg value="-Dfile.encoding=UTF-8"/>
+            <jvmarg value="-DSTOP.PORT=8070"/>
+            <jvmarg value="-DSTOP.KEY=secret"/>
+            <arg line="etc/jetty.xml etc/jetty-rewrite.xml"/>
+        </java>
+
+        <!--<exec dir="${jetty.home}" executable="cmd">-->
+            <!--<arg line="/K start java -DSTOP.PORT=8070 -DSTOP.KEY=secret -jar start.jar etc/jetty.xml etc/jetty-rewrite.xml"/>-->
+        <!--</exec>-->
+    </target>
+
+    <target name="stop">
+        <status/>
+        <if>
+            <istrue value="${jetty.started}"/>
+            <then>
+                <java jar="${jetty.home}/start.jar" fork="true" dir="${jetty.home}">
+                    <jvmarg value="-DSTOP.PORT=8070"/>
+                    <jvmarg value="-DSTOP.KEY=secret"/>
+                    <arg value="--stop"/>
+                </java>
+                <sleep seconds="2"/>
+            </then>
+        </if>
+    </target>
+
+
+</project>

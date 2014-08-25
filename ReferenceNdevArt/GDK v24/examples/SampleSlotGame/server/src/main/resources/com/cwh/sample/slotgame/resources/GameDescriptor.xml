@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gameDescriptor>
+    <gameInfo gameId="100000" suiteName="5 Reel Slots" groupName="SLOTS" gameName="SampleSlotGame" displayGameName="Sample Slots Game" pjMode="0" bonusMoneyAllowed="1">
+        <platformModes>
+            <platformMode platform="flash" mode="casino4" />
+            <platformMode platform="html5" mode="casino5" />
+        </platformModes>
+        <paramXSD>
+            <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+                <xs:element name="param">
+                    <xs:complexType>
+                        <xs:attribute name="minBet"            type="coinValue" use="required"/>
+                        <xs:attribute name="maxBet"            type="coinValue" use="required"/>
+                        <xs:attribute name="coinValue"         type="coinValue" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:simpleType name="coinValue">
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="([0-9]{1,}[.][0-9][0-9])(([,][ ]*([0-9]{1,}[.][0-9][0-9]))*)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:schema>
+        </paramXSD>
+    </gameInfo>
+    <gameTemplates>
+        <gameTemplate curClass="1" suffix="0.02-5.00"  webEnable="true" downloadEnable="false">
+            <param coinValue="0.02,0.05,0.10" minBet="0.02" maxBet="100.00"/>
+        </gameTemplate>
+        <gameTemplate curClass="2" suffix="0.10-0.50" webEnable="true" downloadEnable="false">
+            <param coinValue="0.10,0.25,0.50" minBet="0.10" maxBet="100.00"/>
+        </gameTemplate>
+        <gameTemplate curClass="3" suffix="0.25-1.00" webEnable="true" downloadEnable="false">
+            <param coinValue="0.25,0.50,1.00" minBet="0.25" maxBet="100.00"/>
+        </gameTemplate>
+        <gameTemplate curClass="4" suffix="1.00-3.00" webEnable="true" downloadEnable="false">
+            <param coinValue="1.00,2.00,3.00" minBet="0.25" maxBet="100.00"/>
+        </gameTemplate>
+    </gameTemplates>
+</gameDescriptor>
+

@@ -1,0 +1,68 @@
+<project name="testclient" default="compile" basedir=".">
+    <!-- Setup environment variables -->
+    <property environment="env"/>
+
+    <property name="flex.version"               value="4.0"/>
+    <property name="flex.sdk.dir"               value="${env.CWH_BUILD_TOOLS}/flex_sdk/${flex.version}"/>
+    
+    <property name="src.actionscript.dir"       value="/client/casino4/src/main/actionscript3" />
+    <property name="test.actionscript.dir"      value="/client/casino4/src/test" />
+    <property name="lib.dir"                    value="${basedir}/lib" />
+    <property name="devlib.dir"                 value="${basedir}/devlib/flexunit-4.0.0-as34.0/flexunit" />
+    <property name="test.output.dir"            value="${basedir}/build/test" />
+    <property name="compile.output"             value="${test.output.dir}/test.swf" />
+
+     <!-- Setup a taskdef for the AntContrib library -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+      <classpath>
+        <pathelement location="${env.ANT_HOME}/lib/ant-contrib-1.0b1.jar"/>
+      </classpath>
+    </taskdef>
+
+    <!-- this is used for running flexunit from the command line -->
+	<taskdef resource="flexUnitTasks.tasks" classpath="${devlib.dir}/flexUnitTasks-4.0.0.jar"/>
+
+    <!-- Compiles the game -->
+    <target name="compile">
+        <!-- Determine the compiler needed based on the OS -->
+        <condition property="isWindows">
+            <os family="windows" />
+        </condition>
+        <if>
+            <isset property="isWindows" />
+            <then>
+                <property name="as3tools.flex-sdk.mxmlc.compiler" location="${flex.sdk.dir}/bin/mxmlc.exe"/>
+            </then>
+            <else>
+                <property name="as3tools.flex-sdk.mxmlc.compiler" location="${flex.sdk.dir}/bin/mxmlc"/>
+            </else>
+        </if>
+
+        <exec executable="${as3tools.flex-sdk.mxmlc.compiler}" failonerror="true">
+            <arg line="-source-path+=${src.actionscript.dir}" />
+            <arg line="-source-path+=${test.actionscript.dir}" />
+            <arg line="-library-path+=${lib.dir}" />
+            <arg line="-library-path+=${devlib.dir}" />
+            <arg line="-default-frame-rate=30"/>
+            <arg line="-default-size 800 600" />
+            <arg line="'${test.actionscript.dir}/com/cwh/sampleslotgame/TestRunner.mxml'" />
+            <arg line="-o=${compile.output}"/>
+            <arg line="-static-link-runtime-shared-libraries=true" />
+        </exec>
+
+        <flexunit swf="${compile.output}"
+					toDir="${test.output.dir}"
+					haltonfailure="false"
+					headless="true"
+					verbose="true"
+					localTrusted="true" />
+
+		<junitreport todir="${test.output.dir}">
+			<fileset dir="${test.output.dir}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="${test.output.dir}/html"/>
+		</junitreport>
+    </target>
+
+</project>

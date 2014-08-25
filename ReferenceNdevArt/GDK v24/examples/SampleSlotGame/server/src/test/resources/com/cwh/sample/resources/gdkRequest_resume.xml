@@ -1,0 +1,29 @@
+<gdkRequest>
+    <gameHeader>
+        <gameState>
+            <gameContext>
+                <currentPlayState state="NEW"/>
+                <currentWager creditValue="0.01" creditPerLine="5" creditWager="5"/>
+                <currentResult creditWon="300"/>
+                <lines won="200">
+		           <line id="3" won="100" icon="1" positions="0,2;1,2;2,2;3,2;4,2" /> 		
+		           <line id="4" won="100" icon="1" positions="0,0;1,1;2,2;3,1;4,0" />
+		        </lines>
+                <reels>
+                    <reel id="1" pos="0" >1,1,1</reel>
+                    <reel id="2" pos="0" >1,1,1</reel>
+                    <reel id="3" pos="0" >1,1,1</reel>
+                    <reel id="4" pos="0" >1,1,1</reel>
+                    <reel id="5" pos="0" >1,1,1</reel>
+                </reels>
+                <currentFreeFeature totalSpins="0" usedSpins="0" totalWon="0"/>
+            </gameContext>
+        </gameState>
+        <persistentState exist="1">
+            <persistentContext>
+                <numberSeven count="10"/>
+            </persistentContext>
+        </persistentState>
+    </gameHeader>
+</gdkRequest>
+

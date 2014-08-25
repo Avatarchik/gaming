@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Sample Slot Game</name>
+    <groupId>chartwell.games</groupId>
+    <artifactId>SampleSlotGame</artifactId>
+    <version>2.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <url>http://cacgsvn01.corp.amayagaming.com/mavensite/games/SampleSlotGame/</url>
+
+    <scm>
+        <url>http://cacgsvn01.corp.amayagaming.com/svn/chartwell/games/SampleSlotGame/trunk</url>
+        <developerConnection>scm:svn:http://cacgsvn01.corp.amayagaming.com/svn/chartwell/games/SampleSlotGame/trunk</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <site>
+            <id>cwhsite</id>
+            <url>scp://cacgsvn01.corp.amayagaming.com/cvs/mavensite</url>
+        </site>
+        <repository>
+            <id>cwh</id>
+            <name>Chartwell Releases</name>
+            <url>dav:http://cacgsvn01.corp.amayagaming.com:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>cwhsnap</id>
+            <name>Chartwell Snapshots</name>
+            <url>dav:http://cacgsvn01.corp.amayagaming.com:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <modules>
+        <module>client</module>
+        <module>server</module>
+        <module>assembly</module>
+    </modules>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>2.2</version>
+            </extension>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.0</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.4.1</version>
+                    <configuration>
+                        <!-- Override the necessary parts in your lower level POM -->
+                        <addSchema>false</addSchema>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                        <tagNameFormat>@{project.artifactId}-@{project.version}</tagNameFormat>
+                        <scmCommentPrefix>&lt;Release:${ttList}&gt;</scmCommentPrefix>
+                        <useReleaseProfile>false</useReleaseProfile> <!-- Don't attach javadocs and sources jar files -->
+                        <!-- Goals to run as part of release:prepare. Defaults to "clean verify". -->
+                        <!-- NOTE: Cannot set this to empty, as it will use the defaults. -->
+                        <preparationGoals>clean</preparationGoals>
+                        <!-- Goals to run following prepare step. Defaults to none. -->
+                        <completionGoals />
+                        <!-- Goals to run on release:perform which builds and deploys the new release -->
+                        <goals>deploy</goals>
+                        <checkModificationExcludes>
+                            <exclude>client-build.local.properties</exclude>
+                            <exclude>local.properties</exclude>
+                        </checkModificationExcludes>
+                        <providerImplementations>
+                            <svn>javasvn</svn>
+                        </providerImplementations>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+                            <artifactId>maven-scm-provider-svnjava</artifactId>
+                            <version>2.0.3</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.tmatesoft.svnkit</groupId>
+                            <artifactId>svnkit</artifactId>
+                            <version>1.7.5</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>1.2</version>
+                    <executions>
+                        <execution>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>create</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <doCheck>false</doCheck>
+                        <doUpdate>false</doUpdate>
+                        <useLastCommittedRevision>true</useLastCommittedRevision>
+                        <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+                        <revisionOnScmFailure>UNVERSIONED</revisionOnScmFailure>
+                        <providerImplementations>
+                            <svn>javasvn</svn>
+                        </providerImplementations>
+                        <timestampFormat>{0,date,yyyyMMdd_HHmmss}</timestampFormat>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.tmatesoft.svnkit</groupId>
+                            <artifactId>svnkit</artifactId>
+                            <version>1.7.5</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <descriptor>assembly.xml</descriptor>
+                        <appendAssemblyId>false</appendAssemblyId>
+                        <archive>
+                            <manifest>
+                                <packageName>${project.artifactId}</packageName>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            </manifest>
+                            <manifestSections>
+                                <manifestSection>
+                                    <name>Build Configuration</name>
+                                    <manifestEntries>
+                                        <Repository>${project.scm.url}</Repository>
+                                        <Source-Control>Subversion</Source-Control>
+                                        <SCM-Branch>${scmBranch}</SCM-Branch>
+                                        <SCM-Revision>${buildNumber}</SCM-Revision>
+                                        <Timestamp>${timestamp}</Timestamp>
+                                    </manifestEntries>
+                                </manifestSection>
+                            </manifestSections>
+                        </archive>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>flex-mojos-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <!-- Custom Repository from Amaya... For Testing purposes only -->
+        <!--<repository>
+            <id>amaya-repository</id>
+            <url>http://cacgsvn01.corp.amayagaming.com:8081/nexus/content/groups/public</url>
+        </repository>-->
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>flex-mojos-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup</url>
+        </pluginRepository>
+        <!-- Custom Repository from Amaya... For Testing purposes only -->
+        <!--<pluginRepository>
+            <id>amaya-repository</id>
+            <url>http://cacgsvn01.corp.amayagaming.com:8081/nexus/content/groups/public</url>
+        </pluginRepository>-->
+    </pluginRepositories>
+
+</project>

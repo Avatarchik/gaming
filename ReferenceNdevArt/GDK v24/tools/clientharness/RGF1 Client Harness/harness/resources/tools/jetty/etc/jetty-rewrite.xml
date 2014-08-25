@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+
+<!-- =============================================================== -->
+<!-- Mixin the RewriteHandler                                        -->
+<!-- =============================================================== -->
+
+
+<Configure id="Server" class="org.mortbay.jetty.Server">
+
+    <!-- =========================================================== -->
+    <!-- Configure Rewrite Handler                                   --> 
+    <!-- =========================================================== -->
+    <Get id="oldhandler" name="handler"/>
+
+    <Set name="handler">
+        <New id="Rewrite" class="org.mortbay.jetty.handler.rewrite.RewriteHandler">
+            <Set name="handler">
+                <Ref id="oldhandler" />
+            </Set>
+            <Set name="rewriteRequestURI">true</Set>
+            <Set name="rewritePathInfo">false</Set>
+            <Set name="originalPathAttribute">requestedPath</Set>
+
+            <Set name="rules">
+                <Array type="org.mortbay.jetty.handler.rewrite.Rule">
+                    <Item>
+                        <New class="org.mortbay.jetty.handler.rewrite.RewriteRegexRule">
+                            <Set name="regex">(.*)/(.*)/framework/controller/remote/(.*).flv</Set>
+                            <Set name="replacement">$1/remote/$3.flv</Set>
+                        </New>
+                    </Item>
+                </Array>
+            </Set>
+        </New>
+    </Set>
+
+
+</Configure>

@@ -1,0 +1,399 @@
+<project name="Harness Casino 4 (Flash)" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+    <!-- Setup environment variables -->
+    <property environment="env"/>
+
+	<property name="project.type"				value="maven" />
+	
+    <property name="web.dir"                    value="${basedir}/webapp" />
+
+    <property name="resources.dir"              value="${basedir}/resources" />
+    <property name="page.dir"                   value="${resources.dir}/page" />
+    <property name="cache.dir"                  value="${resources.dir}/cache" />
+    <property name="asset.builder"              value="${resources.dir}/tools/assetBuilder.jar" />
+    <property name="live.war.resource"          value="live.zip" />
+
+    <property name="casino4.manifest"           value="${build.dir}/casino4/manifest.xml" />
+    <property name="casino4.assetstream.file"       value="${build.dir}/casino4/assetStream.bin" />
+    <property name="casino4_800x600.manifest"           value="${build.dir}/casino4_800x600/manifest.xml" />
+    <property name="casino4_800x600.assetstream.file"   value="${build.dir}/casino4_800x600/assetStream.bin" />
+    <property name="casino4mini.manifest"           value="${build.dir}/casino4mini/manifest.xml" />
+    <property name="casino4mini.assetstream.file"   value="${build.dir}/casino4mini/assetStream.bin" />
+    <property name="build.game.dir"             value="${build.dir}/temp" />
+    <property name="build.game.web.dir"         value="${build.dir}/temp/webapp" />
+    <property name="rgf2.game.manifest"              value="${build.dir}/temp/webapp/casino4/manifest.xml"/>
+    <property name="rgf1.game.manifest"              value="${build.dir}/temp/webapp/manifest.xml"/>
+    <property name="compile.debug.mode"         value="true" />
+
+    <property file="${basedir}/webserver.properties"/>
+
+    <!-- Setup a taskdef for the AntContrib library -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+      <classpath>
+          <pathelement location="${resources.dir}/lib/ant-contrib-1.0b1.jar"/>
+      </classpath>
+    </taskdef>
+
+    <path id="maven-ant-tasks.classpath" path="${resources.dir}/lib/maven-ant-tasks-2.1.3.jar" />
+    <typedef resource="org/apache/maven/artifact/ant/antlib.xml"
+             uri="antlib:org.apache.maven.artifact.ant"
+             classpathref="maven-ant-tasks.classpath" />
+
+    <!-- ********** MAIN TARGETS ********** -->
+
+    <target name="build.prepare">
+        <property file="${basedir}/connection.properties"/>
+
+        <delete dir="${cache.dir}"/>
+
+        <mkdir dir="${cache.dir}"/>
+
+        <mkdir dir="${cache.dir}/remote/GameSupport/conf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/GameSupport/conf/frameworkconfig.xml" dest="${cache.dir}/remote/GameSupport/conf/frameworkconfig.xml"/>
+        <replace file="${cache.dir}/remote/GameSupport/conf/frameworkconfig.xml" token='mainMenu apply="default" enabled="1"' value='mainMenu apply="default" enabled="0"' />
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/GameSupport/conf/currencyconfig.xml" dest="${cache.dir}/remote/GameSupport/conf/currencyconfig.xml"/>
+
+        <mkdir dir="${cache.dir}/casino4"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/manifest.xml" dest="${cache.dir}/casino4/manifest.xml"/>
+
+        <mkdir dir="${cache.dir}/casino4/framework/controller"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/controller/framework.swf" dest="${cache.dir}/casino4/framework/controller/framework.swf"/>
+
+        <mkdir dir="${cache.dir}/casino4/framework/ui"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/about.swf" dest="${cache.dir}/casino4/framework/ui/about.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/dialogs.swf" dest="${cache.dir}/casino4/framework/ui/dialogs.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/error.swf" dest="${cache.dir}/casino4/framework/ui/error.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/interface.swf" dest="${cache.dir}/casino4/framework/ui/interface.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/loader.swf" dest="${cache.dir}/casino4/framework/ui/loader.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/myaccount.swf" dest="${cache.dir}/casino4/framework/ui/myaccount.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/options.swf" dest="${cache.dir}/casino4/framework/ui/options.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/profilemenu.swf" dest="${cache.dir}/casino4/framework/ui/profilemenu.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4/framework/ui/network.swf" dest="${cache.dir}/casino4/framework/ui/network.swf"/>
+
+        <mkdir dir="${cache.dir}/casino4_800x600"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/manifest.xml" dest="${cache.dir}/casino4_800x600/manifest.xml"/>
+
+        <mkdir dir="${cache.dir}/casino4_800x600/framework/controller"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/controller/framework.swf" dest="${cache.dir}/casino4_800x600/framework/controller/framework.swf"/>
+
+        <mkdir dir="${cache.dir}/casino4_800x600/framework/ui"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/about.swf" dest="${cache.dir}/casino4_800x600/framework/ui/about.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/dialogs.swf" dest="${cache.dir}/casino4_800x600/framework/ui/dialogs.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/error.swf" dest="${cache.dir}/casino4_800x600/framework/ui/error.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/interface.swf" dest="${cache.dir}/casino4_800x600/framework/ui/interface.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/loader.swf" dest="${cache.dir}/casino4_800x600/framework/ui/loader.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/myaccount.swf" dest="${cache.dir}/casino4_800x600/framework/ui/myaccount.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/options.swf" dest="${cache.dir}/casino4_800x600/framework/ui/options.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4_800x600/framework/ui/profilemenu.swf" dest="${cache.dir}/casino4_800x600/framework/ui/profilemenu.swf"/>
+
+
+        <mkdir dir="${cache.dir}/casino4mini"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/manifest.xml" dest="${cache.dir}/casino4mini/manifest.xml"/>
+
+        <mkdir dir="${cache.dir}/casino4mini/framework/controller"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/controller/framework.swf" dest="${cache.dir}/casino4mini/framework/controller/framework.swf"/>
+
+        <mkdir dir="${cache.dir}/casino4mini/framework/ui"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/ui/about.swf" dest="${cache.dir}/casino4mini/framework/ui/about.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/ui/dialogs.swf" dest="${cache.dir}/casino4mini/framework/ui/dialogs.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/ui/error.swf" dest="${cache.dir}/casino4mini/framework/ui/error.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/ui/interface.swf" dest="${cache.dir}/casino4mini/framework/ui/interface.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/ui/loader.swf" dest="${cache.dir}/casino4mini/framework/ui/loader.swf"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/FrameworkCasino4/casino4mini/framework/ui/options.swf" dest="${cache.dir}/casino4mini/framework/ui/options.swf"/>
+    </target>
+
+    <target name="build.standalone">
+        <ant antfile="build.xml" target="build" inheritall="false">
+            <property file="${basedir}/standalone.properties"/>
+            <property name="build.dir" value="${tomcat.home}/webapps/standalone" />
+            <property name="standalone" value="true" />
+            <property name="live" value="false" />
+        </ant>
+    </target>
+
+    <target name="build.live">
+        <ant antfile="build.xml" target="build" inheritall="false">
+            <property file="${basedir}/live.properties"/>
+            <property name="build.dir" value="${tomcat.home}/webapps/live" />
+            <property name="standalone" value="false" />
+            <property name="live" value="true" />
+        </ant>
+    </target>
+
+    <target name="launch.standalone">
+        <openInBrowser url="http://localhost:${tomcat.start.port}/standalone/harness.html"/>
+    </target>
+
+    <target name="launch.live">
+        <openInBrowser url="http://localhost:${tomcat.start.port}/live/harness.html"/>
+    </target>
+
+    <macrodef name="openInBrowser">
+        <attribute name="url"/>
+        <sequential>
+            <exec dir="${basedir}" executable="rundll32.exe">
+                <arg line="url.dll, FileProtocolHandler"/>
+                <arg line="@{url}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <!-- ********** END MAIN TARGETS ********** -->
+
+    <!-- Runs the build based on either the standalone or live settings -->
+    <target name="build" depends="preflight,clean,assemble,configure,compile.game,copy.remote,asset.stream,tidy"/>
+
+    <!-- Preflight -->
+    <target name="preflight">
+        <if>
+            <not>
+                <available file="${cache.dir}" type="dir"/>
+            </not>
+            <then>
+                <fail message="Cache does not exist. You must run the 'build.prepare' target first to download the necessary files." />
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <isset property="build.dir"/>
+            </not>
+            <then>
+                <fail message="Build.dir not set. Run 'build.live' or 'build.standalone' targets." />
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <or>
+                    <equals arg1="${mode}" arg2="casino4"/>
+                    <equals arg1="${mode}" arg2="casino4_800x600"/>
+                    <equals arg1="${mode}" arg2="casino4mini"/>
+                </or>
+            </not>
+            <then>
+                <fail message="Invalid mode property of '${mode}' set in build properties file."/>
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <available file="${tomcat.home}" type="dir"/>
+            </not>
+            <then>
+                <ant antfile="webserver.xml" target="deploy"/>
+            </then>
+        </if>
+    </target>
+
+    <!-- Cleans the build directory -->
+    <target name="clean" if="build.dir">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Copies the CGS files (framework etc) and anything in the harness/webapp dir (standalone files) to the build directory -->
+    <target name="assemble" if="build.dir">
+        <mkdir dir="${build.dir}"/>
+
+        <if>
+            <equals arg1="${mode}" arg2="casino4"/>
+            <then>
+                <copy todir="${build.dir}" overwrite="true">
+                    <fileset dir="${cache.dir}">
+                        <exclude name="casino4mini/**"/>
+                        <exclude name="casino4_800x600/**"/>
+                    </fileset>
+                </copy>
+            </then>
+
+            <elseif>
+                <equals arg1="${mode}" arg2="casino4_800x600"/>
+                <then>
+                    <copy todir="${build.dir}" overwrite="true">
+                        <fileset dir="${cache.dir}">
+                            <exclude name="casino4/**"/>
+                            <exclude name="casino4mini/**"/>
+                        </fileset>
+                    </copy>
+                </then>
+            </elseif>
+
+            <elseif>
+                <equals arg1="${mode}" arg2="casino4mini"/>
+                <then>
+                    <copy todir="${build.dir}" overwrite="true">
+                        <fileset dir="${cache.dir}">
+                            <exclude name="casino4/**"/>
+                            <exclude name="casino4_800x600/**"/>
+                        </fileset>
+                    </copy>
+                </then>
+            </elseif>
+
+            <else>
+                <fail message="Invalid mode of ${mode} @ assemble"/>
+            </else>
+        </if>
+
+        <copy todir="${build.dir}" overwrite="true">
+            <fileset dir="${page.dir}"/>
+        </copy>
+
+        <if>
+            <istrue value="${standalone}"/>
+            <then>
+                <copy todir="${build.game.web.dir}" overwrite="true">
+                    <fileset dir="${web.dir}"/>
+                </copy>
+            </then>
+            <else>
+                <!-- Unzip the live war proxy resources into the exploded webapp dir -->
+                <unzip dest="${build.dir}">
+                    <fileset dir="${resources.dir}/tools">
+                        <include name="${live.war.resource}"/>
+                    </fileset>
+                </unzip>
+            </else>
+        </if>
+    </target>
+
+    <!-- Configures the harness by copying and renaming the correct properties file and then replacing tokens with
+            the values configured by the user in the harness' "live.properties" or "standalone.properties" -->
+    <target name="configure" if="build.dir">
+        <!-- Do these things if standalone -->
+        <if>
+            <istrue value="${standalone}"/>
+            <then>
+                <move file="${build.dir}/standalone.properties.js" tofile="${build.dir}/properties.js"/>
+                <delete file="${build.dir}/live.properties.js"/>
+                <replace file="${build.dir}/properties.js" token="{displayName}" value="${displayName}" />
+                <replace file="${build.dir}/properties.js" token="{gameName}" value="${gameName}" />
+                <replace file="${build.dir}/properties.js" token="{lang}" value="${lang}" />
+                <replace file="${build.dir}/properties.js" token="{account}" value="${account}" />
+                <replace file="${build.dir}/properties.js" token="{resumedGame}" value="${resumedGame}" />
+				<replace file="${build.dir}/properties.js" token="{base}" value="${base}" />
+                <replace file="${build.dir}/properties.js" token="{data}" value="${data}" />
+                <replace file="${build.dir}/properties.js" token="{js}" value="${js}" />
+                <replace file="${build.dir}/properties.js" token="{egiURL}" value="${egiURL}" />
+                <replace file="${build.dir}/properties.js" token="{egiExtGameId}" value="${egiExtGameId}" />
+                <replace file="${build.dir}/properties.js" token="{mode}" value="${mode}" />
+            </then>
+        </if>
+
+        <!-- Do these things if live -->
+        <if>
+            <istrue value="${live}"/>
+            <then>
+                <move file="${build.dir}/live.properties.js" tofile="${build.dir}/properties.js"/>
+                <delete file="${build.dir}/standalone.properties.js"/>
+                <replace file="${build.dir}/properties.js" token="{playerHandle}" value="${playerHandle}" />
+                <replace file="${build.dir}/properties.js" token="{displayName}" value="${displayName}" />
+                <replace file="${build.dir}/properties.js" token="{gameName}" value="${gameName}" />
+                <replace file="${build.dir}/properties.js" token="{gameId}" value="${gameId}" />
+                <replace file="${build.dir}/properties.js" token="{lang}" value="${lang}" />
+                <replace file="${build.dir}/properties.js" token="{account}" value="${account}" />
+                <replace file="${build.dir}/properties.js" token="{base}" value="${base}" />
+                <replace file="${build.dir}/properties.js" token="{data}" value="${data}" />
+                <replace file="${build.dir}/properties.js" token="{js}" value="${js}" />
+				<replace file="${build.dir}/properties.js" token="{egiURL}" value="${egiURL}" />
+                <replace file="${build.dir}/properties.js" token="{egiExtGameId}" value="${egiExtGameId}" />
+                <replace file="${build.dir}/properties.js" token="{mode}" value="${mode}" />
+                <replace file="${build.dir}/properties.js" token="{tomcat.start.port}" value="${tomcat.start.port}" />
+
+                <copy file="${tomcat.home}/proxy.properties.template" tofile="${tomcat.home}/proxy.properties" overwrite="true"/>
+                <replace file="${tomcat.home}/proxy.properties" token="{proxy.from}" value="/casino/;/location/"/>
+                <replace file="${tomcat.home}/proxy.properties" token="{proxy.to}" value="${protocol}://${domain}"/>
+            </then>
+        </if>
+    </target>
+
+    <!-- Calls the RGF game's client/build.xml file to compile the game. -->
+    <target name="compile.game" if="build.dir">
+		<if>
+			<equals arg1="${project.type}" arg2="maven" />
+			<then>
+			    <if>
+                    <istrue value="${standalone}"/>
+                    <then>
+                        <artifact:mvn mavenHome="${env.M2_HOME}" fork="true" dir="../">
+                            <arg value="-f"/>
+                            <arg value="pom.xml"/>
+                            <arg value="clean"/>
+                            <arg value="package"/>
+                            <arg value="-P standalone"/>
+                            <arg value="-Dbuild.standalone.dir=${build.game.web.dir}/casino4"/>
+                            <arg value="-Dcompile.debug.mode=true"/>
+                        </artifact:mvn>
+                    </then>
+                    <else>
+                        <artifact:mvn mavenHome="${env.M2_HOME}" fork="true" dir="../">
+                            <arg value="-f"/>
+                            <arg value="pom.xml"/>
+                            <arg value="clean"/>
+                            <arg value="package"/>
+                        </artifact:mvn>
+                    </else>
+                </if>
+				<!-- Unzip the package into the temp directory -->
+				<unzip dest="${build.game.web.dir}">
+					<fileset dir="../target">
+						<include name="*.zip"/>
+					</fileset>
+				</unzip>
+			</then>
+			<elseif>
+				<equals arg1="${project.type}" arg2="ant" />
+				<then>
+					<ant antfile="../build.xml" target="build" inheritall="false">
+						<property name="compile.debug.mode" value="${compile.debug.mode}"/>
+						<property name="build.dir" value="${build.game.dir}"/>
+						<property name="standalone" value="${standalone}"/>
+						<property name="has.clean" value="true"/>
+					</ant>
+				</then>
+			</elseif>
+			<else>
+				<fail>"project.type" property must be either "maven" or "ant". Current value is ${project.type}</fail>
+			</else>
+		</if>
+    </target>
+
+    <!-- Copies folders/files that are in the game's webapp directory to the casino4/remote/gameName directory
+            When running the harness, any files requested using a url containing "remote", i.e. those files NOT
+            included in the URL Stream, get requested from this location. -->
+    <target name="copy.remote">
+        <copy todir="${build.dir}/remote/${gameName}">
+            <fileset dir="${build.game.web.dir}"/>
+        </copy>
+    </target>
+
+    <!-- Runs the assetBuilder.jar file to create the binary url stream of all the files needed to play the game. -->
+    <target name="asset.stream" if="build.dir">
+        <propertycopy name="assetstream.file" from="${mode}.assetstream.file" />
+        <propertycopy name="framework.manifest" from="${mode}.manifest" />
+
+		<!-- This is allows backwards compatibility for RGF 2.0 games that are built to dump the casino4 contents
+				in the root like the RGF 1.0 games did. This works on the real server but not on the harness because
+				it looks for the manifest in the new location but it actually exists in the old location. -->
+		<if>
+			<available file="${rgf2.game.manifest}"/>
+			<then>
+				<propertycopy name="game.manifest" from="rgf2.game.manifest" />
+			</then>
+			<else>
+				<propertycopy name="game.manifest" from="rgf1.game.manifest" />
+			</else>
+		</if>
+		
+        <delete file="${assetstream.file}"/>
+		
+        <java jar="${asset.builder}" fork="true">
+            <arg line="${lang} ${assetstream.file} ${game.manifest} ${framework.manifest}"/>
+        </java>
+    </target>
+
+    <!-- Cleans up after the build has completed, removing any temporary artifacts -->
+    <target name="tidy" if="build.dir">
+        <delete dir="${build.game.dir}"/>
+    </target>
+
+</project>

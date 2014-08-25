@@ -1,0 +1,177 @@
+{
+
+    "iconsData": {
+        "framerate": 1,
+        "image": "device/images/icons.png",
+        "frames": {
+            "width":"180",
+            "height":"180",
+            "count":"9"
+        },
+        "animations": {
+            "star": {
+                "frames": [8,6],
+                "next": "star"
+            },
+            "freespin": {
+                "frames": [7,5],
+                "next": "freespin"
+            }
+        }
+    },
+
+    "icons": {
+        "spacing": 180
+    },
+
+    "reel1": {
+        "x": 61,
+        "y": 0
+    },
+
+    "reel2": {
+        "x": 241,
+        "y": 0
+    },
+
+    "reel3": {
+        "x": 421,
+        "y": 0
+    },
+
+    "reel4": {
+        "x": 601,
+        "y": 0
+    },
+
+    "reel5": {
+        "x": 781,
+        "y": 0
+    },
+
+    "blurData": {
+        "image": "device/images/blur.png",
+        "frames": {
+            "width":"180",
+            "height":"540",
+            "count":"5"
+        },
+        "animations": {
+            "blur": [0,4,"blur"]
+        }
+    },
+
+    "paylineButtonData": {
+        "image": "device/images/paylines.png",
+        "frames": [
+            [0,0,46,46],
+            [0,46,46,46],
+            [0,92,46,46],
+            [0,138,46,46],
+            [0,1004,46,46]
+        ]
+    },
+
+    "paylineData": {
+        "image": "device/images/paylines.png",
+        "frames": [
+            [46,0,924,46],
+            [46,46,924,46],
+            [46,92,924,46],
+            [46,138,924,456],
+            [46,594,924,456]
+        ]
+    },
+
+    "btnLine1": {
+        "x": 0,
+        "y": 245
+    },
+
+    "btnLine2": {
+        "x": 0,
+        "y": 66
+    },
+
+    "btnLine3": {
+        "x": 0,
+        "y": 427
+    },
+
+    "btnLine4": {
+        "x": 0,
+        "y": 1
+    },
+
+    "btnLine5": {
+        "x": 0,
+        "y": 494
+    },
+
+    "mcLine1": {
+        "x": 45,
+        "y": 245
+    },
+
+    "mcLine2": {
+        "x": 45,
+        "y": 66
+    },
+
+    "mcLine3": {
+        "x": 45,
+        "y": 427
+    },
+
+    "mcLine4": {
+        "x": 45,
+        "y": 1
+    },
+
+    "mcLine5": {
+        "x": 45,
+        "y": 84
+    },
+
+    "winBoxBackgroundData": {
+        "image": "device/images/winboxes.png",
+        "frames": {
+            "width":"96",
+            "height":"48"
+        }
+    },
+
+    "mcLineWinText": {
+        "textAlign": "center",
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "x": "48",
+        "y": "6"
+    },
+
+    "mcLine1Win": {
+        "x": 191,
+        "y": 244
+    },
+
+    "mcLine2Win": {
+        "x": 191,
+        "y": 66
+    },
+
+    "mcLine3Win": {
+        "x": 191,
+        "y": 428
+    },
+
+    "mcLine4Win": {
+        "x": 191,
+        "y": 158
+    },
+
+    "mcLine5Win": {
+        "x": 191,
+        "y": 337
+    }
+
+}

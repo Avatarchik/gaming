@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdkResponse version="2">
+    <gameInitialize>
+        <request name="InitReq">
+            <persistentState required="true" />
+        </request>
+        <request name="SpinReq">
+            <randomPools>
+                <pool id="POOL_0_14" size="5" min="0" max="14" />
+            </randomPools>
+            <persistentState required="true" />
+        </request>
+        <request name="FreeReq">
+            <randomPools>
+                <pool id="POOL_0_14" size="5" min="0" max="14" />
+            </randomPools>
+            <persistentState required="true" />
+        </request>
+    </gameInitialize>
+</gdkResponse>

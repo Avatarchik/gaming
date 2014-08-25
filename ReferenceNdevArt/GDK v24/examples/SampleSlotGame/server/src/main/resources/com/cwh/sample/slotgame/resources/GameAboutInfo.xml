@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<about>
+    <game name="SampleSlotGame" type="0" desc="Sample Slot Game">
+        <version>1.2</version>
+        <rtp>
+            <level id="1">Main Game: 100%, Free Spins: 150%</level>
+        </rtp>
+    </game>
+</about>

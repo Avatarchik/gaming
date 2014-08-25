@@ -1,0 +1,241 @@
+<html>
+	<head>
+    	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    	<script type="text/javascript" src="js/swfobject.js"></script>
+    	<script type="text/javascript" src="properties.js"></script>
+
+        <script type="text/javascript">
+			var gamedata = {};
+
+            window.onload = function () {
+				loadGame();
+			};
+
+            window.onbeforeunload = handleOnBeforeUnload;
+
+			
+            function loadGame () {
+                var qs = getQueryStringParams(window.location.search.substring(1));
+
+                for ( var a in properties ) {
+                    gamedata[a] = properties[a];
+                }
+
+                for ( var a in qs ) {
+                    gamedata[a] = qs[a];
+                }
+
+                gamedata.gameType = (qs.gameType) ? qs.gameType : "0";
+                gamedata.deviceType = (qs.deviceType) ? qs.deviceType : "web";
+
+                // If launching in standalone, the properties file won't have playerhandle, gameId or profileId.
+                // These have to have a value to pass validation in the framework so we'll set some values here.
+                if ( gamedata.playerHandle == undefined ) gamedata.playerHandle = "999999";
+                if ( gamedata.gameId == undefined && gamedata.profileId == undefined ) gamedata.gameId = "999";
+
+                if ( gamedata.mode == "casino4mini" ) {
+                    $("#frameworkdiv").css("width","240px");
+                    $("#frameworkdiv").css("margin-left","auto");
+                    $("#frameworkdiv").css("margin-right","auto");
+                    $("#frameworkdiv").css("padding-top","20px");
+                }
+				
+				if ( gamedata.base == "" ) gamedata.base = undefined; 
+				if ( gamedata.js.length > 0 ) {
+					gamedata.js = gamedata.js.split(",");
+				} else {
+					gamedata.js = undefined;
+				}
+				if ( gamedata.data == "" ) gamedata.data = undefined;
+				if ( gamedata.egiUrl == "" ) gamedata.egiUrl = undefined;
+				if ( gamedata.egiExtGameId == "" ) gamedata.egiExtGameId = undefined;
+
+                if ( properties.harness == "live" ) {
+                    gamedata.protocol = String(window.document.location).split("://")[0];
+                    gamedata.domain = window.location.host + "/live";
+                    if ( gamedata.resumedGame !== undefined ) {
+                        loadJavascript();
+                    } else {
+                        loadResumeCheck();
+                    }
+                } else {
+                    gamedata.protocol = String(window.document.location).split("://")[0];
+                    gamedata.domain = window.location.host + "/standalone";
+                    loadJavascript();
+                }
+            }
+
+            // Loads the resumecheck.swf
+            function loadResumeCheck () {
+                $.get(window.location.protocol + "//" + gamedata.domain + "/casino/servlet/com.chartwelltechnology.icd.GameResumeServlet?playerHandle="+gamedata.playerHandle+"&lang="+gamedata.lang+"&account="+gamedata.account+"&devicetype="+gamedata.deviceType+"&platform=flash&nocache="+new Date().getTime())
+                        .success(function ( data ) {
+                            var resumeError = $(data).find("error");
+                            if (resumeError.length > 0) {
+                                resumeCheckError(resumeError.attr("message"));
+                            } else {
+                                var resumeData = $(data).find("resumableGame");
+                                var resumeGameName = resumeData.attr("gameName");
+                                if (resumeGameName === "none") {
+                                    startGame();
+                                } else {
+                                    var resumeGameType = resumeData.attr("gameType");
+                                    var resumeGameId = resumeData.attr("gameId");
+                                    var resumeProfileId = resumeData.attr("profileId");
+                                    resumeGame(resumeGameName,resumeGameType,resumeGameId,resumeProfileId);
+                                }
+                            }
+                        })
+                        .error(function () {
+                            resumeCheckError("Error retrieving resume games");
+                        });
+            }
+
+            // Called by resumecheck when there are no games to resume
+            function startGame () {
+                gamedata.resumedGame = "0";
+				loadJavascript();
+            }
+
+            // Called by resumecheck when there is a game to resume
+            function resumeGame ( gameName, gameType, gameId, profileId ) {
+                // Ignore resume game if it doesn't match this exact game.
+                if ( gameName == gamedata.gameName ) {
+                    gamedata.resumedGame = "1";
+                    gamedata.gameName = gameName;
+                    gamedata.gameType = gameType;
+                    gamedata.gameId = gameId;
+                    gamedata.profileId = profileId;
+                }
+                loadJavascript();
+            }
+			
+			function resumeCheckError ( message ) {
+				showError("Resume Check Error: " + message);
+            }
+
+			function loadJavascript () {
+				if ( gamedata.js && gamedata.js.length > 0 ) {
+					var url = decodeURIComponent(gamedata.js.shift());
+					$.ajax( url, {
+						cache: true,
+						dataType: "script",
+						success: loadJavascript,
+						error: loadJavascriptError
+					} );
+				} else {
+					loadFramework();
+				}
+			}
+			
+			function loadJavascriptError (jqXHR, textStatus, errorThrown) {
+				showError(jqXHR.responseText);
+			}
+
+
+            function loadFramework () {
+                var frameworkPath;
+                var width;
+                var height;
+				var pageUrl = window.location.href;
+				var baseUrl = pageUrl.substr(0,pageUrl.lastIndexOf("harness.html"));
+                switch ( gamedata.mode ) {
+                    case "casino4":
+                        gamedata.assetStream = baseUrl + "casino4/assetStream.bin";
+                        frameworkPath = "casino4/framework/controller/framework.swf";
+                        width = "100%";
+                        height = "100%";
+                        break;
+					case "casino4_800x600":
+						gamedata.assetStream = baseUrl + "casino4_800x600/assetStream.bin";
+                        frameworkPath = "casino4_800x600/framework/controller/framework.swf";
+                        width = "100%";
+                        height = "100%";
+						break;
+                    case "casino4mini":
+                        gamedata.assetStream = baseUrl + "casino4mini/assetStream.bin";
+                        frameworkPath = "casino4mini/framework/controller/framework.swf";
+                        width = "240";
+                        height = "240";
+                        break;
+                }
+
+                var params = [];
+                for ( var a in gamedata ) {
+                    if (gamedata[a] != undefined) params.push(a + "=" + gamedata[a]);
+                }
+
+                var so = new SWFObject(frameworkPath + "?" + params.join("&"), "framework", width, height, "10", document.bgColor);
+                so.addParam("menu", "false");				
+				
+				if ( gamedata.base ) {
+					so.addParam("base",gamedata.base);
+				}
+
+				so.write("frameworkdiv");
+            }
+
+            function getQueryStringParams( queryString ) {
+                var qsParm = [];
+                var parms = queryString.split('&');
+                for (var i=0; i<parms.length; i++) {
+                    var pos = parms[i].indexOf('=');
+                    if (pos > 0) {
+                        var key = parms[i].substring(0,pos);
+                        var val = parms[i].substring(pos+1);
+                        qsParm[key] = val;
+                    }
+                }
+                return qsParm;
+            }
+
+            function openNormalWindow ( url, windowId ) {
+                alert("Open Normal Window: " + url);
+            }
+
+            function openPopUpWindow ( url, windowId, windowWidth, windowHeight, resizable ) {
+                alert("Open Pop Up Window: " + url);
+            }
+
+            function enableCloseGameWarning ( message ) {
+                closeGameWarningMessage = message;
+            }
+
+            function disableCloseGameWarning () {
+                closeGameWarningMessage = null;
+            }
+
+            function handleOnBeforeUnload ( event ) {
+                // If the game has set a close game warning message, return it so that it is displayed.
+                if ( closeGameWarningMessage != null ) {
+                    return closeGameWarningMessage;
+                }
+            }
+			
+			function showError ( message ) {
+				$("#frameworkdiv").html("<b>" + message + "</b>");
+				$("body").addClass("error");
+			}
+		</script>
+		
+		<style>
+			body {
+                background-color: #000;
+                font-family: sans-serif;
+                font-size: 0.9em;
+                font-weight: normal;
+                margin: 0px;
+            }
+
+            .error {
+                background-color: #FFF;
+                color: #2f4f4f;
+                padding: 10px;
+            }
+		</style>
+	</head>
+
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" scroll="no">
+		<div id="resumecheckdiv"></div>
+		<div id="frameworkdiv"></div>
+	</body>
+</html>

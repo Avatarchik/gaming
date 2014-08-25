@@ -1,0 +1,24 @@
+<assembly>
+    <id>SampleSlotGame</id>
+    <formats>
+        <format>war</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <includes>
+                <include>chartwell.games.SampleSlotGame:server</include>
+            </includes>
+            <unpack>true</unpack>
+        </dependencySet>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <includes>
+                <include>chartwell.games.SampleSlotGame.client:casino4:zip:*</include>
+                <include>chartwell.games.SampleSlotGame.client:casino5:zip:*</include>
+            </includes>
+            <unpack>true</unpack>
+        </dependencySet>
+    </dependencySets>
+</assembly>

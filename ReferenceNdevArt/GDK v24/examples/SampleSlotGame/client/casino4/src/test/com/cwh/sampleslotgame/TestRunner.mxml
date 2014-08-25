@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application creationComplete="_onCreationComplete(event)"
+    layout="absolute"
+    viewSourceURL="srcview/index.html"
+    xmlns:adobe="http://www.adobe.com/2009/flexUnitUIRunner"
+    xmlns:mx="http://www.adobe.com/2006/mxml">
+    <mx:Script>
+        <![CDATA[
+        import com.cwh.sampleslotgame.model.ModelTestSuite;
+
+        import mx.events.FlexEvent;
+
+        import org.flexunit.internals.TraceListener;
+        import org.flexunit.listeners.CIListener;
+        import org.flexunit.listeners.UIListener;
+        import org.flexunit.runner.FlexUnitCore;
+
+        private function _onCreationComplete(event:FlexEvent):void {
+            runTests();
+        }
+
+        public function runTests():void {
+            var core:FlexUnitCore = new FlexUnitCore();
+
+            /**If you don't need graphical test results, comment out the line below and the MXML declaring
+             the TestRunnerBase. **/
+            core.addListener(new UIListener(uiListener));
+            core.addListener(new CIListener());
+
+            /**If you would like to see text output in verbose mode, umcomment either of the follow listeners **/
+            //core.addListener(new TraceListener());// - For AS3 Projects
+            //core.addListener( TextListener.getDefaultTextListener( LogEventLevel.DEBUG ) ); - For Flex Projects
+
+            core.run(ModelTestSuite);
+        }
+        ]]>
+    </mx:Script>
+    <adobe:TestRunnerBase id="uiListener" width="100%" height="100%"/>
+</mx:Application>

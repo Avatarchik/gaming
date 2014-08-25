@@ -1,0 +1,9 @@
+<page>
+	<failed>false</failed>
+	<profile profileId="1" gameName="MyGameName" gameType="0" currencyName="USD" currencyCode="USD">
+		<parameters chatChannelId="0" xmlParam="1">
+			<param coinValue="0.02,0.05,0.10,0.25,1.00,2.00,5.00" maxGambleWinnings="500.00" PJWinChannelId="0" />
+		</parameters>
+		<accounts accountName="USD" outputAccount="USD" />
+	</profile>
+</page>

@@ -1,0 +1,262 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>chartwell.games.SampleSlotGame</groupId>
+        <artifactId>client</artifactId>
+        <version>2.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>chartwell.games.SampleSlotGame.client</groupId>
+    <artifactId>casino5</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Casino5 (HTML5) Client</name>
+
+    <description>Casino5 (HTML5) Client</description>
+
+    <properties>
+        <webapp.dir>${project.basedir}/src/main/webapp</webapp.dir>
+        <webapp.casino5.dir>${webapp.dir}/casino5</webapp.casino5.dir>
+        <game.min.file>game.min.${project.version}.js</game.min.file>
+        <src.js.dir>${project.basedir}/src/main/javascript</src.js.dir>
+        <build.dir>${project.build.directory}/${project.build.finalName}</build.dir>
+        <build.casino5.dir>${build.dir}/casino5</build.casino5.dir>
+        <build.js.dir>${build.casino5.dir}/javascript</build.js.dir>
+    </properties>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>com.cwh.maven.plugins</groupId>
+                <artifactId>rgf-manifest-maven-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>manifest</id>
+                        <phase>prepare-package</phase>
+                        <goals><goal>manifest</goal></goals>
+                        <configuration>
+                            <outputDirectory>${build.casino5.dir}</outputDirectory>
+
+                            <preloadFileSets>
+                                <fileSet>
+                                    <directory>${webapp.casino5.dir}</directory>
+                                    <includes>
+                                        <include>preload/**/*.*</include>
+                                    </includes>
+                                </fileSet>
+                            </preloadFileSets>
+
+                            <frameworkFileSets>
+                                <fileSet>
+                                    <directory>${webapp.casino5.dir}</directory>
+                                    <includes>
+                                        <include>framework/**/*.*</include>
+                                    </includes>
+                                </fileSet>
+                            </frameworkFileSets>
+
+                            <libFileSets>
+                                <fileSet>
+                                    <directory>${webapp.casino5.dir}</directory>
+                                    <includes>
+                                        <include>lib/**/*.js</include>
+                                    </includes>
+                                </fileSet>
+                            </libFileSets>
+
+                            <cssFileSets>
+                                <fileSet>
+                                    <directory>${webapp.casino5.dir}</directory>
+                                    <includes>
+                                        <include>css/**/*.css</include>
+                                    </includes>
+                                </fileSet>
+                            </cssFileSets>
+
+                            <javascriptFileSets>
+                                <fileSet>
+                                    <directory>${build.casino5.dir}</directory>
+                                    <includes>
+                                        <include>javascript/**/*.js</include>
+                                    </includes>
+                                </fileSet>
+                            </javascriptFileSets>
+
+                            <postloadFileSets>
+                                <fileSet>
+                                    <directory>${webapp.casino5.dir}</directory>
+                                    <includes>
+                                        <include>postload/**/*.*</include>
+                                    </includes>
+                                </fileSet>
+                            </postloadFileSets>
+
+                            <soundFileSets>
+                                <fileSet>
+                                    <directory>${webapp.casino5.dir}</directory>
+                                    <includes>
+                                        <include>sound/**/*.*</include>
+                                    </includes>
+                                </fileSet>
+                            </soundFileSets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>Copy Resources</id>
+                        <phase>prepare-package</phase>
+                        <goals><goal>copy-resources</goal></goals>
+                        <configuration>
+                            <outputDirectory>${build.dir}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${webapp.dir}</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>Source.Full</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>source.full</id>
+                                <goals><goal>run</goal></goals>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <copy todir="${build.js.dir}">
+                                            <fileset dir="${src.js.dir}">
+                                                <include name="**/*.js" />
+                                            </fileset>
+                                        </copy>
+
+                                        <!-- Strips the goog.require and goog.provide calls since we aren't using the Google Closure Compiler -->
+                                        <replaceregexp match="goog\.(.*)" replace="" byline="true">
+                                            <fileset dir="${build.js.dir}">
+                                                <include name="**/*.js" />
+                                            </fileset>
+                                        </replaceregexp>
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>Source.Concat</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>source.concat</id>
+                                <goals><goal>run</goal></goals>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <concat destfile="${build.js.dir}/temp.js">
+                                            <filelist dir="${src.js.dir}" files="Namespace.js" />
+                                            <fileset dir="${src.js.dir}">
+                                                <include name="**/*.js" />
+                                                <exclude name="Namespace.js" />
+                                            </fileset>
+                                        </concat>
+
+                                        <!-- Strips the goog.require and goog.provide calls since we aren't using the Google Closure Compiler -->
+                                        <replaceregexp file="${build.js.dir}/temp.js" match="goog\.(.*)" replace="" byline="true" />
+
+                                        <copy file="${build.js.dir}/temp.js" toFile="${build.js.dir}/${game.min.file}">
+                                            <filterchain>
+                                                <ignoreblank />
+                                            </filterchain>
+                                        </copy>
+
+                                        <delete file="${build.js.dir}/temp.js" />
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+        <profile>
+            <id>Source.GCC</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.cwh.maven.plugins</groupId>
+                        <artifactId>google-closure-compiler-plugin</artifactId>
+                        <version>1.1</version>
+                        <executions>
+                            <execution>
+                                <id>gcc</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>gcc:run</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>${build.js.dir}</outputDirectory>
+                                    <minifiedFileName>${game.min.file}</minifiedFileName>
+                                    <fileSet>
+                                        <directory>${src.js.dir}</directory>
+                                        <includes>
+                                            <include>**/*.js</include>
+                                        </includes>
+                                    </fileSet>
+                                    <outputManifest>${project.build.directory}/gcc_manifest.txt</outputManifest>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

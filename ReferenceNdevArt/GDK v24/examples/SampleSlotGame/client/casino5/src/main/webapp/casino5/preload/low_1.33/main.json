@@ -1,0 +1,59 @@
+{
+
+    "tfWon": {
+        "color": "#000",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "x": "765",
+        "y": "422"
+    },
+
+    "tfWonShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "1224",
+        "y": "614"
+    },
+
+    "tfStars": {
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "x": "155",
+        "y": "482"
+    },
+
+    "tfStarsShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "x": "157",
+        "y": "484"
+    },
+
+    "tfCounter": {
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "x": "530",
+        "y": "482"
+    },
+
+    "tfCounterShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "left",
+        "x": "532",
+        "y": "484"
+    },
+
+    "reels": {
+        "x": 5,
+        "y": 40
+    }
+
+}

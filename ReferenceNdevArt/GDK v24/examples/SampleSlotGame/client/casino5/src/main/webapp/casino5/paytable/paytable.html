@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            color: #555;
+            font-family: Arial,Helvetica,sans;
+            font-weight: bold;
+            font-size: 30px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: solid 1px #DDD;
+        }
+
+        .iconCell {
+            display: inline-block;
+            width: 260px;
+            height: 150px;
+            clear: both;
+            padding: 10px;
+            margin: 10px;
+            background-color: #EEE;
+        }
+
+
+        .icon {
+            width: 180px;
+            min-height: 180px;
+            background-repeat: no-repeat;
+            float: left;
+            border: solid 2px #999;
+            -webkit-transform: scale(0.83,0.83);
+            -webkit-transform-origin: top left;
+            -ms-transform: scale(0.83,0.83);
+            -ms-transform-origin: top left;
+            transform: scale(0.83,0.83);
+            transform-origin: top left;
+        }
+
+        .icon0 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: 0px 0px;
+        }
+
+        .icon1 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: -180px 0px;
+        }
+
+        .icon2 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: -360px 0px;
+        }
+
+        .icon3 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: 0px -180px;
+        }
+
+        .icon4 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: -180px -180px;
+        }
+
+        .icon5 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: -360px -180px;
+        }
+
+        .icon6 {
+            background-image: url('../preload/standard/images/icons.png');
+            background-position: 0px -360px;
+        }
+
+        .payout {
+            color: #555;
+            font-family: Arial,Helvetica,sans;
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 15px;
+            text-align: right;
+        }
+
+
+        .featureCell {
+            display: inline-block;
+            width: 350px;
+            min-height: 225px;
+            clear: both;
+            padding: 10px;
+            margin: 10px;
+            background-color: #DCDDEE;
+            vertical-align: top;
+        }
+
+        .note {
+            color: #555;
+            font-family: Arial,Helvetica,sans;
+            font-weight: bold;
+            font-size: 16px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 185px;
+            text-align: left;
+        }
+
+
+        .payline {
+            width: 170px;
+            min-height: 140px;
+            background-repeat: no-repeat;
+            display: inline-block;
+
+        }
+
+        .payline1 {
+            background-image: url('paytable.png');
+            background-position: 0px 0px;
+        }
+
+        .payline2 {
+            background-image: url('paytable.png');
+            background-position: 0px -140px;
+        }
+        .payline3 {
+            background-image: url('paytable.png');
+            background-position: 0px -280px;
+        }
+
+        .payline4 {
+            background-image: url('paytable.png');
+            background-position: 0px -420px;
+        }
+
+        .payline5 {
+            background-image: url('paytable.png');
+            background-position: 0px -560px;
+        }
+
+        .group {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Payouts</div>
+        <div class="group">
+            <div class="iconCell"><div class="icon icon0"></div><div class="payout">x5 - 100</div></div>
+            <div class="iconCell"><div class="icon icon1"></div><div class="payout">x5 - 100</div></div>
+            <div class="iconCell"><div class="icon icon2"></div><div class="payout">x5 - 100</div></div>
+            <div class="iconCell"><div class="icon icon3"></div><div class="payout">x5 - 100</div></div>
+            <div class="iconCell"><div class="icon icon4"></div><div class="payout">x5 - 100</div></div>
+        </div>
+        <div class="header">Game Features</div>
+        <div class="group">
+            <div class="featureCell"><div class="icon icon5"></div><div class="note">3 Free Spin icons on any reels awards 10 free games. Additional 10 free games awarded if retriggered within a free spin.</div></div>
+            <div class="featureCell"><div class="icon icon6"></div><div class="note">Any star icon appearing on any reel is added to the "Stars" count. Stars collected persist across game sessions. Stars do not pay and are included to the use of the persistent accumulator feature.</div></div>
+        </div>
+        <div class="header">Paylines</div>
+        <div class="group">
+            <div class="payline payline1"></div>
+            <div class="payline payline2"></div>
+            <div class="payline payline3"></div>
+            <div class="payline payline4"></div>
+            <div class="payline payline5"></div>
+        </div>
+    </div>
+</body>
+</html>

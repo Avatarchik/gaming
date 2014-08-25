@@ -1,0 +1,24 @@
+<map>
+    <responses request="GeoLocationReq">
+        <response id="GeoLocationReq" file="geolocation.xml" />
+    </responses>
+    <responses request="CheckLoginReq">
+        <response id="CheckLoginReq" file="checklogin.xml" />
+    </responses>
+	<responses request="ProfilesReq">
+		<response id="ProfilesReq" file="profile.xml" />
+	</responses>
+	<responses request="LoginReq">
+		<response id="LoginReq" file="login.xml" />
+	</responses>
+	<responses request="StartGameReq">
+		<response id="StartGameReq" file="startgame.xml" />
+	</responses>
+	<responses request="ResumeGameReq">
+		<response id="ResumeGameReq" file="preresume.xml" />
+		<response id="ResumeGameReq" file="resume.xml" />
+	</responses>
+	<responses request="ConfirmHandEndReq">
+		<response id="ConfirmHandEndReq" file="confirmhandend.xml" />
+	</responses>		
+</map>
