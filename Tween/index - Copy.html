@@ -160,7 +160,6 @@ function init(responseArray){
 	dragonbody_2 = document.getElementById('dragonbody_2');
 	dragonbody_3 = document.getElementById('dragonbody_3');
 
-//Tween.get(bentarget).to({x:100}, 500, Ease.linear);
 
 	dragonCompleteObject = [bentarget, dragonbody_1, dragonbody_2, dragonbody_3];
 	//console.log(dragonCompleteObject);
@@ -251,10 +250,10 @@ function init(responseArray){
 
 	//headtween.start();
 
-	//benRight.chain(benRightDown);
+	benRight.chain(benRightDown);
 
 	benRight.start();
-	
+	//benRight2.start();
 
 
 }
