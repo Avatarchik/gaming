@@ -1,0 +1,33 @@
+{
+
+    "tfMessage": {
+        "color": "#fad94c",
+        "lineWidth":"600",
+        "x": 640,
+        "y": 675
+    },
+
+    "tfMessageShadow": {
+        "color": "#9c2006",
+        "lineWidth":"600",
+        "x": 640,
+        "y": 675,
+         "outline":"2"
+    },
+
+    "tfProgress": {
+        "color": "#fad94c",
+        "lineWidth":"600",
+        "x": 640,
+        "y": 705
+    },
+
+    "tfProgressShadow": {
+        "color": "#9c2006",
+        "lineWidth":"600",
+        "x": 640,
+        "y": 705,
+         "outline":"2"
+    }
+
+}
