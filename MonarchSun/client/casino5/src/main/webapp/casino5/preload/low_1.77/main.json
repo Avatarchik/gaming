@@ -774,7 +774,7 @@
         },
         "bigWinBannerShadow":{
         "color": "#141fb6",
-        "font": "bold 70px Impact, Cartoonist Kooky,Cartoonist,Helvetica,Arial,sans-serif",
+        "font": "bold 101px Impact, Cartoonist Kooky,Cartoonist,Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "440",
         "y": "160",
@@ -855,7 +855,7 @@
         [0,0,127,99, 8],
         [0,0,127,99, 9],
         [0,0,127,99,10],
-        [0,0,127,99,11]
+        [0,0,127,107,11]
 
         ]
 
@@ -1041,11 +1041,11 @@
         "frames": {
         "width":"127",
         "height":"396",
-        "count":"6"
+        "count":"9"
         },
         "animations": {
         "reelBlueStreamAnim": {
-        "frames": [0,1,2,3,4,5],
+        "frames": [0,1,2,3,4,5,6,7,8],
         "next": ""
         }
         }
@@ -1060,12 +1060,12 @@
         },
         "frames": {
         "width":"47",
-        "height":"170",
-        "count":"6"
+        "height":"127",
+        "count":"9"
         },
         "animations": {
         "reelBlueStreamAnim": {
-        "frames": [0,1,2,3,4,5],
+        "frames": [0,1,2,3,4,5,6,7,8],
         "next": ""
         }
         }
@@ -1094,8 +1094,8 @@
         "animate": true,
         "image": "device/images/Winbox/WinframeBig.png",
         "frames": {
-        "width":"190",
-        "height":"179",
+        "width":"127",
+        "height":"107",
         "count":"1"
         },
         "animations": {
@@ -1162,7 +1162,7 @@
         "image": "device/images/animations/sym1_anim.png",
         "frames": {
         "width":"127",
-        "height":"99",
+        "height":"107",
         "count":"18"
         },
         "animations": {
@@ -1178,7 +1178,7 @@
         "image": "device/images/animations/sym2_anim.png",
         "frames": {
         "width":"127",
-        "height":"99",
+        "height":"107",
         "count":"18"
         },
         "animations": {
@@ -1194,7 +1194,7 @@
         "image": "device/images/animations/sym3_anim.png",
         "frames": {
         "width":"127",
-        "height":"99",
+        "height":"107",
         "count":"18"
         },
         "animations": {
@@ -1210,7 +1210,7 @@
         "image": "device/images/animations/sym4_anim.png",
         "frames": {
         "width":"127",
-        "height":"99",
+        "height":"107",
         "count":"18"
         },
         "animations": {
@@ -1324,7 +1324,7 @@
         "image": "device/images/animations/sym12_anim.png",
         "frames": {
         "width":"127",
-        "height":"99",
+        "height":"107",
         "count":"18"
         },
         "animations": {
@@ -1341,7 +1341,7 @@
         "image": "device/images/animations/bonus_marker.png",
         "frames": {
         "width":"127",
-        "height":"99",
+        "height":"107",
         "count":"12"
         },
         "animations": {
@@ -1374,13 +1374,13 @@
         "animate": true,
         "image": "device/images/animations/anticipation.png",
         "frames": {
-        "width":"86",
-        "height":"215",
+        "width":"63",
+        "height":"198",
         "count":"4"
         },
         "scale": {
-        "x": 2,
-        "y": 2
+        "x": 2.6,
+        "y": 2.14
         },
         "animations": {
         "reelAnticipation": {

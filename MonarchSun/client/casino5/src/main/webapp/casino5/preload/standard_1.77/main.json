@@ -433,7 +433,7 @@
         "color": "#FFF",
         "font": "bold 40px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "1236",
+        "x": "1246",
         "y": "306"
         },
 
@@ -442,7 +442,7 @@
         "alpha": "0.2",
         "font": "bold 40px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "1236",
+        "x": "1246",
         "y": "310"
         },
 
@@ -450,7 +450,7 @@
         "color": "#FFF",
         "font": "bold 28px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "1236",
+        "x": "1246",
         "y": "271"
         },
 
@@ -458,7 +458,7 @@
         "color": "#000",
         "font": "bold 28px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "1236",
+        "x": "1246",
         "y": "271",
         "outline":"5"
         },
@@ -611,7 +611,7 @@
         },
 
         "freeGamesMeter": {
-        "x": "1138",
+        "x": "1120",
         "y": "297"
         },
 
@@ -688,7 +688,7 @@
         },
 
         "totalWinMeter": {
-        "x": "1138",
+        "x": "1120",
         "y": "647"
         },
 
@@ -854,17 +854,17 @@
         "device/images/symbols/sym12.png"
         ],
         "frames": [
-        [0,0,206,162, 0],
-        [0,0,206,162, 1],
-        [0,0,206,162, 2],
-        [0,0,206,162, 3],
+        [0,0,206,185, 0],
+        [0,0,206,185, 1],
+        [0,0,206,185, 2],
+        [0,0,206,185, 3],
         [0,0,206,162, 4],
         [0,0,206,162, 5],
         [0,0,206,162, 6],
         [0,0,206,162, 7],
         [0,0,206,162, 8],
         [0,0,206,162, 9],
-        [0,0,206,162,10]
+        [0,0,206,185,10]
 
         ]
 
@@ -1053,11 +1053,11 @@
         "frames": {
         "width":"51",
         "height":"162",
-        "count":"6"
+        "count":"9"
         },
         "animations": {
         "reelBlueStreamAnim": {
-        "frames": [0,1,2,3,4,5],
+        "frames": [0,1,2,3,4,5,6,7,8],
         "next": ""
         }
         }
@@ -1072,13 +1072,13 @@
         "y": 4
         },
         "frames": {
-        "width":"47",
-        "height":"170",
-        "count":"6"
+        "width":"51",
+        "height":"121",
+        "count":"9"
         },
         "animations": {
         "reelBlueStreamAnim": {
-        "frames": [0,1,2,3,4,5],
+        "frames": [0,1,2,3,4,5,6,7,8],
         "next": ""
         }
         }
@@ -1093,11 +1093,11 @@
         "frames": {
         "width":"206",
         "height":"162",
-        "count":"4"
+        "count":"1"
         },
         "animations": {
         "winboxAnim": {
-        "frames": [0,1,2,3],
+        "frames": [0],
         "next": "winboxAnim"
         }
         }
@@ -1108,8 +1108,8 @@
         "animate": true,
         "image": "device/images/Winbox/WinframeBig.png",
         "frames": {
-        "width":"190",
-        "height":"179",
+        "width":"206",
+        "height":"185",
         "count":"1"
         },
         "animations": {
@@ -1177,7 +1177,7 @@
         "image": "device/images/animations/sym1_anim.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"18"
         },
         "animations": {
@@ -1193,7 +1193,7 @@
         "image": "device/images/animations/sym2_anim.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"18"
         },
         "animations": {
@@ -1209,7 +1209,7 @@
         "image": "device/images/animations/sym3_anim.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"18"
         },
         "animations": {
@@ -1225,7 +1225,7 @@
         "image": "device/images/animations/sym4_anim.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"18"
         },
         "animations": {
@@ -1342,7 +1342,7 @@
         "image": "device/images/animations/sym12_anim.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"18"
         },
         "animations": {
@@ -1359,7 +1359,7 @@
         "image": "device/images/animations/bonus_marker.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"12"
         },
         "animations": {
@@ -1376,7 +1376,7 @@
         "image": "device/images/animations/sym12_anim.png",
         "frames": {
         "width":"206",
-        "height":"162",
+        "height":"185",
         "count":"18"
         },
         "animations": {
@@ -1392,13 +1392,13 @@
         "animate": true,
         "image": "device/images/animations/anticipation.png",
         "frames": {
-        "width":"72",
-        "height":"176",
+        "width":"52",
+        "height":"162",
         "count":"4"
         },
         "scale": {
-        "x": 4,
-        "y": 4
+        "x": 4.8,
+        "y": 4.28
         },
         "animations": {
         "reelAnticipation": {

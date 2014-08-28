@@ -1350,8 +1350,8 @@
             "count":"4"
         },
         "scale": {
-            "x": 4,
-            "y": 4
+            "x": 5,
+            "y": 4.25
         },
         "animations": {
             "reelAnticipation": {
