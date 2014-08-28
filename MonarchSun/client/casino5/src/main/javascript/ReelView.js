@@ -10,7 +10,7 @@ goog.require("amaya.game");
 
 goog.provide("amaya.game.ReelView");
 
-amaya.game.ReelView = function ( container, symAnimContainer, model, backgroundContainer, reelStreamContainer, soundManager ) {
+amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContainer,  model, backgroundContainer, reelStreamContainer, soundManager ) {
 
     var instance = new amaya.api.EventDispatcher();
 
@@ -362,6 +362,94 @@ amaya.game.ReelView = function ( container, symAnimContainer, model, backgroundC
                                 });
 
         }
+
+
+
+
+/*
+ function getReelAnticipationData ( ) {
+            var reelAnticipationData = mainjson.reelAnticipationData;
+            reelAnticipationData.images = [gameServices.assets.getAsset(mainjson.reelAnticipationData.image)];
+            var reelAnticipationSS = new createjs.SpriteSheet(mainjson.reelAnticipationData);
+            var reelAnticipation = new createjs.Sprite(reelAnticipationSS);
+            reelAnticipation.gotoAndStop(0);
+            reelAnticipation.gotoAndPlay("reelAnticipation");
+            return reelAnticipation;
+        }
+
+        var reelAnimation;
+        instance.playReelAnticipation = function (id) {
+            reelAnimation = getReelAnticipationData();
+            reelAnimation.y = mainjson.reel4.y - mainjson.reelAnticipationData.spacing.y;
+            reelAnimation.x = mainjson.reel4.x - mainjson.reelAnticipationData.spacing.x;
+            reelAnimation.scaleX = mainjson.reelAnticipationData.scale.x;
+            reelAnimation.scaleY = mainjson.reelAnticipationData.scale.y;
+            backgroundContainer.addChild(reelAnimation);
+            soundManager.PlayAnticipation();
+        };
+        */
+
+                function getStickyWildAnimData () {
+                    var stickyWildAnimData = mainjson.stickyWildAnimData;
+                    stickyWildAnimData.images = [gameServices.assets.getAsset(mainjson.stickyWildAnimData.image)];
+                    var stickyWildAnimSS = new createjs.SpriteSheet(mainjson.stickyWildAnimData);
+                    var stickyWildAnim = new createjs.Sprite(stickyWildAnimSS);
+                    stickyWildAnim.gotoAndStop(0);
+                    stickyWildAnim.gotoAndPlay("stickyWildAnim");
+                    return stickyWildAnim;
+                };
+                var stickyWildAnimAnimation;
+                instance.playStickyWildAnim = function (id) {
+                    stickyWildAnimAnimation = getStickyWildAnimData();
+                    stickyWildAnimAnimation.y = mainjson.reel3.y - mainjson.stickyWildAnimData.spacing.y;
+                    stickyWildAnimAnimation.x = mainjson.reel3.x - mainjson.stickyWildAnimData.spacing.x;
+                    stickyWildAnimAnimation.scaleX = mainjson.stickyWildAnimData.scale.x;
+                    stickyWildAnimAnimation.scaleY = mainjson.stickyWildAnimData.scale.y;
+                    stickyWildContainer.addChild(stickyWildAnimAnimation);
+                    //soundManager.PlayAnticipation();
+                };
+
+
+                function getStickyWildLoopData () {
+                    var stickyWildLoopData = mainjson.stickyWildLoopData;
+                    stickyWildLoopData.images = [gameServices.assets.getAsset(mainjson.stickyWildLoopData.image)];
+                    var stickyWildLoopSS = new createjs.SpriteSheet(mainjson.stickyWildLoopData);
+                    var stickyWildLoop = new createjs.Sprite(stickyWildLoopSS);
+                    stickyWildLoop.gotoAndStop(0);
+                    stickyWildLoop.gotoAndPlay("stickyWildLoop");
+                    return stickyWildLoop;
+                };
+                var stickyWildLoopAnimation;
+                instance.playStickyWildLoop = function (id) {
+                    stickyWildLoopAnimation = getStickyWildLoopData();
+                    stickyWildLoopAnimation.y = mainjson.reel3.y - mainjson.stickyWildLoopData.spacing.y;
+                    stickyWildLoopAnimation.x = mainjson.reel3.x - mainjson.stickyWildLoopData.spacing.x;
+                    stickyWildLoopAnimation.scaleX = mainjson.stickyWildLoopData.scale.x;
+                    stickyWildLoopAnimation.scaleY = mainjson.stickyWildLoopData.scale.y;
+                    stickyWildContainer.addChild(stickyWildLoopAnimation);
+                    //soundManager.PlayAnticipation();
+                };
+
+                function getStickyWildStartData () {
+                    var stickyWildStartData = mainjson.stickyWildStartData;
+                    stickyWildStartData.images = [gameServices.assets.getAsset(mainjson.stickyWildStartData.image)];
+                    var stickyWildStartSS = new createjs.SpriteSheet(mainjson.stickyWildStartData);
+                    var stickyWildStart = new createjs.Sprite(stickyWildStartSS);
+                    stickyWildStart.gotoAndStop(0);
+                    stickyWildStart.gotoAndPlay("stickyWildStart");
+                    return stickyWildStart;
+                };
+                var stickyWildStartAnimation;
+                instance.playStickyWildStart = function (id) {
+                    stickyWildStartAnimation = getStickyWildStartData();
+                    stickyWildStartAnimation.y = mainjson.reel3.y - mainjson.stickyWildStartData.spacing.y;
+                    stickyWildStartAnimation.x = mainjson.reel3.x - mainjson.stickyWildStartData.spacing.x;
+                    stickyWildStartAnimation.scaleX = mainjson.stickyWildStartData.scale.x;
+                    stickyWildStartAnimation.scaleY = mainjson.stickyWildStartData.scale.y;
+                    stickyWildContainer.addChild(stickyWildStartAnimation);
+                    //soundManager.PlayAnticipation();
+                };
+
 
     return instance;
 }

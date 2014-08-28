@@ -146,6 +146,8 @@ amaya.game.Model = function ( openingBalance, creditValueList, numberOfLines ) {
     var ScatterWays;
 	var SymbolsWays;
     var winningLineId;
+    var stickyWilds;
+
      /**
       * @returns {Array.<object>}
        */
@@ -631,12 +633,20 @@ amaya.game.Model = function ( openingBalance, creditValueList, numberOfLines ) {
             SymbolsWays = value;
     }
 
-    instance.getWinningLineId= function(){
+    instance.getWinningLineId = function(){
             return winningLineId;
     };
 
-    instance.setWinningLineId= function(value){
+    instance.setWinningLineId = function(value){
              winningLineId = value;
+    };
+
+    instance.getstickyWilds = function(){
+            return stickyWilds;
+    };
+
+    instance.setstickyWilds = function(value){
+             stickyWilds = value;
     };
 
     balance = openingBalance;

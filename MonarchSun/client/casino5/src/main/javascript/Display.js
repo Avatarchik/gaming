@@ -36,6 +36,11 @@ amaya.game.Display = function ( gameCanvas ) {
 
 
 
+    instance.stickyWildContainer = new createjs.Container();
+    gameStage.addChild( instance.stickyWildContainer );
+
+
+
     instance.winboxContainer = new createjs.Container();
     gameStage.addChild( instance.winboxContainer );
 

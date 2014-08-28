@@ -40,14 +40,14 @@ amaya.game.IntroView = function ( container) {
 
     IntroContainer.addChild(tfIntroContinue);
 
-    var tfIntroTextShadow1 = new createjs.Text(langFile.Msg1);
-    amaya.sdk.utils.JSONUtils.fromJSON( tfIntroTextShadow1, json.tfIntroTextShadow1 );
-    IntroContainer.addChild(tfIntroTextShadow1);
+    //var tfIntroTextShadow1 = new createjs.Text(langFile.Msg1);
+    //amaya.sdk.utils.JSONUtils.fromJSON( tfIntroTextShadow1, json.tfIntroTextShadow1 );
+    //IntroContainer.addChild(tfIntroTextShadow1);
 
-    var tfIntroText1 = new createjs.Text(langFile.Msg1);
-    amaya.sdk.utils.JSONUtils.fromJSON( tfIntroText1, json.tfIntroText1 );
+    //var tfIntroText1 = new createjs.Text(langFile.Msg1);
+    //amaya.sdk.utils.JSONUtils.fromJSON( tfIntroText1, json.tfIntroText1 );
     //tfIntroText.text = langFile.Msg;
-     IntroContainer.addChild(tfIntroText1);
+    // IntroContainer.addChild(tfIntroText1);
 
     //text onto intro screen started from here, it should be from IntroText2 to IntroText7 with their shadows as well
    var tfIntroTextShadow2 = new createjs.Text(langFile.IntroText2);

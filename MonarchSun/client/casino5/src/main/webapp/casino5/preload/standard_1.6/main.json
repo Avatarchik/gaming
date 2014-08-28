@@ -1366,6 +1366,92 @@
 
 
     },
+
+        "stickyWildAnimData":{
+            "framerate": 4,
+            "animate": true,
+            "image": "device/images/animations/sym2_anim.png",
+            "frames": {
+                "width":"68",
+                "height":"186",
+                "count":"4"
+            },
+            "scale": {
+                "x": 5,
+                "y": 4.25
+            },
+            "animations": {
+                "stickyWildAnim": {
+                    "frames": [0,1,2,3],
+                    "next": "stickyWildAnim"
+                }
+            },
+            "spacing": {
+                "x": 33,
+                "y": 36
+            }
+
+
+        },
+
+        "stickyWildLoopData":{
+            "framerate": 4,
+            "animate": true,
+            "image": "device/images/animations/stickyWild.png",
+            "frames": {
+                "width":"68",
+                "height":"186",
+                "count":"4"
+            },
+            "scale": {
+                "x": 5,
+                "y": 4.25
+            },
+            "animations": {
+                "stickyWildLoop": {
+                    "frames": [0,1,2,3],
+                    "next": "stickyWildLoop"
+                }
+            },
+            "spacing": {
+                "x": 33,
+                "y": 36
+            }
+
+
+        },
+
+        "stickyWildStartData":{
+            "framerate": 4,
+            "animate": true,
+            "image": "device/images/animations/WildMarker.png",
+            "frames": {
+                "width":"68",
+                "height":"186",
+                "count":"4"
+            },
+            "scale": {
+                "x": 5,
+                "y": 4.25
+            },
+            "animations": {
+                "stickyWildStart": {
+                    "frames": [0,1,2,3],
+                    "next": "stickyWildStart"
+                }
+            },
+            "spacing": {
+                "x": 33,
+                "y": 36
+            }
+
+
+        },
+
+
+
+
+
     "blankData": {
         "framerate": 10,
         "animate": false,

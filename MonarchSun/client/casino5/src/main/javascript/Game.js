@@ -239,7 +239,7 @@ amaya.game.Game = function () {
         backgroundView.showLogo();
 
         // Reel View - Controls the display of the reels (Spin and Icon animations).
-        reelView = new amaya.game.ReelView( display.reelsContainer, display.symAnimContainer, model, display.winboxContainer , display.reelStreamContainer, soundManager);
+        reelView = new amaya.game.ReelView( display.reelsContainer, display.symAnimContainer, display.stickyWildContainer, model, display.winboxContainer , display.reelStreamContainer, soundManager);
 
 
         // Payline View - Controls the display of the paylines.
@@ -384,6 +384,11 @@ amaya.game.Game = function () {
          // to get symbols and ways win
          model.setSymbolsWays(spinResponse.getSymbolsAndWays());
          model.setWinningLineId(spinResponse.getWinningLineId());
+
+         //to get the sticky wild data
+         //console.log('spinResponse.getstickyWilds()', spinResponse.getstickyWilds());
+         model.setstickyWilds(spinResponse.getstickyWilds());
+
         //console.log("setScatterWin=="+spinResponse.getScatterWin());
         freeSpinView.bonusTotal(spinResponse.getFreeSpinsWon());
        // model.setCreditsWon(spinResponse.getCreditsWon() - spinResponse.getScatterWin());
@@ -427,6 +432,11 @@ amaya.game.Game = function () {
        // to get symbols and ways win
         model.setSymbolsWays(freeSpinResponse.getSymbolsAndWays());
         model.setWinningLineId(freeSpinResponse.getWinningLineId());
+
+        //to get the sticky wild data
+         model.setstickyWilds(spinResponse.getstickyWilds());
+
+
         // If the total number of free spins in the response is greater than the number of free spins
         // currently in the model, then this free spin triggers additional free spins.
         // If so, set the triggered flag to true.
@@ -1351,6 +1361,9 @@ amaya.game.Game = function () {
                     reelView.stopScatterAnimation();
                     paylineView.hideAllPosBg();
                     scatFlag=0;
+        }
+        if (event.data == 2 && model.getstickyWilds().length) {
+            reelView.playStickyWildAnim();
         }
         soundManager.PlayReelStopSound();
     }
