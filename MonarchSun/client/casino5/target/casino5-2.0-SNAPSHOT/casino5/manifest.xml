@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<manifest type="master" date="20-08-2014_17:52:00">
+<manifest type="master" date="29-08-2014_12:57:22">
     <manifest type="framework">
         <file>framework/low_1.33/loader.jpg</file>
         <file>framework/low_1.33/loader.json</file>
@@ -16,17 +16,7 @@
     </manifest>
     <manifest type="preload" implements="low_1.33,low_1.6,low_1.77,standard_1.33,standard_1.6,standard_1.77">
         <file>preload/lang/MonarchSun_${lang}.json</file>
-        <file>preload/low/images/small_symbols/Ace.png</file>
-        <file>preload/low/images/small_symbols/Blue_Wolf.png</file>
-        <file>preload/low/images/small_symbols/Bonus.png</file>
-        <file>preload/low/images/small_symbols/FireBird.png</file>
-        <file>preload/low/images/small_symbols/Jack.png</file>
-        <file>preload/low/images/small_symbols/King.png</file>
-        <file>preload/low/images/small_symbols/Logo_Symbol.png</file>
-        <file>preload/low/images/small_symbols/Paws.png</file>
-        <file>preload/low/images/small_symbols/Queen.png</file>
-        <file>preload/low/images/small_symbols/Red_Wolf.png</file>
-        <file>preload/low/images/small_symbols/Wild.png</file>
+        <file>preload/low/images/introBonus.png</file>
         <file>preload/low_1.33/images/animations/anticipation.png</file>
         <file>preload/low_1.33/images/animations/bigWin.png</file>
         <file>preload/low_1.33/images/animations/bonus_marker.png</file>
@@ -129,13 +119,15 @@
         <file>preload/low_1.77/images/animations/bigWin.png</file>
         <file>preload/low_1.77/images/animations/bonus_marker.png</file>
         <file>preload/low_1.77/images/animations/reelStrike.png</file>
-        <file>preload/low_1.77/images/animations/sym11_anim.png</file>
+        <file>preload/low_1.77/images/animations/reelStrikeSmall.png</file>
+        <file>preload/low_1.77/images/animations/stickyWild.png</file>
+        <file>preload/low_1.77/images/animations/sym12_anim.png</file>
         <file>preload/low_1.77/images/animations/sym1_anim.png</file>
         <file>preload/low_1.77/images/animations/sym2_anim.png</file>
         <file>preload/low_1.77/images/animations/sym3_anim.png</file>
         <file>preload/low_1.77/images/animations/sym4_anim.png</file>
         <file>preload/low_1.77/images/animations/sym5_anim.png</file>
-        <file>preload/low_1.77/images/animations/sym6_anim.png</file>
+        <file>preload/low_1.77/images/animations/WildMarker.png</file>
         <file>preload/low_1.77/images/Bg_reel.jpg</file>
         <file>preload/low_1.77/images/Celebration_win/CelebrationWindowFrame.png</file>
         <file>preload/low_1.77/images/Celebration_win/Celebration_windowIntro.png</file>
@@ -151,6 +143,7 @@
         <file>preload/low_1.77/images/small_symbols/sym1.png</file>
         <file>preload/low_1.77/images/small_symbols/sym10.png</file>
         <file>preload/low_1.77/images/small_symbols/sym11.png</file>
+        <file>preload/low_1.77/images/small_symbols/sym12.png</file>
         <file>preload/low_1.77/images/small_symbols/sym2.png</file>
         <file>preload/low_1.77/images/small_symbols/sym3.png</file>
         <file>preload/low_1.77/images/small_symbols/sym4.png</file>
@@ -163,6 +156,7 @@
         <file>preload/low_1.77/images/symbols/sym1.png</file>
         <file>preload/low_1.77/images/symbols/sym10.png</file>
         <file>preload/low_1.77/images/symbols/sym11.png</file>
+        <file>preload/low_1.77/images/symbols/sym12.png</file>
         <file>preload/low_1.77/images/symbols/sym2.png</file>
         <file>preload/low_1.77/images/symbols/sym3.png</file>
         <file>preload/low_1.77/images/symbols/sym4.png</file>
@@ -172,7 +166,9 @@
         <file>preload/low_1.77/images/symbols/sym8.png</file>
         <file>preload/low_1.77/images/symbols/sym9.png</file>
         <file>preload/low_1.77/images/Winbox/Winframe.png</file>
+        <file>preload/low_1.77/images/Winbox/WinframeBig.png</file>
         <file>preload/low_1.77/images/Win_meter.png</file>
+        <file>preload/low_1.77/images/xStaticWild.png</file>
         <file>preload/low_1.77/main.json</file>
         <file>preload/standard/images/introBonus.png</file>
         <file>preload/standard/images/xStaticWild.png</file>
@@ -180,13 +176,15 @@
         <file>preload/standard_1.33/images/animations/bigWin.png</file>
         <file>preload/standard_1.33/images/animations/bonus_marker.png</file>
         <file>preload/standard_1.33/images/animations/reelStrike.png</file>
-        <file>preload/standard_1.33/images/animations/sym11_anim.png</file>
+        <file>preload/standard_1.33/images/animations/reelStrikeSmall.png</file>
+        <file>preload/standard_1.33/images/animations/stickyWild.png</file>
+        <file>preload/standard_1.33/images/animations/sym12_anim.png</file>
         <file>preload/standard_1.33/images/animations/sym1_anim.png</file>
         <file>preload/standard_1.33/images/animations/sym2_anim.png</file>
         <file>preload/standard_1.33/images/animations/sym3_anim.png</file>
         <file>preload/standard_1.33/images/animations/sym4_anim.png</file>
         <file>preload/standard_1.33/images/animations/sym5_anim.png</file>
-        <file>preload/standard_1.33/images/animations/sym6_anim.png</file>
+        <file>preload/standard_1.33/images/animations/WildMarker.png</file>
         <file>preload/standard_1.33/images/Bg_reel.jpg</file>
         <file>preload/standard_1.33/images/Celebration_win/CelebrationWindowFrame.png</file>
         <file>preload/standard_1.33/images/Celebration_win/Celebration_windowIntro.png</file>
@@ -195,13 +193,12 @@
         <file>preload/standard_1.33/images/Freegame.jpg</file>
         <file>preload/standard_1.33/images/loader.jpg</file>
         <file>preload/standard_1.33/images/logo.png</file>
-        <file>preload/standard_1.33/images/Mask/Left_CornerFeathers.png</file>
-        <file>preload/standard_1.33/images/Mask/Right_CornerFeathers.png</file>
         <file>preload/standard_1.33/images/Msg_Bar.png</file>
         <file>preload/standard_1.33/images/powerLogo.png</file>
         <file>preload/standard_1.33/images/small_symbols/sym1.png</file>
         <file>preload/standard_1.33/images/small_symbols/sym10.png</file>
         <file>preload/standard_1.33/images/small_symbols/sym11.png</file>
+        <file>preload/standard_1.33/images/small_symbols/sym12.png</file>
         <file>preload/standard_1.33/images/small_symbols/sym2.png</file>
         <file>preload/standard_1.33/images/small_symbols/sym3.png</file>
         <file>preload/standard_1.33/images/small_symbols/sym4.png</file>
@@ -214,6 +211,7 @@
         <file>preload/standard_1.33/images/symbols/sym1.png</file>
         <file>preload/standard_1.33/images/symbols/sym10.png</file>
         <file>preload/standard_1.33/images/symbols/sym11.png</file>
+        <file>preload/standard_1.33/images/symbols/sym12.png</file>
         <file>preload/standard_1.33/images/symbols/sym2.png</file>
         <file>preload/standard_1.33/images/symbols/sym3.png</file>
         <file>preload/standard_1.33/images/symbols/sym4.png</file>
@@ -281,13 +279,15 @@
         <file>preload/standard_1.77/images/animations/bigWin.png</file>
         <file>preload/standard_1.77/images/animations/bonus_marker.png</file>
         <file>preload/standard_1.77/images/animations/reelStrike.png</file>
-        <file>preload/standard_1.77/images/animations/sym11_anim.png</file>
+        <file>preload/standard_1.77/images/animations/reelStrikeSmall.png</file>
+        <file>preload/standard_1.77/images/animations/stickyWild.png</file>
+        <file>preload/standard_1.77/images/animations/sym12_anim.png</file>
         <file>preload/standard_1.77/images/animations/sym1_anim.png</file>
         <file>preload/standard_1.77/images/animations/sym2_anim.png</file>
         <file>preload/standard_1.77/images/animations/sym3_anim.png</file>
         <file>preload/standard_1.77/images/animations/sym4_anim.png</file>
         <file>preload/standard_1.77/images/animations/sym5_anim.png</file>
-        <file>preload/standard_1.77/images/animations/sym6_anim.png</file>
+        <file>preload/standard_1.77/images/animations/WildMarker.png</file>
         <file>preload/standard_1.77/images/Bg_reel.jpg</file>
         <file>preload/standard_1.77/images/Celebration_win/CelebrationWindowFrame.png</file>
         <file>preload/standard_1.77/images/Celebration_win/Celebration_windowIntro.png</file>
@@ -303,6 +303,7 @@
         <file>preload/standard_1.77/images/small_symbols/sym1.png</file>
         <file>preload/standard_1.77/images/small_symbols/sym10.png</file>
         <file>preload/standard_1.77/images/small_symbols/sym11.png</file>
+        <file>preload/standard_1.77/images/small_symbols/sym12.png</file>
         <file>preload/standard_1.77/images/small_symbols/sym2.png</file>
         <file>preload/standard_1.77/images/small_symbols/sym3.png</file>
         <file>preload/standard_1.77/images/small_symbols/sym4.png</file>
@@ -315,6 +316,7 @@
         <file>preload/standard_1.77/images/symbols/sym1.png</file>
         <file>preload/standard_1.77/images/symbols/sym10.png</file>
         <file>preload/standard_1.77/images/symbols/sym11.png</file>
+        <file>preload/standard_1.77/images/symbols/sym12.png</file>
         <file>preload/standard_1.77/images/symbols/sym2.png</file>
         <file>preload/standard_1.77/images/symbols/sym3.png</file>
         <file>preload/standard_1.77/images/symbols/sym4.png</file>
@@ -324,6 +326,7 @@
         <file>preload/standard_1.77/images/symbols/sym8.png</file>
         <file>preload/standard_1.77/images/symbols/sym9.png</file>
         <file>preload/standard_1.77/images/Winbox/Winframe.png</file>
+        <file>preload/standard_1.77/images/Winbox/WinframeBig.png</file>
         <file>preload/standard_1.77/images/Win_meter.png</file>
         <file>preload/standard_1.77/main.json</file>
     </manifest>

@@ -22,7 +22,7 @@
 	</msgheader>
 	<msgdata reqName="ResumeGameReq">
 		<data name="isResume" value="true" />
-		<data name="gameName" value="MonarchSun" />
+		<data name="gameName" value="SampleSlotGame" />
 		<data name="profileId" value="9197" />
 	</msgdata>
 </gamemessage>

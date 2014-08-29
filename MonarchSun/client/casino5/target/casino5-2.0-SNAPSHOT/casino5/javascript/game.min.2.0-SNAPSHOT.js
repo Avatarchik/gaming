@@ -469,6 +469,8 @@ amaya.game.Display = function ( gameCanvas ) {
     gameStage.addChild( instance.paylineContainer );
     instance.symAnimContainer = new createjs.Container();
     gameStage.addChild( instance.symAnimContainer );
+    instance.stickyWildContainer = new createjs.Container();
+    gameStage.addChild( instance.stickyWildContainer );
     instance.winboxContainer = new createjs.Container();
     gameStage.addChild( instance.winboxContainer );
     instance.reelStreamContainer = new createjs.Container();
@@ -830,7 +832,7 @@ amaya.game.Game = function () {
         backgroundView = new amaya.game.BackgroundView( display.backgroundContainer, display.logoContainer );
         backgroundView.showLogo();
         // Reel View - Controls the display of the reels (Spin and Icon animations).
-        reelView = new amaya.game.ReelView( display.reelsContainer, display.symAnimContainer, model, display.winboxContainer , display.reelStreamContainer, soundManager);
+        reelView = new amaya.game.ReelView( display.reelsContainer, display.symAnimContainer, display.stickyWildContainer, model, display.winboxContainer , display.reelStreamContainer, soundManager);
         // Payline View - Controls the display of the paylines.
         paylineView = new amaya.game.PaylineView( display.paylineContainer, display.winboxContainer, model, reelView );
         // Won View - Controls the display of the won field and sounds
@@ -947,6 +949,8 @@ amaya.game.Game = function () {
          // to get symbols and ways win
          model.setSymbolsWays(spinResponse.getSymbolsAndWays());
          model.setWinningLineId(spinResponse.getWinningLineId());
+         //to get the sticky wild data
+         //console.log('spinResponse.getstickyWilds()', spinResponse.getstickyWilds());
         //console.log("setScatterWin=="+spinResponse.getScatterWin());
         freeSpinView.bonusTotal(spinResponse.getFreeSpinsWon());
        // model.setCreditsWon(spinResponse.getCreditsWon() - spinResponse.getScatterWin());
@@ -985,6 +989,8 @@ amaya.game.Game = function () {
        // to get symbols and ways win
         model.setSymbolsWays(freeSpinResponse.getSymbolsAndWays());
         model.setWinningLineId(freeSpinResponse.getWinningLineId());
+        //to get the sticky wild data
+         model.setstickyWilds(freeSpinResponse.getstickyWilds());
         // If the total number of free spins in the response is greater than the number of free spins
         // currently in the model, then this free spin triggers additional free spins.
         // If so, set the triggered flag to true.
@@ -1771,6 +1777,11 @@ amaya.game.Game = function () {
                     paylineView.hideAllPosBg();
                     scatFlag=0;
         }
+        if (model.getGameState() == amaya.game.GameConstants.FREE_SPIN_STATE) {
+            if (event.data == 2 && model.getstickyWilds().length) {
+                reelView.playStickyWildStart(event.data);
+            }
+        }
         soundManager.PlayReelStopSound();
     }
     function checkAndPlayScatterAppearSound(id) {
@@ -2178,6 +2189,13 @@ amaya.game.GameConstants = {
     SYM_QUEEN : 9,
     SYM_JACK : 10,
     SYM_SCATTER : 11,
+    /* shashank changes reverted
+    SYM_ACE : 8,
+    SYM_KING : 9,
+    SYM_QUEEN : 10,
+    SYM_JACK : 11,
+    SYM_SCATTER : 12,
+    */
     NUM_REEL_SPIN_ROWS : 7,
     NUM_SYMBOLS : 12,
     REEL_INDEX_START_INDEX : 1,
@@ -2209,13 +2227,13 @@ amaya.game.IntroView = function ( container) {
     amaya.sdk.utils.JSONUtils.fromJSON( tfIntroContinue, json.tfIntroContinue );
    // tfIntroContinue.text = langFile.tap_to_continue;
     IntroContainer.addChild(tfIntroContinue);
-    var tfIntroTextShadow1 = new createjs.Text(langFile.Msg1);
-    amaya.sdk.utils.JSONUtils.fromJSON( tfIntroTextShadow1, json.tfIntroTextShadow1 );
-    IntroContainer.addChild(tfIntroTextShadow1);
-    var tfIntroText1 = new createjs.Text(langFile.Msg1);
-    amaya.sdk.utils.JSONUtils.fromJSON( tfIntroText1, json.tfIntroText1 );
+    //var tfIntroTextShadow1 = new createjs.Text(langFile.Msg1);
+    //amaya.sdk.utils.JSONUtils.fromJSON( tfIntroTextShadow1, json.tfIntroTextShadow1 );
+    //IntroContainer.addChild(tfIntroTextShadow1);
+    //var tfIntroText1 = new createjs.Text(langFile.Msg1);
+    //amaya.sdk.utils.JSONUtils.fromJSON( tfIntroText1, json.tfIntroText1 );
     //tfIntroText.text = langFile.Msg;
-     IntroContainer.addChild(tfIntroText1);
+    // IntroContainer.addChild(tfIntroText1);
     //text onto intro screen started from here, it should be from IntroText2 to IntroText7 with their shadows as well
    var tfIntroTextShadow2 = new createjs.Text(langFile.IntroText2);
     amaya.sdk.utils.JSONUtils.fromJSON( tfIntroTextShadow2, json.tfIntroTextShadow2 );
@@ -2403,6 +2421,7 @@ amaya.game.Model = function ( openingBalance, creditValueList, numberOfLines ) {
     var ScatterWays;
 	var SymbolsWays;
     var winningLineId;
+    var stickyWilds;
      /**
       * @returns {Array.<object>}
        */
@@ -2811,11 +2830,17 @@ amaya.game.Model = function ( openingBalance, creditValueList, numberOfLines ) {
     instance.setSymbolsWays =function(value){
             SymbolsWays = value;
     }
-    instance.getWinningLineId= function(){
+    instance.getWinningLineId = function(){
             return winningLineId;
     };
-    instance.setWinningLineId= function(value){
+    instance.setWinningLineId = function(value){
              winningLineId = value;
+    };
+    instance.getstickyWilds = function(){
+            return stickyWilds;
+    };
+    instance.setstickyWilds = function(value){
+             stickyWilds = value;
     };
     balance = openingBalance;
     creditValues = creditValueList;
@@ -2967,6 +2992,15 @@ amaya.game.PaylineView = function ( container, winboxContainer, model, reelView 
     }
    function createWinBox ( pos ) {
         for (var i = 0; i < pos.length; i++) {
+            /* changes for double winbox
+            console.log('reelArray' ,pos[i]);
+            console.log('reelID' ,pos[i][0]);
+            if(pos[i][0] == 3){
+                winframeData.images = [gameServices.assets.getAsset(json.winboxDataBig.image)];
+            } else {
+                winframeData.images = [gameServices.assets.getAsset(json.winboxData.image)];
+            }
+            */
             var winframeData = json.winboxData;
             winframeData.images = [gameServices.assets.getAsset(json.winboxData.image)];
             var winframeAnimSS = new createjs.SpriteSheet(winframeData);
@@ -3009,7 +3043,7 @@ amaya.game.PaylineView = function ( container, winboxContainer, model, reelView 
  * Time: 4:24 PM
  * To change this template use File | Settings | File Templates.
  */
-amaya.game.ReelView = function ( container, symAnimContainer, model, backgroundContainer, reelStreamContainer, soundManager ) {
+amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContainer,  model, backgroundContainer, reelStreamContainer, soundManager ) {
     var instance = new amaya.api.EventDispatcher();
     var gameServices = new amaya.GameServices();
     var paylineView;
@@ -3042,6 +3076,7 @@ amaya.game.ReelView = function ( container, symAnimContainer, model, backgroundC
         "4": reel5
     };
     amaya.sdk.utils.JSONUtils.fromJSON( symAnimContainer, mainjson.reels );
+    amaya.sdk.utils.JSONUtils.fromJSON( stickyWildContainer, mainjson.reel3 );
     var animReel1 = new createjs.Container();
     amaya.sdk.utils.JSONUtils.fromJSON( animReel1, mainjson.reel1 );
     symAnimContainer.addChild(animReel1);
@@ -3313,6 +3348,128 @@ amaya.game.ReelView = function ( container, symAnimContainer, model, backgroundC
                                     reelStreamContainer.removeChild(blueStream);
                                 });
         }
+                function getStickyWildAnimData () {
+                    var stickyWildAnimData = mainjson.stickyWildAnimData;
+                    stickyWildAnimData.images = [gameServices.assets.getAsset(mainjson.stickyWildAnimData.image)];
+                    var stickyWildAnimSS = new createjs.SpriteSheet(mainjson.stickyWildAnimData);
+                    var stickyWildAnim = new createjs.Sprite(stickyWildAnimSS);
+                    stickyWildAnim.gotoAndStop(0);
+                    stickyWildAnim.gotoAndPlay("stickyWildAnim");
+                    return stickyWildAnim;
+                };
+                /*var stickyWildAnimAnimation;
+                instance.playStickyWildAnim = function (id) {
+                    *//*stickyWildAnimAnimation = getStickyWildAnimData();
+                    stickyWildAnimAnimation.y = mainjson.reel3.y - mainjson.stickyWildAnimData.spacing.y;
+                    stickyWildAnimAnimation.x = mainjson.reel3.x - mainjson.stickyWildAnimData.spacing.x;
+                    stickyWildAnimAnimation.scaleX = mainjson.stickyWildAnimData.scale.x;
+                    stickyWildAnimAnimation.scaleY = mainjson.stickyWildAnimData.scale.y;
+                    stickyWildContainer.addChild(stickyWildAnimAnimation);
+                    //soundManager.PlayAnticipation();*//*
+                    var icons1 = new createjs.Container();
+                    var icons2 = new createjs.Container();
+                    var icons3 = new createjs.Container();
+                    var icons4 = new createjs.Container();
+                    var icons5 = new createjs.Container();
+                    var icons = {
+                        "0": icons1,
+                        "1": icons2,
+                        "2": icons3,
+                        "3": icons4,
+                        "4": icons5
+                    };
+                    for (var i=0; i < model.getstickyWilds().length; i++) {
+                        var icon;
+                        icon = getStickyWildAnimData();
+                        icon.y = model.getstickyWilds()[i]*mainjson.icons.spacing;
+                        icons[id].addChild(icon);
+                        stickyWildContainer.addChild(icons[id]);
+                        //icon.addEventListener("animationend",function () {
+                       //};
+                    }
+                };*/
+                function getStickyWildLoopData () {
+                    var stickyWildLoopData = mainjson.stickyWildLoopData;
+                    stickyWildLoopData.images = [gameServices.assets.getAsset(mainjson.stickyWildLoopData.image)];
+                    var stickyWildLoopSS = new createjs.SpriteSheet(mainjson.stickyWildLoopData);
+                    var stickyWildLoop = new createjs.Sprite(stickyWildLoopSS);
+                    stickyWildLoop.gotoAndStop(0);
+                    stickyWildLoop.gotoAndPlay("stickyWildLoop");
+                    return stickyWildLoop;
+                };
+                var stickyWildLoopAnimation;
+                instance.playStickyWildLoop = function (id) {
+                    /*stickyWildLoopAnimation = getStickyWildLoopData();
+                    stickyWildLoopAnimation.y = mainjson.reel3.y - mainjson.stickyWildLoopData.spacing.y;
+                    stickyWildLoopAnimation.x = mainjson.reel3.x - mainjson.stickyWildLoopData.spacing.x;
+                    stickyWildLoopAnimation.scaleX = mainjson.stickyWildLoopData.scale.x;
+                    stickyWildLoopAnimation.scaleY = mainjson.stickyWildLoopData.scale.y;
+                    stickyWildContainer.addChild(stickyWildLoopAnimation);
+                    //soundManager.PlayAnticipation();*/
+                    var icons1 = new createjs.Container();
+                    var icons2 = new createjs.Container();
+                    var icons3 = new createjs.Container();
+                    var icons4 = new createjs.Container();
+                    var icons5 = new createjs.Container();
+                    var icons = {
+                        "0": icons1,
+                        "1": icons2,
+                        "2": icons3,
+                        "3": icons4,
+                        "4": icons5
+                    };
+                    for (var i=0; i < model.getstickyWilds().length; i++) {
+                        var icon;
+                        icon = getStickyWildLoopData();
+                        icon.y = model.getstickyWilds()[i]*mainjson.icons.spacing;
+                        icons[id].addChild(icon);
+                        stickyWildContainer.addChild(icons[id]);
+                        //icon.addEventListener("animationend",function () {
+                       //};
+                    }
+                };
+                function getStickyWildStartData () {
+                    var stickyWildStartData = mainjson.stickyWildStartData;
+                    stickyWildStartData.images = [gameServices.assets.getAsset(mainjson.stickyWildStartData.image)];
+                    var stickyWildStartSS = new createjs.SpriteSheet(mainjson.stickyWildStartData);
+                    var stickyWildStart = new createjs.Sprite(stickyWildStartSS);
+                    stickyWildStart.gotoAndStop(0);
+                    stickyWildStart.gotoAndPlay("stickyWildStart");
+                    return stickyWildStart;
+                };
+                var stickyWildStartAnimation;
+                instance.playStickyWildStart = function (id) {
+                    /*stickyWildStartAnimation = getStickyWildStartData();
+                    stickyWildStartAnimation.y = mainjson.reel3.y - mainjson.stickyWildStartData.spacing.y;
+                    stickyWildStartAnimation.x = mainjson.reel3.x - mainjson.stickyWildStartData.spacing.x;
+                    stickyWildStartAnimation.scaleX = mainjson.stickyWildStartData.scale.x;
+                    stickyWildStartAnimation.scaleY = mainjson.stickyWildStartData.scale.y;
+                    stickyWildContainer.addChild(stickyWildStartAnimation);
+                    //soundManager.PlayAnticipation();*/
+                    var icons1 = new createjs.Container();
+                    var icons2 = new createjs.Container();
+                    var icons3 = new createjs.Container();
+                    var icons4 = new createjs.Container();
+                    var icons5 = new createjs.Container();
+                    var icons = {
+                        "0": icons1,
+                        "1": icons2,
+                        "2": icons3,
+                        "3": icons4,
+                        "4": icons5
+                    };
+                    for (var i=0; i < model.getstickyWilds().length; i++) {
+                        var icon;
+                        icon = getStickyWildStartData();
+                        icon.y = model.getstickyWilds()[i]*mainjson.icons.spacing;
+                        icons[id].addChild(icon);
+                        stickyWildContainer.addChild(icons[id]);
+                        icon.addEventListener("animationend",function () {
+                            stickyWildContainer.removeAllChildren();
+                            instance.playStickyWildLoop(id);
+                        });
+                    }
+                };
     return instance;
 }
 amaya.game.SoundConstants = {
@@ -4674,6 +4831,8 @@ amaya.game.messaging.FreeSpinResponse = function ( responseData ) {
     var numOfSym=[];
     var wayPos=0;
     var winningLineId = [];
+    var stickyWilds;
+    stickyWilds = $(responseData).find("stickyWilds").text().split(',');
     $(responseData).find("msgdata reels reel").each( function ( index, element ) {
         stops = $(element).text().split(",");
         if (stops.length === 3) {
@@ -4826,6 +4985,9 @@ amaya.game.messaging.FreeSpinResponse = function ( responseData ) {
     };
     instance.getWinningLineId= function(){
             return winningLineId;
+    };
+    instance.getstickyWilds = function () {
+                return stickyWilds;
     };
     return instance;
 };

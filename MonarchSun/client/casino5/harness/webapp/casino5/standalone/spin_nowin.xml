@@ -14,7 +14,7 @@
 		<gamePlayId>2724628</gamePlayId>
 		<lastMsgId>0</lastMsgId>
 		<timeStamp timeZoneOffset="0">1291247156184</timeStamp>
-		<processTime>238</processTime>
+		<processTime>238</processTime> 
 		<responsiblegaming rctype="2" time="91614">
 			<rgrealitycheck display="false" />
 			<rgplayersessionlimit display="false" />
@@ -22,13 +22,14 @@
 	</msgheader>
     <msgdata reqName="SpinReq">
         <reels>
-            <reel id="1" pos="3">10,5,8</reel>
-            <reel id="2" pos="31">9,6,11,1</reel>
-            <reel id="3" pos="35">12,7,1,1</reel>
-            <reel id="4" pos="14">7,11,13,1</reel>
-            <reel id="5" pos="9">13,8,11</reel>
+            <reel id="1" pos="4">10,3,3,8</reel>
+            <reel id="2" pos="31">9,11,7,7</reel>
+            <reel id="3" pos="35">7,11,7</reel>
+            <reel id="4" pos="14">7,7,1,9</reel>
+            <reel id="5" pos="9">8,10,10,10</reel>
         </reels>
         <lines won="0"></lines>
+		<stickyWilds>0,2</stickyWilds>
         <creditResults wagered="20" won="0"></creditResults>
         <results wagered="0.40" won="0.00" net="-0.40"></results>
         <freeSpins total="0" used="0" won="0"></freeSpins>

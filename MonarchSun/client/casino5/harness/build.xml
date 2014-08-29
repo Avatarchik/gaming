@@ -39,8 +39,8 @@
 
         <!-- Download the casino 5 framework config. This comes from the CGS -->
         <mkdir dir="${cache.dir}/conf"/>
-        <get src="${connection.protocol}://${connection.domain}/casino/game/conf/html5config.xml" dest="${cache.dir}/conf/html5config.xml"/>
-        <get src="${connection.protocol}://${connection.domain}/casino/game/conf/currencyconfig.xml" dest="${cache.dir}/conf/currencyconfig.xml"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/GameSupport/conf/html5config.xml" dest="${cache.dir}/conf/html5config.xml"/>
+        <get src="${connection.protocol}://${connection.domain}/casino/game/remote/GameSupport/conf/currencyconfig.xml" dest="${cache.dir}/conf/currencyconfig.xml"/>
 
         <!-- Download the casino 5 about page. This comes from the remote webapp but is not in the manifest -->
         <mkdir dir="${cache.dir}/menu"/>
@@ -206,7 +206,7 @@
                     </fileset>
                 </copy>
 
-                <copy todir="${build.dir}" overwrite="true">
+                <copy todir="${build.dir}/remote/GameSupport" overwrite="true">
                     <fileset dir="${cache.dir}">
                         <include name="conf/*.*"/>
                     </fileset>

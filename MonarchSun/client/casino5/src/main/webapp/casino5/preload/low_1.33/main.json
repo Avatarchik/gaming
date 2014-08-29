@@ -1,1287 +1,1649 @@
 {
 
-    "tfFsWon1": {
+        "tfFsWon1": {
         "color": "#fad039",
         "font": "bold 52px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "405",
-        "y": "75"
-    },
-    "tfFsWonShadow1": {
-		"color": "#000",
-		"font": "bold 52px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "405",
-		"y": "75",
-		"outline":"2.5"
-	},
+        "x": "396",
+        "y": "92"
+        },
 
-    "tfFsWon2": {
-        "color": "#c19ff5",
-        "font": "bold 53px Helvetica,Arial,sans-serif",
-        "textAlign": "right",
-        "x": "320",
-        "y": "140"
-    },
-    "tfFsWonShadow2": {
-		"color": "#000",
-		"font": "bold 53px Helvetica,Arial,sans-serif",
-		"textAlign": "right",
-		"x": "320",
-		"y": "140",
-		"outline":"2.5"
-	},
-
-    "tfFsWon3": {
-        "color": "#2b0b59",
-        "font": "bold 50px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "480",
-        "y": "140"
-    },
-    "tfFsWonShadow3": {
-		"color": "#868f0b",
-		"font": "bold 50px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "480",
-		"y": "140",
-		"outline":"2.5"
-	},
-
-    "tfFsWon4": {
-        "color": "#2b0b59",
-        "font": "bold 40px Helvetica,Arial,sans-serif",
-        "textAlign": "right",
-        "x": "215",
-        "y": "204"
-    },
-    "tfFsWonShadow4": {
-		"color": "#868f0b",
-		"font": "bold 40px Helvetica,Arial,sans-serif",
-		"textAlign": "right",
-		"x": "215",
-		"y": "204",
-		"outline":"2.5"
-	},
-
-    "tfFsWon5": {
-        "color": "#c19ff5",
-        "font": "bold 53px Helvetica,Arial,sans-serif",
-        "textAlign": "right",
-        "x": "320",
-        "y": "196"
-    },
-    "tfFsWonShadow5": {
-		"color": "#000",
-		"font": "bold 53px Helvetica,Arial,sans-serif",
-		"textAlign": "right",
-		"x": "320",
-		"y": "196",
-		"outline":"2.5"
-	},
-
-    "tfFsWon6": {
-        "color": "#2b0b59",
-        "font": "bold 42px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "480",
-        "y": "205"
-    },
-    "tfFsWonShadow6": {
-		"color": "#868f0b",
-		"font": "bold 42px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "480",
-		"y": "205",
-		"outline":"2.5"
-	},
-
-    "tfFsWon7": {
-        "color": "#c19ff5",
-        "font": "bold 98px Helvetica,Arial,sans-serif",
-        "textAlign": "right",
-        "x": "320",
-        "y": "295"
-    },
-    "tfFsWonShadow7": {
-		"color": "#000",
-		"font": "bold 98px Helvetica,Arial,sans-serif",
-		"textAlign": "right",
-		"x": "320",
-		"y": "295",
-		"outline":"2.5"
-	},
-
-    "tfFsWon8": {
-        "color": "#2b0b59",
-        "font": "bold 50px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "480",
-        "y": "295"
-    },
-    "tfFsWonShadow8": {
-		"color": "#868f0b",
-		"font": "bold 50px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "480",
-		"y": "295",
-		"outline":"2.5"
-	},
-
-    "tfFsWon9": {
-        "color": "#2b0b59",
-        "font": "bold 59px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "480",
-        "y": "352"
-    },
-    "tfFsWonShadow9": {
-		"color": "#868f0b",
-		"font": "bold 59px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "480",
-		"y": "352",
-		"outline":"2.5"
-	},  
-
-    "tfFsAmountWon1": {
+        "tfFsWon2": {
         "color": "#fad039",
-        "font": "bold 55px Helvetica,Arial,sans-serif",
+        "font": "bold 34px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "150",
+        "y": "172"
+        },
+
+        "tfFsWon3": {
+        "color": "#eb0f59",
+        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "255",
+        "y": "182"
+        },
+
+        "tfFsWon4": {
+        "color": "#2b0b59",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "190",
+        "y": "235"
+        },
+        "tfFsWon5": {
+        "color": "#eb0f59",
+        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "558",
+        "y": "182"
+        },
+        "fsintro_ad_image1":{
+        "x": "364",
+        "y": "155"
+        },
+        "tfFsWon6": {
+        "color": "#fad039",
+        "font": "bold 34px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "585",
+        "y": "173"
+        },
+        "tfFsWon7": {
+        "color": "#fad039",
+        "font": "bold 25px Helvetica,Arial,sans-serif",
+        "lineWidth":100,
+        "textAlign": "right",
+        "x": "680",
+        "y": "170"
+        },
+        "tfFsWon8": {
+        "color": "#fad039",
+        "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "400",
-        "y": "87"
-    },
-    "tfFsAmountWonShadow1": {
+        "y": "250"
+        },
+        "tfFsWon9": {
+        "color": "#2b0b59",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "470",
+        "y": "332"
+        },
+
+        "tfFsWonShadow1": {
         "color": "#000",
-        "font": "bold 55px Helvetica,Arial,sans-serif",
+        "font": "bold 52px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "400",
-        "y": "87",
-	    "outline":"8"
-    },
+        "x": "396",
+        "y": "92",
+        "outline":"2"
+        },
 
-    "tfFsAmountWon2": {
-        "color": "#c19ff5",
-        "font": "bold 85px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "400",
-        "y": "185"
-    },
-    "tfFsAmountWonShadow2": {
-        "color": "#000",       
-        "font": "bold 85px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "400",
-        "y": "185",
-	    "outline":"8"
-    },
+        "tfFsWonShadow2": {
+        "color": "#000",
+        "font": "bold 34px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "150",
+        "y": "172",
+        "outline":"2"
+        },
 
-    "tfFsAmountWon3": {
-         "color": "#2b0b59",
-         "font": "bold 50px Helvetica,Arial,sans-serif",
-         "textAlign": "center",
-         "x": "400",
-         "y": "290"
-     },
-     "tfFsAmountWonShadow3": {
-        "color": "#868f0b",        
-        "font": "bold 50px Helvetica,Arial,sans-serif",
+        "tfFsWonShadow3": {
+        "color": "#000",
+        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "255",
+        "y": "182",
+        "outline":"2"
+        },
+
+        "tfFsWonShadow4": {
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "230",
+        "y": "235",
+        "outline":"2"
+        },
+        "tfFsWonShadow5": {
+        "color": "#000",
+        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "558",
+        "y": "180",
+        "outline":"2"
+        },
+        "tfFsWonShadow6": {
+        "color": "#000",
+        "font": "bold 34px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "585",
+        "y": "173",
+        "outline":"2"
+        },
+        "tfFsWonShadow7": {
+        "color": "#000",
+        "font": "bold 25px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "lineWidth":100,
+        "x": "680",
+        "y": "170",
+        "outline":"2"
+        },
+        "tfFsWonShadow8": {
+        "color": "#000",
+        "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "400",
-        "y": "290",
-	    "outline":"6"
-    },
-
-    "tfFsAmountWon4": {
-       "color": "#2b0b59",
-       "font": "bold 42px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "200",
-       "y": "355"
-       },
-     "tfFsAmountWonShadow4": {
+        "y": "250",
+        "outline":"2"
+        },
+        "tfFsWonShadow9": {
         "color": "#868f0b",
-        "font": "bold 42px Helvetica,Arial,sans-serif",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "200",
-        "y": "355",
+        "x": "470",
+        "y": "332",
+        "outline":"2"
+        },
+        "tfFsAmountWon1": {
+        "color": "#5ef9f1",
+        "font": "bold 53px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "390",
+        "y": "90"
+        },
+
+        "tfFsAmountWon2": {
+        "color": "#ce41a7",
+        "font": "bold 75px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "390",
+        "y": "155"
+        },
+
+        "tfFsAmountWon3": {
+        "color": "#5ef9f1",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "390",
+        "y": "250"
+        },
+        "tfFsAmountWon4": {
+        "color": "#5ef9f1",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "220",
+        "y": "315"
+        },
+
+        "tfFsAmountWon5": {
+        "color": "#5ef9f1",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "290",
+        "y": "315"
+        },
+        "tfFsAmountWon6": {
+        "color": "#5ef9f1",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "474",
+        "y": "315"
+        },
+
+        "tfFsAmountWonShadow1": {
+        "color": "#000",
+        "font": "bold 53px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "390",
+        "y": "90",
+        "outline":"8"
+        },
+
+        "tfFsAmountWonShadow2": {
+        "color": "#4c0b60",
+        "font": "bold 75px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "390",
+        "y": "155",
+        "outline":"8"
+        },
+
+        "tfFsAmountWonShadow3": {
+        "color": "#000",
+
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "390",
+        "y": "250",
+        "outline":"6"
+        },
+        "tfFsAmountWonShadow4": {
+        "color": "#000",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "220",
+        "y": "315",
+        "outline":"6"
+        },
+        "tfFsAmountWonShadow5": {
+        "color": "#000",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "290",
+        "y": "315",
+        "outline":"6"
+        },
+        "fsintro_ad_image2":{
+        "x": "235",
+        "y": "285"
+        },
+        "tfFsAmountWonShadow6": {
+        "color": "#000",
+        "font": "bold 45px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "474",
+        "y": "315",
         "outline":"6"
         },
 
-   "tfFsAmountWon5": {
-        "color": "#c19ff5",
-        "font": "bold 46px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "300",
-        "y": "355"
-    },
-    "tfFsAmountWonShadow5": {
-        "color": "#000",
-        "font": "bold 46px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "300",
-        "y": "355",
-         "outline":"8"
-    },
-    "tfFsAmountWon6": {
-          "color": "#2b0b59",
-          "font": "bold 42px Helvetica,Arial,sans-serif",
-          "textAlign": "center",
-          "x": "505",
-          "y": "355"
-      },    
-    "tfFsAmountWonShadow6": {
-        "color": "#868f0b",
-        "font": "bold 42px Helvetica,Arial,sans-serif",
-        "textAlign": "center",
-        "x": "505",
-        "y": "355",
-         "outline":"6"
-    },
-
-    "tfFsRetrigWon0": {
+        "tfFsRetrigWon0": {
         "color": "#fad039",
         "font": "bold 47px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "406",
         "y": "60"
-    },
-	"tfFsRetrigWonShadow0": {
+        },
+        "tfFsRetrigWonShadow0": {
         "color": "#000",
         "font": "bold 47px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "406",
         "y": "60",
         "outline":"8"
-    },
+        },
 
-    "tfFsRetrigWon1": {
+        "tfFsRetrigWon1": {
         "color": "#c19ff5",
         "font": "bold 50px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "320",
         "y": "141"
-    },
-	"tfFsRetrigWonShadow1": {
+        },
+        "tfFsRetrigWonShadow1": {
         "color": "#000",
         "font": "bold 50px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "320",
         "y": "141",
         "outline":"4"
-    },
-	
-    "tfFsRetrigWon2": {
+        },
+
+        "tfFsRetrigWon2": {
         "color": "#2b0b59",
         "font": "bold 50px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "146"
-    },
-	"tfFsRetrigWonShadow2": {
+        },
+        "tfFsRetrigWonShadow2": {
         "color": "#868f0b",
         "font": "bold 50px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "146",
         "outline":"2.5"
-    },
+        },
 
-    "tfFsRetrigWon3": {
+        "tfFsRetrigWon3": {
         "color": "#2b0b59",
         "font": "bold 35px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "205",
         "y": "215"
-    },
-	
-    "tfFsRetrigWonShadow3": {
+        },
+
+        "tfFsRetrigWonShadow3": {
         "color": "#868f0b",
         "font": "bold 35px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "205",
         "y": "215",
         "outline":"2.5"
-    },
-    "tfFsRetrigWon4": {
+        },
+        "tfFsRetrigWon4": {
         "color": "#c19ff5",
         "font": "bold 50px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "320",
         "y": "200"
-    },	
-    "tfFsRetrigWonShadow4": {
+        },
+        "tfFsRetrigWonShadow4": {
         "color": "#000",
         "font": "bold 50px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "320",
         "y": "200",
         "outline":"2.5"
-    },
-	
-    "tfFsRetrigWon5": {
+        },
+
+        "tfFsRetrigWon5": {
         "color": "#2b0b59",
         "font": "bold 42px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "210"
-    },	
-	"tfFsRetrigWonShadow5": {
+        },
+        "tfFsRetrigWonShadow5": {
         "color": "#868f0b",
         "font": "bold 42px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "210",
         "outline":"2.5"
-    },	
-	
-    "tfFsRetrigWon6": {
+        },
+
+        "tfFsRetrigWon6": {
         "color": "#c19ff5",
         "font": "bold 90px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "320",
         "y": "295"
-    },	
-    "tfFsRetrigWonShadow6": {
-		"color": "#000",
-		"font": "bold 90px Helvetica,Arial,sans-serif",
-		"textAlign": "right",
-		"x": "320",
-		"y": "295",
-		"outline":"2.5"
-    },
-	
-    "tfFsRetrigWon7": {
+        },
+        "tfFsRetrigWonShadow6": {
+        "color": "#000",
+        "font": "bold 90px Helvetica,Arial,sans-serif",
+        "textAlign": "right",
+        "x": "320",
+        "y": "295",
+        "outline":"2.5"
+        },
+
+        "tfFsRetrigWon7": {
         "color": "#2b0b59",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "300"
-    },
-	"tfFsRetrigWonShadow7": {
+        },
+        "tfFsRetrigWonShadow7": {
         "color": "#868f0b",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "300",
         "outline":"2.5"
-    },
-	
-    "tfFsRetrigWon8": {
+        },
+
+        "tfFsRetrigWon8": {
         "color": "#2b0b59",
         "font": "bold 60px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "490",
         "y": "345"
-    },
-    "tfFsRetrigWonShadow8": {
-		"color": "#868f0b",
-		"font": "bold 60px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "490",
-		"y": "345",
-		"outline":"2.5"
-    },
+        },
+        "tfFsRetrigWonShadow8": {
+        "color": "#868f0b",
+        "font": "bold 60px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "490",
+        "y": "345",
+        "outline":"2.5"
+        },
 
-    "tfContinue": {
+        "tfContinue": {
         "color": "#d1f1fe",
         "font": "bold 25px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "400",
-        "y": "380"
-    },
-    "tfContinueShadow": {
+        "x": "310",
+        "y": "310"
+        },
+
+        "tfContinueShadow": {
         "color": "#FF0000",
         "font": "bold 25px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "400",
-        "y": "380",
-        "outline":"6"
-    },
+        "x": "310",
+        "y": "310",
+        "outline":"5"
+        },
 
-    "tfIntroText1":{
+        "tfIntroText1":{
         "color": "#9fe8f6",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
-        "x": "120",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x": "230",
+        "y": "495"
+        },
+        "tfIntroTextShadow1":{
+        "color": "#03176a",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x": "230",
+        "y": "495" ,
+        "outline":"2"
+        },
+
+        "tfIntroText2":{
+        "color": "#51fffd",
+        "font": "bold 15px Helvetica,Arial,sans-serif",
+        "x": "12",
         "y": "470"
-    },
-    "tfIntroTextShadow1":{
-        "color": "#03176a",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
-        "x": "120",
-        "y": "470",
-        "outline":"3"
-    },
-
-    "tfIntroText2":{
-        "color": "#cc0d00",
-        "font": "bold 24px Helvetica,Arial,sans-serif",
-        "x": "453",
-        "y": "505"
-    },
-    "tfIntroTextShadow2":{
+        },
+        "tfIntroTextShadow2":{
         "color": "#000",
-        "font": "bold 24px Helvetica,Arial,sans-serif",
-        "x": "453",
-        "y": "505" ,
+        "font": "bold 15px Helvetica,Arial,sans-serif",
+        "x": "12",
+        "y": "470" ,
         "outline":"3"
-    },
+        },
 
-    "tfIntroText3":{
+        "tfIntroText3":{
+        "color": "#fff90d",
+        "font": "bold 22px Helvetica,Arial,sans-serif",
+        "x": "12",
+        "y": "485"
+        },
+        "tfIntroTextShadow3":{
+        "color": "#000",
+        "font": "bold 22px Helvetica,Arial,sans-serif",
+        "x": "12",
+        "y": "485" ,
+        "outline":"3"
+        },
+
+        "tfIntroText4":{
+        "color": "#51fffd",
+        "font": "bold 15px Helvetica,Arial,sans-serif",
+        "x": "12",
+        "y": "515"
+        },
+        "tfIntroTextShadow4":{
+        "color": "#000",
+        "font": "bold 15px Helvetica,Arial,sans-serif",
+        "x": "12",
+        "y": "510" ,
+        "outline":"3"
+        },
+
+        "tfIntroText5":{
+        "color": "#fff90d",
+        "font": "bold 42px Helvetica,Arial,sans-serif",
+        "x": "645",
+        "y": "510"
+        },
+        "tfIntroTextShadow5":{
+        "color": "#000",
+        "font": "bold 42px Helvetica,Arial,sans-serif",
+        "x": "645",
+        "y": "510" ,
+        "outline":"7"
+        },
+
+
+        "tfIntroText6":{
         "color": "#9fe8f6",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
-        "x": "483",
-        "y": "505"
-    },
-    "tfIntroTextShadow3":{
+        "font": "bold 15px Helvetica,Arial,sans-serif",
+        "x": "720",
+        "y": "506"
+        },
+        "tfIntroTextShadow6":{
         "color": "#03176a",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
-        "x": "483",
-        "y": "505" ,
+        "font": "bold 15px Helvetica,Arial,sans-serif",
+        "x": "720",
+        "y": "506" ,
         "outline":"3"
-    },
+        },
 
-   "tfIntroContinue": {
+
+        "tfIntroText7":{
+        "color": "#51fffd",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "x": "720",
+        "y": "520"
+        },
+        "tfIntroTextShadow7":{
+        "color": "#000",
+        "font": "bold 30px Helvetica,Arial,sans-serif",
+        "x": "720",
+        "y": "520" ,
+        "outline":"7"
+        },
+
+        "tfIntroText8":{
+        "color": "#fff90d",
+        "font": "bold 37px Helvetica,Arial,sans-serif",
+        "x": "307",
+        "y": "526"
+        },
+        "tfIntroTextShadow8":{
+        "color": "#000",
+        "font": "bold 37px Helvetica,Arial,sans-serif",
+        "x": "307",
+        "y": "526" ,
+        "outline":"6"
+        },
+
+        "tfIntroContinue": {
+        "color": "#FFF",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "430",
+        "y": "520"
+        },
+
+
+        "tfIntroContinueShadow": {
+        "color": "#FF0000",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "430",
+        "y": "520",
+        "outline":"3"
+        },
+
+        "scattersym":{
+        "x": "47",
+        "y": "481"
+        } ,
+        "message1":{
+        "color": "#9fe8f6",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x":"185",
+        "y":"4"
+        },
+        "messageShadow1":{
+        "color": "#03176a",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x":"185",
+        "y":"4",
+        "outline":"2"
+        },
+
+        "message2":{
+        "color": "#cc0d00",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x":"570",
+        "y":"34"
+        },
+        "messageShadow2":{
+        "color": "#000",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x":"570",
+        "y":"34",
+        "outline":"3"
+        },
+
+        "message3":{
+        "color": "#9fe8f6",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x":"590",
+        "y":"34"
+        },
+        "messageShadow3":{
+        "color": "#03176a",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "x":"590",
+        "y":"34",
+        "outline":"3"
+        },
+        "message4":{
+        "color": "#9fe8f6",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+
+        "x":"405",
+        "y":"4"
+        },
+        "messageShadow4":{
+        "color": "#03176a",
+        "font": "bold 18px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x":"405",
+        "y":"4",
+        "outline":"2"
+        },
+
+        "FreeMessage":{
+        "color": "#ffc000",
+        "font": "bold 12px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "lineWidth": "380",
+        "lineHeight":"13",
+        "x":"337",
+        "y":"13"
+        },
+        "FreeMessageShadow":{
+        "color": "#cc0d00",
+        "font": "bold 12px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "lineWidth": "380",
+        "lineHeight":"13",
+        "x":"337",
+        "y":"13",
+        "outline":"1"
+        },
+
+
+
+        "intro_ad_image1":{
+        "x": "43",
+        "y": "505"
+        } ,
+
+        "intro_ad_image2":{
+        "x": "660",
+        "y": "460"
+        } ,
+        "tfCounter": {
+        "color": "#FFF",
+        "font": "bold 25px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "175",
+        "y": "525"
+        },
+        "tfCounterShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 25px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "175",
+        "y": "525"
+        },
+
+        "tfCounterText":{
+        "color": "#FFF",
+        "font": "bold 17px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "lineWidth":"80",
+        "x": "50",
+        "y": "525"
+        },
+        "tfCounterTextShadow":{
+        "color": "#000",
+        "font": "bold 17px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "lineWidth":"80",
+        "x": "50",
+        "y": "525" ,
+        "outline":"3"
+        },
+
+        "freeGamesMeter": {
+        "x": "85",
+        "y": "518"
+        },
+
+        "tfWon": {
+        "color": "#FFF",
+        "font": "bold 25px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "422",
+        "y": "526"
+        },
+        "tfWonShadow": {
+        "color": "#000",
+        "alpha": "0.2",
+        "font": "bold 25px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "422",
+        "y": "526"
+        },
+
+        "winText": {
         "color": "#FFF",
         "font": "bold 22px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "673",
-        "y": "535"
-    },
+        "x": "300",
+        "y": "529"
+        },
+        "winTextShadow": {
+        "color": "#000",
+        "font": "bold 22px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "300",
+        "y": "529",
+        "outline":"3"
+        },
 
-    "tfIntroContinueShadow": {
-		"color": "#FF0000",
-		"font": "bold 22px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "673",
-		"y": "535" ,
-		"outline":"3"
-    },
+        "winMeter": {
+        "x": "335",
+        "y": "518"
+        },
 
-    "scattersym":{
-            "x": "47",
-            "y": "481"
-    } ,
-   "tfCounter": {
-       "color": "#FFF",
-       "font": "bold 25px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "175",
-       "y": "525"
-   },
-   "tfCounterShadow": {
-       "color": "#000",
-       "alpha": "0.2",
-       "font": "bold 25px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "175",
-       "y": "525"
-   },
-
-   "tfCounterText":{
-       "color": "#FFF",
-       "font": "bold 17px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "lineWidth":"80",
-       "x": "50",
-       "y": "525"
-   },
-    "tfCounterTextShadow":{
-       "color": "#000",
-       "font": "bold 17px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "lineWidth":"80",
-       "x": "50",
-       "y": "525" ,
-       "outline":"3"
-    },
-
-   "freeGamesMeter": {
-       "x": "85",
-       "y": "518"
-   },
-
-   "tfWon": {
-       "color": "#FFF",
-       "font": "bold 25px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "422",
-       "y": "526"
-   },
-   "tfWonShadow": {
-       "color": "#000",
-       "alpha": "0.2",
-       "font": "bold 25px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "422",
-       "y": "526"
-   },
-
-   "winText": {
-       "color": "#FFF",
-       "font": "bold 22px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "300",
-       "y": "529"
-   },
-    "winTextShadow": {
-       "color": "#000",
-       "font": "bold 22px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "300",
-       "y": "529",
-       "outline":"3"
-   },
-
-   "winMeter": {
-       "x": "335",
-       "y": "518"
-   },
-
-   "freeWonValue":{
-   	    "color": "#FFF",
+        "freeWonValue":{
+        "color": "#FFF",
         "font": "bold 25px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "700",
         "y": "525"
-   },
-    "freeWonValueShadow":{
-   	    "color": "#000",
+        },
+        "freeWonValueShadow":{
+        "color": "#000",
         "alpha": "0.2",
         "font": "bold 25px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "700",
         "y": "525"
-   },
+        },
 
-   "freeWonText": {
+        "freeWonText": {
         "color": "#FFF",
         "font": "bold 17px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "lineWidth":"100",
         "x": "565",
         "y": "525"
-   },
-   "freeWonTextShadow": {
-		"color": "#000",
-		"font": "bold 17px Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"lineWidth":"100",
-		"x": "565",
-		"y": "525" ,
-		"outline":"3"
-   },
+        },
+        "freeWonTextShadow": {
+        "color": "#000",
+        "font": "bold 17px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "lineWidth":"100",
+        "x": "565",
+        "y": "525" ,
+        "outline":"3"
+        },
 
-   "totalWinMeter": {
+        "totalWinMeter": {
         "x": "610",
         "y": "518"
-   },
-	
-    "message1":{
-	    "color": "#d46211",
-        "font": "bold 18px Helvetica,Arial,sans-serif",
-   		"x":"185",
-		"y":"4"
-	},
-	"messageShadow1":{
-	    "color": "#c70202",
-        "font": "bold 18px Helvetica,Arial,sans-serif",
-        "x":"185",
-        "y":"4",
-        "outline":"1.5"
-    },
-    
-    "message4":{
-        "color": "#d46211",
-        "font": "bold 18px Helvetica,Arial,sans-serif",     
-        "x":"275",
-        "y":"4"
-    },
-    "messageShadow4":{
-        "color": "#c70202",
-        "font": "bold 18px Helvetica,Arial,sans-serif",         
-        "x":"275", 
-        "y":"4",
-        "outline":"1.5"
-    },
+        },
 
-	"bigWinBanner":{
-		"color": "#008aff",
+
+
+        "bigWinBanner":{
+        "color": "#008aff",
         "font": "bold 60px Impact, Cartoonist Kooky,Cartoonist,Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "399",
         "y": "190"
-	},
+        },
 
-    "bigWinBannerShadow":{
-		"color": "#141fb6",
-		"font": "bold 60px Impact, Cartoonist Kooky,Cartoonist,Helvetica,Arial,sans-serif",
-		"textAlign": "center",
-		"x": "399",
-		"y": "190",
-		"outline":"7"
-    },
+        "bigWinBannerShadow":{
+        "color": "#141fb6",
+        "font": "bold 60px Impact, Cartoonist Kooky,Cartoonist,Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "399",
+        "y": "190",
+        "outline":"7"
+        },
 
-    "bigWinMeter": {
+        "bigWinMeter": {
         "color": "#FFF",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "403",
         "y": "305"
-    },
+        },
 
-    "bigWinMeterBox": {
+        "bigWinMeterBox": {
         "x": "313",
         "y": "302"
-    },
+        },
 
-    "leftMask": {
-         "x": "0",
-         "y": "71"
-    },
+        "leftMask": {
+        "x": "0",
+        "y": "71"
+        },
 
-     "rightMask": {
+        "rightMask": {
         "x": "758",
         "y": "71"
-     },
+        },
 
-   "gamelogo": {
-        "x": "335",
-        "y": "2"
-   },
-   "powerlogo":{
-		"x": "32",
+        "gamelogo": {
+        "x": "325",
+        "y": "0"
+        },
+        "powerlogo":{
+        "x": "32",
         "y": "15"
-   },
-   "msgBar": {
-       "x": "76",
-       "y": "487"
-   },
+        },
+        "msgBar": {
+        "x": "76",
+        "y": "487"
+        },
 
-   "iconWinMsg": {
-       "color": "#FFF",
-       "font": "bold 16px Helvetica,Arial,sans-serif",
-       "textAlign": "center",
-       "x": "399",
-       "y": "494"
-   },
+        "iconWinMsg": {
+        "color": "#FFF",
+        "font": "bold 16px Helvetica,Arial,sans-serif",
+        "textAlign": "center",
+        "x": "399",
+        "y": "494"
+        },
 
-    "iconsData": {
+        "iconsData": {
         "framerate": 1,
-        "image":  ["device/images/symbols/sym1.png","device/images/symbols/sym2.png","device/images/symbols/sym3.png","device/images/symbols/sym4.png","device/images/symbols/sym5.png","device/images/symbols/sym6.png","device/images/symbols/sym7.png","device/images/symbols/sym8.png","device/images/symbols/sym9.png","device/images/symbols/sym10.png","device/images/symbols/sym11.png"],
+        "image":  ["device/images/symbols/sym1.png",
+        "device/images/symbols/sym2.png",
+        "device/images/symbols/sym3.png",
+        "device/images/symbols/sym4.png",
+        "device/images/symbols/sym5.png",
+        "device/images/symbols/sym6.png",
+        "device/images/symbols/sym7.png",
+        "device/images/symbols/sym8.png",
+        "device/images/symbols/sym9.png",
+        "device/images/symbols/sym10.png",
+        "device/images/symbols/sym11.png",
+        "device/images/symbols/sym12.png"
+        ],
         "frames": [
-            [0,0,143,113, 0],
-            [0,0,143,113, 1],
-            [0,0,143,113, 2],
-            [0,0,143,113, 3],
-            [0,0,143,113, 4],
-            [0,0,143,113, 5],
-            [0,0,143,113, 6],
-            [0,0,143,113, 7],
-            [0,0,143,113, 8],
-            [0,0,143,113, 9],
-            [0,0,143,113,10]
+        [0,0,143,122, 0],
+        [0,0,143,122, 1],
+        [0,0,143,122, 2],
+        [0,0,143,122, 3],
+        [0,0,143,113, 4],
+        [0,0,143,113, 5],
+        [0,0,143,113, 6],
+        [0,0,143,113, 7],
+        [0,0,143,113, 8],
+        [0,0,143,113, 9],
+        [0,0,143,113,10],
+        [0,0,143,122,11]
 
         ]
 
-    },
+        },
 
-     "msgIconsData": {
-            "framerate": 1,
-            "image":  ["device/images/small_symbols/sym1.png",
-            "device/images/small_symbols/sym2.png",
-            "device/images/small_symbols/sym3.png",
-            "device/images/small_symbols/sym4.png",
-            "device/images/small_symbols/sym5.png",
-            "device/images/small_symbols/sym6.png",
-            "device/images/small_symbols/sym7.png",
-            "device/images/small_symbols/sym8.png",
-            "device/images/small_symbols/sym9.png",
-            "device/images/small_symbols/sym10.png",
-            "device/images/small_symbols/sym11.png"
-            ],
-            "frames": [
-                [0,0,30,30, 0],
-                [0,0,30,30, 1],
-                [0,0,30,30, 2],
-                [0,0,30,30, 3],
-                [0,0,30,30, 4],
-                [0,0,30,30, 5],
-                [0,0,30,30, 6],
-                [0,0,30,30, 7],
-                [0,0,30,30, 8],
-                [0,0,30,30, 9],
-                [0,0,30,30,10]
+        "msgIconsData": {
+        "framerate": 1,
+        "image":  ["device/images/small_symbols/sym1.png",
+        "device/images/small_symbols/sym2.png",
+        "device/images/small_symbols/sym3.png",
+        "device/images/small_symbols/sym4.png",
+        "device/images/small_symbols/sym5.png",
+        "device/images/small_symbols/sym6.png",
+        "device/images/small_symbols/sym7.png",
+        "device/images/small_symbols/sym8.png",
+        "device/images/small_symbols/sym9.png",
+        "device/images/small_symbols/sym10.png",
+        "device/images/small_symbols/sym11.png",
+        "device/images/small_symbols/sym12.png"
+        ],
+        "frames": [
+        [0,0,30,30, 0],
+        [0,0,30,30, 1],
+        [0,0,30,30, 2],
+        [0,0,30,30, 3],
+        [0,0,30,30, 4],
+        [0,0,30,30, 5],
+        [0,0,30,30, 6],
+        [0,0,30,30, 7],
+        [0,0,30,30, 8],
+        [0,0,30,30, 9],
+        [0,0,30,30,10],
+        [0,0,30,30,11]
 
 
-            ]
+        ]
 
         },
 
         "msgIconsPos1":{
-            "x":389,
-            "y":712
+        "x":389,
+        "y":712
         },
 
-         "msgIconsPos2":{
-            "x":311,
-            "y":712
-         },
-    "reelBg_BaseData": {
+        "msgIconsPos2":{
+        "x":311,
+        "y":712
+        },
+        "reelBg_BaseData": {
         "framerate": 1,
         "image": "device/images/Bg_reel.jpg",
         "frames": [
-            [32,95,135,105],
-            [182,38,135,105],
-            [332,38,135,105],
-			[482,38,135,105],
-			[632,91,135,105],
-			[32,208,135,105],
-            [182,151,135,105],
-            [332,151,135,105],
-			[482,151,135,105],
-			[632,208,135,105],
-			[32,321,135,105],
-            [182,264,135,105],
-            [332,264,135,105],
-			[482,264,135,105],
-			[632,321,135,105],
-			[32,434,135,105],
-            [182,377,135,105],
-            [332,377,135,105],
-			[482,377,135,105],
-			[632,434,135,105]	
+        [42,38,135,105],
+        [187,38,135,105],
+        [332,95,135,105],
+        [477,38,135,105],
+        [622,38,135,105],
+        [42,151,135,105],
+        [187,151,135,105],
+        [332,208,135,105],
+        [477,151,135,105],
+        [622,151,135,105],
+        [42,264,135,105],
+        [187,264,135,105],
+        [332,321,135,105],
+        [477,264,135,105],
+        [622,264,135,105],
+        [42,377,135,105],
+        [187,377,135,105],
+        [332,434,135,105],
+        [477,377,135,105],
+        [622,377,135,105]
         ],
         "spacing": 4
-    },
+        },
 
-    "reelBg_FSData": {
+        "reelBg_FSData": {
         "framerate": 1,
         "image": "device/images/Freegame.jpg",
         "frames": [
-            [32,95,135,105],
-            [182,38,135,105],
-            [332,38,135,105],
-			[482,38,135,105],
-			[632,91,135,105],
-			[32,208,135,105],
-            [182,151,135,105],
-            [332,151,135,105],
-			[482,151,135,105],
-			[632,208,135,105],
-			[32,321,135,105],
-            [182,264,135,105],
-            [332,264,135,105],
-			[482,264,135,105],
-			[632,321,135,105],
-			[32,434,135,105],
-            [182,377,135,105],
-            [332,377,135,105],
-			[482,377,135,105],
-			[632,434,135,105]		
+        [42,38,135,105],
+        [187,38,135,105],
+        [332,95,135,105],
+        [477,38,135,105],
+        [622,38,135,105],
+        [42,151,135,105],
+        [187,151,135,105],
+        [332,208,135,105],
+        [477,151,135,105],
+        [622,151,135,105],
+        [42,264,135,105],
+        [187,264,135,105],
+        [332,321,135,105],
+        [477,264,135,105],
+        [622,264,135,105],
+        [42,377,135,105],
+        [187,377,135,105],
+        [332,434,135,105],
+        [477,377,135,105],
+        [622,377,135,105]
         ],
         "spacing": 4
-    },
+        },
 
-    "icons": {
+        "icons": {
         "spacing": 113
-    },
+        },
 
-    "reel1": {
-        "x": 28,
-        "y": 91
-    },
-
-    "reel2": {
-        "x": 178,
+        "reel1": {
+        "x": 38,
         "y": 34
-    },
+        },
 
-    "reel3": {
+        "reel2": {
+        "x": 183,
+        "y": 34
+        },
+
+        "reel3": {
         "x": 328,
-        "y": 34
-    },
-
-    "reel4": {
-        "x": 478,
-        "y": 34
-    },
-
-    "reel5": {
-        "x": 628,
         "y": 91
-    },
+        },
 
-    "reels": {
+        "reel4": {
+        "x": 473,
+        "y": 34
+        },
+
+        "reel5": {
+        "x": 618,
+        "y": 34
+        },
+
+        "reels": {
         "x": 0,
         "y": 0
-    },
+        },
 
-    "reelAreaMask1":{
-        "SlotBoxLeft":28,
+        "reelAreaMask1":{
+        "SlotBoxLeft":38,
+        "SlotBoxTop":34,
+        "width":286,
+        "height":452,
+        "reelGap":2
+        },
+
+        "reelAreaMask2":{
+        "SlotBoxLeft":326,
         "SlotBoxTop":91,
-        "width":155,
-        "height":337,
-        "reelGap":1
-     },
+        "width":145,
+        "height":339,
+        "reelGap":2
+        },
 
-	"reelAreaMask2":{
-		"SlotBoxLeft":179,
-		"SlotBoxTop":34,
-		"width":442,
-		"height":454,
-		"reelGap":1
-	},
+        "reelAreaMask3":{
+        "SlotBoxLeft":473,
+        "SlotBoxTop":34,
+        "width":286,
+        "height":452,
+        "reelGap":2
+        },
 
-    "reelAreaMask3":{
-	    "SlotBoxLeft":608,
-	    "SlotBoxTop":91,
-	    "width":162,
-	    "height":337,
-	    "reelGap":1
-    },
-	
-	"hrLineShape":{
-	    "Left":165,
-	    "Top":270,
-	    "width":465,
-	    "height":3
-	},
+        "hrLineShape":{
+        "Left":165,
+        "Top":270,
+        "width":465,
+        "height":3
+        },
 
-	"hrLineRetrigShape":{
-	    "Left":160,
-	    "Top":280,
-	    "width":485,
-	    "height":3
-	},
-	
-	"BlueStreamData":{
-          "framerate": 8,
-          "animate": true,
-          "image": "device/images/animations/reelStrike.png",
-          "scale": {
-              "x": 2,
-              "y": 2
-          },
-          "frames": {
-              "width":"71",
-              "height":"226",
-              "count":"6"
-          },
-          "animations": {
-              "reelBlueStreamAnim": {
-                  "frames": [0,1,2,3,4,5],
-                  "next": ""
-              }
-          }
-    },   
-  
-    "winboxData":{
+        "hrLineRetrigShape":{
+        "Left":160,
+        "Top":280,
+        "width":485,
+        "height":3
+        },
+
+        "BlueStreamData":{
+        "framerate": 8,
+        "animate": true,
+        "image": "device/images/animations/reelStrike.png",
+        "scale": {
+        "x": 2,
+        "y": 2
+        },
+        "frames": {
+        "width":"71",
+        "height":"226",
+        "count":"9"
+        },
+        "animations": {
+        "reelBlueStreamAnim": {
+        "frames": [0,1,2,3,4,5,6,7,8],
+        "next": ""
+        }
+        }
+        },
+        "BlueStreamDataSmall":{
+        "framerate": 6,
+        "animate": true,
+        "image": "device/images/animations/reelStrikeSmall.png",
+        "scale": {
+        "x": 4,
+        "y": 4
+        },
+        "frames": {
+        "width":"36",
+        "height":"185",
+        "count":"9"
+        },
+        "animations": {
+        "reelBlueStreamAnim": {
+        "frames": [0,1,2,3,4,5,6,7,8],
+        "next": ""
+        }
+        }
+        },
+        "winboxData":{
         "framerate": 11,
         "animate": true,
         "image": "device/images/Winbox/Winframe.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"4"
+        "width":"143",
+        "height":"113",
+        "count":"1"
         },
         "animations": {
-            "winboxAnim": {
-                "frames": [0,1,2,3],
-                "next": "winboxAnim"
-            }
+        "winboxAnim": {
+        "frames": [0],
+        "next": "winboxAnim"
         }
-    },	
+        }
+        },
 
-    "sym1Data": {
+        "winboxDataBig":{
+        "framerate": 11,
+        "animate": true,
+        "image": "device/images/Winbox/WinframeBig.png",
+        "frames": {
+        "width":"143",
+        "height":"122",
+        "count":"1"
+        },
+        "animations": {
+        "winboxAnim": {
+        "frames": [0],
+        "next": "winboxAnim"
+        }
+        }
+        },
+
+        "redWinData":{
+        "framerate": 4,
+        "animate": true,
+        "image": "device/images/animations/red.png",
+        "pos": {
+        "x": 165,
+        "y": 70
+        },
+        "scale": {
+        "x": 4,
+        "y":4
+        },
+        "frames": {
+        "width":"179",
+        "height":"167",
+        "count":"9"
+        },
+        "animations": {
+        "redAnim": {
+        "frames": [0,1,2,3,4,5,6,7,8],
+        "next": ""
+        }
+        }
+        },
+
+        "blueWinData":{
+        "framerate": 4,
+        "animate": true,
+        "image": "device/images/animations/blue.png",
+        "pos": {
+        "x": 165,
+        "y": 70
+        },
+        "scale": {
+        "x": 4,
+        "y":4
+        },
+        "frames": {
+        "width":"179",
+        "height":"167",
+        "count":"9"
+        },
+        "animations": {
+        "blueAnim": {
+        "frames": [0,1,2,3,4,5,6,7,8],
+        "next": ""
+        }
+        }
+        },
+
+
+
+        "sym1Data": {
         "framerate": 6,
         "animate": true,
         "image": "device/images/animations/sym1_anim.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"122",
+        "count":"18"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": "anim"
         }
-    },
-	
-    "sym2Data": {
+        }
+        },
+
+        "sym2Data": {
         "framerate": 14,
         "animate": true,
         "image": "device/images/animations/sym2_anim.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"122",
+        "count":"18"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": "anim"
         }
-    },
-	
-    "sym3Data": {
+        }
+        },
+
+        "sym3Data": {
         "framerate": 12,
         "animate": true,
         "image": "device/images/animations/sym3_anim.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"122",
+        "count":"18"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": "anim"
         }
-    },
-	
-    "sym4Data": {
+        }
+        },
+
+        "sym4Data": {
         "framerate": 12,
         "animate": true,
         "image": "device/images/animations/sym4_anim.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"122",
+        "count":"18"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": ""
-            }
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": ""
         }
-    },
-	
-    "sym5Data": {
+        }
+        },
+
+        "sym5Data": {
         "framerate": 12,
         "animate": true,
         "image": "device/images/animations/sym5_anim.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"113",
+        "count":"18"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": "anim"
         }
-    },
-	
-    "sym6Data": {
+        }
+        },
+
+        "sym6Data": {
         "framerate": 12,
         "animate": true,
-        "image": "device/images/animations/sym6_anim.png",
+        "image": "device/images/symbols/sym6.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"113",
+        "count":"1"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0],
+        "next": "anim"
         }
-    },
-	
-    "sym7Data": {
+        }
+        },
+
+        "sym7Data": {
         "framerate": 12,
         "animate": true,
         "image": "device/images/symbols/sym7.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"12"
+        "width":"143",
+        "height":"113",
+        "count":"12"
         },
         "animations": {
-            "anim": {
-                "frames": [0],
-                "next": ""
-            }
+        "anim": {
+        "frames": [0],
+        "next": ""
+        }
         }
 
-    },
-	
-    "sym8Data": {
-       "framerate": 12,
-       "animate": true,
-       "image": "device/images/symbols/sym8.png",
-       "frames": {
-           "width":"143",
-           "height":"113",
-            "count":"12"
         },
-        "animations": {
-            "anim": {
-                "frames": [0],
-                "next": ""
-            }
-       }
 
-    },
-	
-    "sym9Data":{
-       "framerate": 12,
-       "animate": true,
-       "image": "device/images/symbols/sym9.png",
-       "frames": {
-           "width":"143",
-           "height":"113",
-       "count":"12"
-        },
-        "animations": {
-            "anim": {
-                "frames": [0],
-                "next": ""
-            }
-       }
-
-    },
-	
-    "sym10Data": {
-      "framerate": 12,
-      "animate": true,
-      "image": "device/images/symbols/sym10.png",
-      "frames": {
-          "width":"143",
-          "height":"113",
-      "count":"12"
-        },
-        "animations": {
-            "anim": {
-                "frames": [0],
-                "next": ""
-            }
-      }
-
-    },
-
-    "scatterData": {
+        "sym8Data": {
         "framerate": 12,
         "animate": true,
-        "image": "device/images/animations/sym11_anim.png",
+        "image": "device/images/symbols/sym8.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"113",
+        "count":"12"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0],
+        "next": ""
         }
-    },
+        }
 
-    "scatterTriggerHalfData":{
-         "framerate": 11,
-         "animate": true,
-         "image": "device/images/animations/bonus_marker.png",
-         "frames": {
-             "width":"143",
-             "height":"113",
-             "count":"12"
-         },
-         "animations": {
-             "scatterHalf": {
-                 "frames": [0,1,2,3,4,5,6,7,8,9,10,11],
-                 "next": "scatterHalf"
-             }
-         }
-    },
+        },
 
-    "scatterTriggerData": {
+        "sym9Data":{
         "framerate": 12,
         "animate": true,
-        "image": "device/images/animations/sym11_anim.png",
+        "image": "device/images/symbols/sym9.png",
         "frames": {
-            "width":"143",
-            "height":"113",
-            "count":"18"
+        "width":"143",
+        "height":"113",
+        "count":"12"
         },
         "animations": {
-            "anim": {
-                "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-                "next": "anim"
-            }
-		}
-	},
+        "anim": {
+        "frames": [0],
+        "next": ""
+        }
+        }
 
-    "reelAnticipationData":{
+        },
+
+        "sym10Data": {
+        "framerate": 12,
+        "animate": true,
+        "image": "device/images/symbols/sym10.png",
+        "frames": {
+        "width":"143",
+        "height":"113",
+        "count":"12"
+        },
+        "animations": {
+        "anim": {
+        "frames": [0],
+        "next": ""
+        }
+        }
+
+        },
+
+        "scatterData": {
+        "framerate": 12,
+        "animate": true,
+        "image": "device/images/animations/sym12_anim.png",
+        "frames": {
+        "width":"143",
+        "height":"122",
+        "count":"18"
+        },
+        "animations": {
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": "anim"
+        }
+        }
+        },
+
+        "scatterTriggerHalfData":{
+        "framerate": 11,
+        "animate": true,
+        "image": "device/images/animations/bonus_marker.png",
+        "frames": {
+        "width":"143",
+        "height":"122",
+        "count":"12"
+        },
+        "animations": {
+        "scatterHalf": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11],
+        "next": "scatterHalf"
+        }
+        }
+        },
+
+        "scatterTriggerData": {
+        "framerate": 12,
+        "animate": true,
+        "image": "device/images/animations/sym12_anim.png",
+        "frames": {
+        "width":"143",
+        "height":"122",
+        "count":"18"
+        },
+        "animations": {
+        "anim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+        "next": "anim"
+        }
+        }
+        },
+
+        "reelAnticipationData":{
         "framerate": 4,
         "animate": true,
         "image": "device/images/animations/anticipation.png",
         "frames": {
-            "width":"96",
-            "height":"246",
-            "count":"4"
+        "width":"71",
+        "height":"226",
+        "count":"4"
         },
         "scale": {
-            "x": 2,
-            "y": 2
+        "x": 2,
+        "y": 2
         },
         "animations": {
-            "reelAnticipation": {
-                "frames": [0,1,2,3],
-                "next": "reelAnticipation"
-            }
+        "reelAnticipation": {
+        "frames": [0,1,2,3],
+        "next": "reelAnticipation"
+        }
         },
         "spacing": {
-            "x": 22,
-            "y": 23
+        "x": 22,
+        "y": 23
         }
-    },
-    "blankData": {
+        },
+        "blankData": {
         "framerate": 12,
         "animate": false,
         "image": "device/images/symbols/blank.png",
         "frames": {
-            "width":"1",
-            "height":"1",
-            "count":"1"
+        "width":"1",
+        "height":"1",
+        "count":"1"
         },
         "animations": {
-            "anim": {
-                "frames": [0],
-                "next": "anim"
-            }
+        "anim": {
+        "frames": [0],
+        "next": "anim"
         }
-    },
+        }
+        },
 
-    "celebrationWindowIntroData": {
-		"image": "device/images/Celebration_win/Celebration_windowIntro.png",
-		"position": {
-			"x": 0,
-			"y": 0
-		}
-    },
-
-    "celebrationWindowData": {
+        "celebrationWindowIntroData": {
         "image": "device/images/Celebration_win/Celebration_windowIntro.png",
         "position": {
-            "x": 0,
-            "y": 0
+        "x": 0,
+        "y": 31
         }
-    },
+        },
 
-    "celebrationOutroWindowData": {
+        "celebrationWindowData": {
+        "image": "device/images/Celebration_win/Celebration_windowIntro.png",
+        "position": {
+        "x": 0,
+        "y": 0
+        }
+        },
+        "fireWolfAnimData":{
+        "framerate": 3,
+        "animate": true,
+        "pos": {
+        "x": 0,
+        "y": 0
+        },
+        "scale": {
+        "x": 4,
+        "y": 4
+        },
+        "image": "device/images/animations/transition_1.png",
+        "frames": {
+        "width":"320",
+        "height":"200",
+        "count":"6"
+        },
+        "animations": {
+        "introAnim": {
+        "frames": [0,1,2,3,4,5],
+        "next": ""
+        }
+        }
+        },
+
+        "fireWolfAnimDataEnd":{
+        "framerate": 3,
+        "animate": true,
+        "pos": {
+        "x": 0,
+        "y": 0
+        },
+        "scale": {
+        "x": 4,
+        "y": 4
+        },
+        "image": "device/images/animations/transition_2.png",
+        "frames": {
+        "width":"320",
+        "height":"200",
+        "count":"6"
+        },
+        "animations": {
+        "introAnimEnd": {
+        "frames": [0,1],
+        "next": ""
+        },
+        "introAnimEnd2": {
+        "frames": [2,3,4,5],
+        "next": ""
+        }
+        }
+        },
+
+
+        "fireWolfSummaryData":{
+        "framerate": 4,
+        "animate": true,
+        "pos": {
+        "x": 0,
+        "y": 0
+        },
+        "scale": {
+        "x": 4,
+        "y": 4
+        },
+        "image": "device/images/animations/summary_1.png",
+        "frames": {
+        "width":"320",
+        "height":"200",
+        "count":"10"
+        },
+        "animations": {
+        "outroAnim": {
+        "frames": [0,1,2,3,4,5,6,7,8,9],
+        "next": ""
+        }
+
+
+        }
+        },
+
+        "fireWolfSummaryEndData":{
+        "framerate": 2,
+        "animate": true,
+        "pos": {
+        "x": 0,
+        "y": 0
+        },
+        "scale": {
+        "x": 2,
+        "y": 2
+        },
+        "image": "device/images/animations/summary_2.png",
+        "frames": {
+        "width":"640",
+        "height":"400",
+        "count":"6"
+        },
+        "animations": {
+        "outroAnimEnd": {
+        "frames": [0,1,2,3,4],
+        "next": ""
+        },
+        "outroAnimEnd2": {
+        "frames": [0,1,2,3,4,5],
+        "next": ""
+        }
+        }
+        },
+
+
+        "celebrationOutroWindowData": {
         "image": "device/images/Celebration_win/CelebrationWindowFrame.png",
         "position": {
-            "x": 0,
-            "y": 0
+        "x": 8,
+        "y": 5
         }
-    },    
+        },
 
-    "bigWinAnimData": {
-         "framerate": 11,
-         "animate": true,
-         "pos": {
-             "x": 450,
-             "y": 250
-         },
-         "scale": {
-             "x": 1.8,
-             "y": 1.8
-         },
-         "image": "device/images/animations/bigWin.png",
-         "frames": {
-             "width":"217",
-             "height":"189",
-             "count":"11"
-         },
-         "animations": {
-             "lightBigWin": {
-                "frames": [0,1,2,3,4,5,6],
-                 "next": ""
-             }
-         }
-     },
-
-
-    "bigWinAnimData1": {
-         "framerate": 11,
-         "animate": true,
-         "pos": {
-             "x": 450,
-             "y": 250
-         },
-         "scale": {
-             "x": 1.8,
-             "y": 1.8
-         },
-         "image": "device/images/animations/bigWin.png",
-         "frames": {
-             "width":"217",
-             "height":"189",
-             "count":"11"
-         },
-         "animations": {
-             "lightBigWin1": {
-                "frames": [7,8,9,10],
-                 "next": "lightBigWin1"
-             }
-         }
-    },
-
-    "bigWinAnimData2": {
-          "framerate": 11,
-          "animate": true,
-          "pos": {
-              "x": 0,
-              "y": 250
-          },
-          "scale": {
-              "x": 1.8,
-              "y": 1.8
-          },
-          "image": "device/images/animations/bigWin.png",
-          "frames": {
-              "width":"217",
-              "height":"189",
-              "count":"11"
-          },
-          "animations": {
-              "lightBigWin2": {
-                 "frames": [0,1,2,3,4,5,6],
-                  "next": ""
-              }
-          }
-    },
+        "bigWinAnimData": {
+        "framerate": 11,
+        "animate": true,
+        "pos": {
+        "x": 450,
+        "y": 250
+        },
+        "scale": {
+        "x": 1.8,
+        "y": 1.8
+        },
+        "image": "device/images/animations/bigWin.png",
+        "frames": {
+        "width":"217",
+        "height":"189",
+        "count":"11"
+        },
+        "animations": {
+        "lightBigWin": {
+        "frames": [0,1,2,3,4,5,6],
+        "next": ""
+        }
+        }
+        },
 
 
-	"bigWinAnimData3": {
-		  "framerate": 11,
-		  "animate": true,
-		  "pos": {
-			  "x": 0,
-			  "y": 250
-		  },
-		  "scale": {
-			  "x": 1.8,
-			  "y": 1.8
-		  },
-		  "image": "device/images/animations/bigWin.png",
-		  "frames": {
-			  "width":"217",
-			  "height":"189",
-			  "count":"11"
-		  },
-		  "animations": {
-			  "lightBigWin3": {
-				 "frames": [7,8,9,10],
-				  "next": "lightBigWin3"
-			  }
-		  }
-	}
-}
+        "bigWinAnimData1": {
+        "framerate": 11,
+        "animate": true,
+        "pos": {
+        "x": 450,
+        "y": 250
+        },
+        "scale": {
+        "x": 1.8,
+        "y": 1.8
+        },
+        "image": "device/images/animations/bigWin.png",
+        "frames": {
+        "width":"217",
+        "height":"189",
+        "count":"11"
+        },
+        "animations": {
+        "lightBigWin1": {
+        "frames": [7,8,9,10],
+        "next": "lightBigWin1"
+        }
+        }
+        },
+
+        "bigWinAnimData2": {
+        "framerate": 11,
+        "animate": true,
+        "pos": {
+        "x": 0,
+        "y": 250
+        },
+        "scale": {
+        "x": 1.8,
+        "y": 1.8
+        },
+        "image": "device/images/animations/bigWin.png",
+        "frames": {
+        "width":"217",
+        "height":"189",
+        "count":"11"
+        },
+        "animations": {
+        "lightBigWin2": {
+        "frames": [0,1,2,3,4,5,6],
+        "next": ""
+        }
+        }
+        },
+
+
+        "bigWinAnimData3": {
+        "framerate": 11,
+        "animate": true,
+        "pos": {
+        "x": 0,
+        "y": 250
+        },
+        "scale": {
+        "x": 1.8,
+        "y": 1.8
+        },
+        "image": "device/images/animations/bigWin.png",
+        "frames": {
+        "width":"217",
+        "height":"189",
+        "count":"11"
+        },
+        "animations": {
+        "lightBigWin3": {
+        "frames": [7,8,9,10],
+        "next": "lightBigWin3"
+        }
+        }
+        }
+        }

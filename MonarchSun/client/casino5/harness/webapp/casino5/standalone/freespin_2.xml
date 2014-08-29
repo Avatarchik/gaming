@@ -22,25 +22,18 @@
     </msgheader>
     <msgdata reqName="FreeReq">
         <reels>
-            <reel id="1" pos="14">2,10,7</reel>
-            <reel id="2" pos="59">10,2,12</reel>
-            <reel id="3" pos="59">7,5,11</reel>
-            <reel id="4" pos="40">13,4,10</reel>
-            <reel id="5" pos="42">6,12,1</reel>
+            <reel id="1" pos="43">2,8,3,2</reel>
+            <reel id="2" pos="103">7,6,8,5</reel>
+            <reel id="3" pos="101">8,10,9</reel>
+            <reel id="4" pos="100">11,5,4,11</reel>
+            <reel id="5" pos="82">5,2,7,2</reel>
+            <rePattern>1,1,1,1</rePattern>
         </reels>
-        <lines won="240">
-            <line id="4" won="10" icon="11" positions="1,1;2,2;3,3;4,2;5,1" positionsHit="1,1;2,2;3,3;"></line>
-            <line id="5" won="20" icon="7" positions="1,3;2,2;3,1;4,2;5,3" positionsHit="1,3;2,2;3,1;"></line>
-            <line id="6" won="20" icon="7" positions="1,1;2,2;3,1;4,2;5,1" positionsHit="1,1;2,2;3,1;"></line>
-            <line id="12" won="40" icon="5" positions="1,1;2,2;3,2;4,2;5,1" positionsHit="1,1;2,2;3,2;"></line>
-            <line id="18" won="20" icon="7" positions="1,3;2,2;3,1;4,1;5,1" positionsHit="1,3;2,2;3,1;"></line>
-            <line id="19" won="10" icon="11" positions="1,1;2,2;3,3;4,3;5,3" positionsHit="1,1;2,2;3,3;"></line>
-            <line id="4" won="30" icon="2" positions="1,1;2,2;3,3;4,2;5,1" positionsHit="1,1;2,2;"></line>
-            <line id="6" won="30" icon="2" positions="1,1;2,2;3,1;4,2;5,1" positionsHit="1,1;2,2;"></line>
-            <line id="12" won="30" icon="2" positions="1,1;2,2;3,2;4,2;5,1" positionsHit="1,1;2,2;"></line>
-            <line id="19" won="30" icon="2" positions="1,1;2,2;3,3;4,3;5,3" positionsHit="1,1;2,2;"></line>
+        <lines won="20">
+            <line id="7" won="25" icon="8" positions="1,2;2,3;3,1"/>
         </lines>
-        <creditResults wagered="20" won="260"></creditResults>
-        <freeSpins total="5" used="2" won="260"></freeSpins>
+        <stickyWilds>1</stickyWilds>
+        <creditResults wagered="250" won="65"></creditResults>
+        <freeSpins total="8" used="2" won="40"></freeSpins>
     </msgdata>
 </gamemessage>

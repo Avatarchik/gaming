@@ -1057,6 +1057,24 @@
             }
         }
     },
+	
+	"winboxDataBig":{
+        "framerate": 11,
+        "animate": true,
+        "image": "device/images/Winbox/WinframeBig.png",
+        "frames": {
+            "width":"190",
+            "height":"179",
+            "count":"1"
+        },
+        "animations": {
+            "winboxAnim": {
+                "frames": [0],
+                "next": "winboxAnim"
+            }
+        }
+    },
+	
     "redWinData":{
         "framerate": 4,
         "animate": true,
@@ -1332,8 +1350,8 @@
             "count":"4"
         },
         "scale": {
-            "x": 4,
-            "y": 4
+            "x": 5,
+            "y": 4.25
         },
         "animations": {
             "reelAnticipation": {
@@ -1348,6 +1366,92 @@
 
 
     },
+
+        "stickyWildAnimData":{
+			"framerate": 10,
+			"animate": true,
+			"image": "device/images/animations/sym2_anim.png",
+			"frames": {
+				"width":"190",
+				"height":"179",
+				"count":"18"
+			},
+			"scale": {
+					"x": 1,
+					"y": 1
+				},
+				
+			"animations": {
+				"stickyWildAnim": {
+					"frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+					"next": ""
+				}
+			},
+			
+				"spacing": {
+					"x": 33,
+					"y": 36
+				}
+        },
+
+        "stickyWildLoopData":{
+            "framerate": 4,
+            "animate": true,
+            "image": "device/images/animations/stickyWild.png",
+            "frames": {
+                "width":"68",
+                "height":"186",
+                "count":"4"
+            },
+            "scale": {
+                "x": 5,
+                "y": 4.25
+            },
+            "animations": {
+                "stickyWildLoop": {
+                    "frames": [0,1,2,3],
+                    "next": "stickyWildLoop"
+                }
+            },
+            "spacing": {
+                "x": 33,
+                "y": 36
+            }
+
+
+        },
+
+        "stickyWildStartData":{
+            "framerate": 10,
+            "animate": true,
+            "image": "device/images/animations/WildMarker.png",
+            "frames": {
+                "width":"190",
+                "height":"179",
+                "count":"12"
+            },
+            "scale": {
+                "x": 1,
+                "y": 1
+            },
+            "animations": {
+                "stickyWildStart": {
+                    "frames": [0,1,2,3,4,5,6,7,8,9,10,11],
+                    "next": ""
+                }
+            },
+            "spacing": {
+                "x": 33,
+                "y": 36
+            }
+
+
+        },
+
+
+
+
+
     "blankData": {
         "framerate": 10,
         "animate": false,

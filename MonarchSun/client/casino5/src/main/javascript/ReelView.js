@@ -56,6 +56,7 @@ amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContaine
     };
 
     amaya.sdk.utils.JSONUtils.fromJSON( symAnimContainer, mainjson.reels );
+    amaya.sdk.utils.JSONUtils.fromJSON( stickyWildContainer, mainjson.reel3 );
 
     var animReel1 = new createjs.Container();
     amaya.sdk.utils.JSONUtils.fromJSON( animReel1, mainjson.reel1 );
@@ -365,30 +366,6 @@ amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContaine
 
 
 
-
-/*
- function getReelAnticipationData ( ) {
-            var reelAnticipationData = mainjson.reelAnticipationData;
-            reelAnticipationData.images = [gameServices.assets.getAsset(mainjson.reelAnticipationData.image)];
-            var reelAnticipationSS = new createjs.SpriteSheet(mainjson.reelAnticipationData);
-            var reelAnticipation = new createjs.Sprite(reelAnticipationSS);
-            reelAnticipation.gotoAndStop(0);
-            reelAnticipation.gotoAndPlay("reelAnticipation");
-            return reelAnticipation;
-        }
-
-        var reelAnimation;
-        instance.playReelAnticipation = function (id) {
-            reelAnimation = getReelAnticipationData();
-            reelAnimation.y = mainjson.reel4.y - mainjson.reelAnticipationData.spacing.y;
-            reelAnimation.x = mainjson.reel4.x - mainjson.reelAnticipationData.spacing.x;
-            reelAnimation.scaleX = mainjson.reelAnticipationData.scale.x;
-            reelAnimation.scaleY = mainjson.reelAnticipationData.scale.y;
-            backgroundContainer.addChild(reelAnimation);
-            soundManager.PlayAnticipation();
-        };
-        */
-
                 function getStickyWildAnimData () {
                     var stickyWildAnimData = mainjson.stickyWildAnimData;
                     stickyWildAnimData.images = [gameServices.assets.getAsset(mainjson.stickyWildAnimData.image)];
@@ -398,16 +375,43 @@ amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContaine
                     stickyWildAnim.gotoAndPlay("stickyWildAnim");
                     return stickyWildAnim;
                 };
-                var stickyWildAnimAnimation;
+
+                /*var stickyWildAnimAnimation;
+
                 instance.playStickyWildAnim = function (id) {
-                    stickyWildAnimAnimation = getStickyWildAnimData();
+                    *//*stickyWildAnimAnimation = getStickyWildAnimData();
                     stickyWildAnimAnimation.y = mainjson.reel3.y - mainjson.stickyWildAnimData.spacing.y;
                     stickyWildAnimAnimation.x = mainjson.reel3.x - mainjson.stickyWildAnimData.spacing.x;
                     stickyWildAnimAnimation.scaleX = mainjson.stickyWildAnimData.scale.x;
                     stickyWildAnimAnimation.scaleY = mainjson.stickyWildAnimData.scale.y;
                     stickyWildContainer.addChild(stickyWildAnimAnimation);
-                    //soundManager.PlayAnticipation();
-                };
+                    //soundManager.PlayAnticipation();*//*
+
+                    var icons1 = new createjs.Container();
+                    var icons2 = new createjs.Container();
+                    var icons3 = new createjs.Container();
+                    var icons4 = new createjs.Container();
+                    var icons5 = new createjs.Container();
+                    var icons = {
+                        "0": icons1,
+                        "1": icons2,
+                        "2": icons3,
+                        "3": icons4,
+                        "4": icons5
+                    };
+
+                    for (var i=0; i < model.getstickyWilds().length; i++) {
+                        var icon;
+                        icon = getStickyWildAnimData();
+                        icon.y = model.getstickyWilds()[i]*mainjson.icons.spacing;
+                        icons[id].addChild(icon);
+                        stickyWildContainer.addChild(icons[id]);
+                        //icon.addEventListener("animationend",function () {
+
+                       //};
+                    }
+
+                };*/
 
 
                 function getStickyWildLoopData () {
@@ -421,13 +425,37 @@ amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContaine
                 };
                 var stickyWildLoopAnimation;
                 instance.playStickyWildLoop = function (id) {
-                    stickyWildLoopAnimation = getStickyWildLoopData();
+                    /*stickyWildLoopAnimation = getStickyWildLoopData();
                     stickyWildLoopAnimation.y = mainjson.reel3.y - mainjson.stickyWildLoopData.spacing.y;
                     stickyWildLoopAnimation.x = mainjson.reel3.x - mainjson.stickyWildLoopData.spacing.x;
                     stickyWildLoopAnimation.scaleX = mainjson.stickyWildLoopData.scale.x;
                     stickyWildLoopAnimation.scaleY = mainjson.stickyWildLoopData.scale.y;
                     stickyWildContainer.addChild(stickyWildLoopAnimation);
-                    //soundManager.PlayAnticipation();
+                    //soundManager.PlayAnticipation();*/
+
+                    var icons1 = new createjs.Container();
+                    var icons2 = new createjs.Container();
+                    var icons3 = new createjs.Container();
+                    var icons4 = new createjs.Container();
+                    var icons5 = new createjs.Container();
+                    var icons = {
+                        "0": icons1,
+                        "1": icons2,
+                        "2": icons3,
+                        "3": icons4,
+                        "4": icons5
+                    };
+
+                    for (var i=0; i < model.getstickyWilds().length; i++) {
+                        var icon;
+                        icon = getStickyWildLoopData();
+                        icon.y = model.getstickyWilds()[i]*mainjson.icons.spacing;
+                        icons[id].addChild(icon);
+                        stickyWildContainer.addChild(icons[id]);
+                        //icon.addEventListener("animationend",function () {
+
+                       //};
+                    }
                 };
 
                 function getStickyWildStartData () {
@@ -441,13 +469,37 @@ amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContaine
                 };
                 var stickyWildStartAnimation;
                 instance.playStickyWildStart = function (id) {
-                    stickyWildStartAnimation = getStickyWildStartData();
+                    /*stickyWildStartAnimation = getStickyWildStartData();
                     stickyWildStartAnimation.y = mainjson.reel3.y - mainjson.stickyWildStartData.spacing.y;
                     stickyWildStartAnimation.x = mainjson.reel3.x - mainjson.stickyWildStartData.spacing.x;
                     stickyWildStartAnimation.scaleX = mainjson.stickyWildStartData.scale.x;
                     stickyWildStartAnimation.scaleY = mainjson.stickyWildStartData.scale.y;
                     stickyWildContainer.addChild(stickyWildStartAnimation);
-                    //soundManager.PlayAnticipation();
+                    //soundManager.PlayAnticipation();*/
+                    var icons1 = new createjs.Container();
+                    var icons2 = new createjs.Container();
+                    var icons3 = new createjs.Container();
+                    var icons4 = new createjs.Container();
+                    var icons5 = new createjs.Container();
+                    var icons = {
+                        "0": icons1,
+                        "1": icons2,
+                        "2": icons3,
+                        "3": icons4,
+                        "4": icons5
+                    };
+
+                    for (var i=0; i < model.getstickyWilds().length; i++) {
+                        var icon;
+                        icon = getStickyWildStartData();
+                        icon.y = model.getstickyWilds()[i]*mainjson.icons.spacing;
+                        icons[id].addChild(icon);
+                        stickyWildContainer.addChild(icons[id]);
+                        icon.addEventListener("animationend",function () {
+                            //stickyWildContainer.removeAllChildren();
+                            instance.playStickyWildLoop(id);
+                        });
+                    }
                 };
 
 

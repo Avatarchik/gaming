@@ -70,10 +70,6 @@ amaya.game.messaging.SpinResponse = function ( responseData ) {
     var numOfSym = [];
     var wayPos=0;
     var winningLineId = [];
-    var stickyWilds;
-
-    stickyWilds = $(responseData).find("stickyWilds").text().split(',');
-    //console.log('>>>>>>>>>>>stickyWild', stickyWilds);
 
     $(responseData).find("msgdata reels reel").each( function ( index, element ) {
         stops = $(element).text().split(",");
@@ -260,10 +256,6 @@ amaya.game.messaging.SpinResponse = function ( responseData ) {
     };
     instance.getFreeSpinsWon = function () {
             return freeSpinsWon;
-    };
-
-    instance.getstickyWilds = function () {
-                return stickyWilds;
     };
 
 

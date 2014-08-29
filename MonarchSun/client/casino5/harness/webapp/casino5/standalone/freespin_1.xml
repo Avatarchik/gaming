@@ -22,17 +22,18 @@
 	</msgheader>
     <msgdata reqName="FreeReq">
         <reels>
-            <reel id="1" pos="25">12,9,5</reel>
-            <reel id="2" pos="12">12,6,10</reel>
-            <reel id="3" pos="30">12,2,11</reel>
-            <reel id="4" pos="68">4,11,6</reel>
-            <reel id="5" pos="73">10,4,9</reel>
+            <reel id="1" pos="43">2,8,3,2</reel>
+            <reel id="2" pos="103">7,6,8,5</reel>
+            <reel id="3" pos="101">8,10,9</reel>
+            <reel id="4" pos="100">11,5,4,11</reel>
+            <reel id="5" pos="82">5,2,7,2</reel>
+            <rePattern>1,1,1,1</rePattern>
         </reels>
         <lines won="20">
-            <line id="2" won="10" icon="12" positions="1,1;2,1;3,1;4,1;5,1" positionsHit="1,1;2,1;3,1;"></line>
-            <line id="15" won="10" icon="12" positions="1,1;2,1;3,2;4,3;5,3" positionsHit="1,1;2,1;3,2;"></line>
+            <line id="7" won="25" icon="8" positions="1,2;2,3;3,1"/>
         </lines>
-        <creditResults wagered="20" won="20"></creditResults>
-        <freeSpins total="5" used="1" won="20"></freeSpins>
+		<stickyWilds>0,2</stickyWilds>
+        <creditResults wagered="20" won="45"></creditResults>
+        <freeSpins total="8" used="1" won="20"></freeSpins>
     </msgdata>
 </gamemessage>

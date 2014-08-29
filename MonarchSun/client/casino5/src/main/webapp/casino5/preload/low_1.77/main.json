@@ -5,7 +5,7 @@
         "font": "bold 48px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "356",
-        "y": "52"
+        "y": "62"
         },
 
         "tfFsWon2": {
@@ -13,7 +13,7 @@
         "font": "bold 34px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "110",
-        "y": "137"
+        "y": "147"
         },
 
         "tfFsWon3": {
@@ -21,7 +21,7 @@
         "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "215",
-        "y": "145"
+        "y": "155"
         },
 
         "tfFsWon4": {
@@ -29,25 +29,25 @@
         "font": "bold 30px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "190",
-        "y": "200"
+        "y": "210"
         },
         "tfFsWon5": {
         "color": "#eb0f59",
         "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "518",
-        "y": "145"
+        "y": "155"
         },
         "fsintro_ad_image1":{
         "x": "324",
-        "y": "120"
+        "y": "130"
         },
         "tfFsWon6": {
         "color": "#fad039",
         "font": "bold 34px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "545",
-        "y": "138"
+        "y": "148"
         },
         "tfFsWon7": {
         "color": "#fad039",
@@ -55,21 +55,21 @@
         "lineWidth":100,
         "textAlign": "right",
         "x": "640",
-        "y": "135"
+        "y": "145"
         },
         "tfFsWon8": {
         "color": "#eb0f59",
         "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "360",
-        "y": "215"
+        "y": "225"
         },
         "tfFsWon9": {
         "color": "#2b0b59",
         "font": "bold 45px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "430",
-        "y": "297"
+        "y": "307"
         },
 
         "tfFsWonShadow1": {
@@ -77,7 +77,7 @@
         "font": "bold 48px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "356",
-        "y": "52",
+        "y": "62",
         "outline":"2"
         },
 
@@ -86,7 +86,7 @@
         "font": "bold 34px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "110",
-        "y": "137",
+        "y": "147",
         "outline":"2"
         },
 
@@ -95,7 +95,7 @@
         "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "215",
-        "y": "145",
+        "y": "155",
         "outline":"2"
         },
 
@@ -104,7 +104,7 @@
         "font": "bold 30px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "190",
-        "y": "200",
+        "y": "210",
         "outline":"2"
         },
         "tfFsWonShadow5": {
@@ -112,7 +112,7 @@
         "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "right",
         "x": "518",
-        "y": "145",
+        "y": "155",
         "outline":"2"
         },
         "tfFsWonShadow6": {
@@ -120,7 +120,7 @@
         "font": "bold 34px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "545",
-        "y": "138",
+        "y": "148",
         "outline":"2"
         },
         "tfFsWonShadow7": {
@@ -129,7 +129,7 @@
         "textAlign": "right",
         "lineWidth":100,
         "x": "640",
-        "y": "135",
+        "y": "145",
         "outline":"2"
         },
         "tfFsWonShadow8": {
@@ -137,7 +137,7 @@
         "font": "bold 23px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "360",
-        "y": "215",
+        "y": "225",
         "outline":"2"
         },
         "tfFsWonShadow9": {
@@ -145,7 +145,7 @@
         "font": "bold 45px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "430",
-        "y": "297",
+        "y": "307",
         "outline":"2"
         },
         "tfFsAmountWon1": {
@@ -1415,8 +1415,8 @@
         "celebrationWindowIntroData": {
         "image": "device/images/Celebration_win/Celebration_windowIntro.png",
         "position": {
-        "x": 0,
-        "y": 0
+        "x": 4,
+        "y": 7
         }
         },
 

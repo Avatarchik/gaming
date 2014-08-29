@@ -387,7 +387,6 @@ amaya.game.Game = function () {
 
          //to get the sticky wild data
          //console.log('spinResponse.getstickyWilds()', spinResponse.getstickyWilds());
-         model.setstickyWilds(spinResponse.getstickyWilds());
 
         //console.log("setScatterWin=="+spinResponse.getScatterWin());
         freeSpinView.bonusTotal(spinResponse.getFreeSpinsWon());
@@ -434,7 +433,7 @@ amaya.game.Game = function () {
         model.setWinningLineId(freeSpinResponse.getWinningLineId());
 
         //to get the sticky wild data
-         model.setstickyWilds(spinResponse.getstickyWilds());
+         model.setstickyWilds(freeSpinResponse.getstickyWilds());
 
 
         // If the total number of free spins in the response is greater than the number of free spins
@@ -1362,8 +1361,10 @@ amaya.game.Game = function () {
                     paylineView.hideAllPosBg();
                     scatFlag=0;
         }
-        if (event.data == 2 && model.getstickyWilds().length) {
-            reelView.playStickyWildAnim();
+        if (model.getGameState() == amaya.game.GameConstants.FREE_SPIN_STATE) {
+            if (event.data == 2 && model.getstickyWilds().length) {
+                reelView.playStickyWildStart(event.data);
+            }
         }
         soundManager.PlayReelStopSound();
     }
