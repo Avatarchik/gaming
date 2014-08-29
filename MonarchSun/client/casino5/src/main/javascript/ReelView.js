@@ -142,6 +142,13 @@ amaya.game.ReelView = function ( container, symAnimContainer, stickyWildContaine
         return icon;
     }
 */
+
+    instance.removeAllStickyWilds = function () {
+        stickyWildContainer.removeAllChildren();
+
+    }
+
+
     instance.playFireAnimOnReel = function () {
         var animData = mainjson.fireAnimData;
         fireAnimContainer.removeAllChildren();

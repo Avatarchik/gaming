@@ -757,6 +757,7 @@ amaya.game.Game = function () {
         // should transition back to the regular spin state.
         else if ( model.getFreeSpinsUsed() < model.getFreeSpinsTotal() ) {
 			display.removeEventListener(amaya.game.events.ClickToContinueEvent.Click, skipAnimation);
+
 			//console.log("onFreeSpinComplete  if ( model.getFreeSpinsUsed() < model.getFreeSpinsTotal() ) removeEventListener skipAnimation");
             // Provide a couple of seconds for the player to view any wins before starting the next spin.
             // Note, at this point, the game state is still in free spin mode and no confirm hand end should
@@ -976,11 +977,13 @@ amaya.game.Game = function () {
             backgroundView.showMainSpinBackground();
             freeSpinView.hideCounter();
             wonView.clearWinMsg();
+
 	    }
         }
 
         // Play the bonus end sound
         //soundSystem.play(amaya.game.SoundConstants.FREE_SPIN_END);
+        reelView.removeAllStickyWilds();
     }
 
     // Event handler that is called when the player initiates a new series of auto spins.
