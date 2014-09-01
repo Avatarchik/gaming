@@ -383,13 +383,13 @@
 
     "tfIntroText1":{
         "color": "#9fe8f6",
-        "font": "bold 20px Helvetica,Arial,sans-serif",
+        "font": "bold 14px Helvetica,Arial,sans-serif",
         "x": "510",
         "y": "700"
     },
     "tfIntroTextShadow1":{
         "color": "#03176a",
-        "font": "bold 20px Helvetica,Arial,sans-serif",
+        "font": "bold 14px Helvetica,Arial,sans-serif",
         "x": "510",
         "y": "700" ,
         "outline":"2"
@@ -398,44 +398,44 @@
 
 	"tfIntroText2":{
         "color": "#51fffd",
-        "font": "bold 34px Helvetica,Arial,sans-serif",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
         "x": "14",
-        "y": "585"
+        "y": "570"
     },
     "tfIntroTextShadow2":{
         "color": "#000",
-        "font": "bold 34px Helvetica,Arial,sans-serif",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
         "x": "14",
-        "y": "585",
+        "y": "570",
         "outline":"3"
     },
 
 	"tfIntroText3":{
         "color": "#fff90d",
-        "font": "bold 55px Helvetica,Arial,sans-serif",
+        "font": "bold 35px Helvetica,Arial,sans-serif",
         "x": "13",
-        "y": "615"
+        "y": "595"
     },
     "tfIntroTextShadow3":{
         "color": "#000",
-        "font": "bold 55px Helvetica,Arial,sans-serif",
+        "font": "bold 35px Helvetica,Arial,sans-serif",
         "x": "13",
-        "y": "615" ,
-        "outline":"7"
+        "y": "595" ,
+        "outline":"4"
     },
 
 
     "tfIntroText4":{
 		"color": "#51fffd",
-		"font": "bold 34px Helvetica,Arial,sans-serif",
+		"font": "bold 25px Helvetica,Arial,sans-serif",
 		"x": "14",
-		"y": "677"
+		"y": "648"
 	},
 	"tfIntroTextShadow4":{
 		"color": "#000",
-		"font": "bold 34px Helvetica,Arial,sans-serif",
+		"font": "bold 25px Helvetica,Arial,sans-serif",
 		"x": "14",
-		"y": "677" ,
+		"y": "648" ,
 		"outline":"3"
 	},
 	
@@ -468,33 +468,33 @@
 		"outline":"3"
 	},
 		
-		"tfIntroText7":{
-			"color": "#51fffd",
-			"font": "bold 41px Helvetica,Arial,sans-serif",
-			"x": "1156",
-			"y": "711"
-		},
-		"tfIntroTextShadow7":{
-			"color": "#000",
-			"font": "bold 41px Helvetica,Arial,sans-serif",
-			"x": "1156",
-			"y": "711" ,
-			"outline":"7"
-		},
+	"tfIntroText7":{
+		"color": "#51fffd",
+		"font": "bold 41px Helvetica,Arial,sans-serif",
+		"x": "1156",
+		"y": "711"
+	},
+	"tfIntroTextShadow7":{
+		"color": "#000",
+		"font": "bold 41px Helvetica,Arial,sans-serif",
+		"x": "1156",
+		"y": "711" ,
+		"outline":"7"
+	},
 
-		"tfIntroText8":{
-			"color": "#fff90d",
-			"font": "bold 55px Helvetica,Arial,sans-serif",
-			"x": "486",
-			"y": "693"
-		},
-		"tfIntroTextShadow8":{
-			"color": "#000",
-			"font": "bold 55px Helvetica,Arial,sans-serif",
-			"x": "486",
-			"y": "693" ,
-			"outline":"6"
-		},
+	"tfIntroText8":{
+		"color": "#fff90d",
+		"font": "bold 55px Helvetica,Arial,sans-serif",
+		"x": "480",
+		"y": "665"
+	},
+	"tfIntroTextShadow8":{
+		"color": "#000",
+		"font": "bold 55px Helvetica,Arial,sans-serif",
+		"x": "480",
+		"y": "665" ,
+		"outline":"4"
+	},
 
     "tfIntroContinue": {
         "color": "#FFF",
@@ -518,8 +518,8 @@
     } ,
 
 	"intro_ad_image1":{
-		"x": "91",
-		"y": "666"
+		"x": "81",
+		"y": "630"
 	},
 
 	"intro_ad_image2":{
@@ -532,33 +532,33 @@
 		"color": "#FFF",
 		"font": "bold 32px Helvetica,Arial,sans-serif",
 		"textAlign": "center",
-		"x": "241",
-		"y": "690"
+		"x": "220",
+		"y": "689"
 	},
 	"tfCounterShadow": {
 		"color": "#000",
 		"alpha": "0.2",
 		"font": "bold 32px Helvetica,Arial,sans-serif",
 		"textAlign": "center",
-		"x": "241",
-		"y": "690"
+		"x": "220",
+		"y": "689"
 	},
 
 	"tfCounterText":{
 		"color": "#FFF",
-		"font": "bold 23px Helvetica,Arial,sans-serif",
+		"font": "bold 20px Helvetica,Arial,sans-serif",
 		"textAlign": "center",
 		"lineWidth":"100",
 		"x": "93",
-		"y": "683"
+		"y": "686"
 	},
 	"tfCounterTextShadow":{
 		"color": "#000",
-		"font": "bold 23px Helvetica,Arial,sans-serif",
+		"font": "bold 20px Helvetica,Arial,sans-serif",
 		"textAlign": "center",
 		"lineWidth":"100",
 		"x": "93",
-		"y": "683",
+		"y": "686",
 	    "outline":"3"
 	},
 
@@ -571,27 +571,27 @@
         "color": "#FFF",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "534",
-        "y": "690"
+        "x": "514",
+        "y": "689"
     },
     "tfWonShadow": {
         "color": "#000",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "534",
-        "y": "690"
+        "x": "514",
+        "y": "689"
     },
 
     "winText": {
         "color": "#FFF",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "392",
         "y": "696"
     },
     "winTextShadow": {
         "color": "#000",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "x": "392",
         "y": "696",
@@ -607,33 +607,33 @@
     	"color": "#FFF",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "870",
-        "y": "690"
+        "x": "850",
+        "y": "689"
     },
      "freeWonValueShadow":{
     	"color": "#000",
         "alpha": "0.2",
         "font": "bold 32px Helvetica,Arial,sans-serif",
         "textAlign": "center",
-        "x": "870",
-        "y": "690"
+        "x": "850",
+        "y": "689"
     },
 
     "freeWonText": {
         "color": "#FFF",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "lineWidth":"100",
         "x": "714",
-        "y": "683"
+        "y": "685"
     },
     "freeWonTextShadow": {
         "color": "#000",
-        "font": "bold 23px Helvetica,Arial,sans-serif",
+        "font": "bold 20px Helvetica,Arial,sans-serif",
         "textAlign": "center",
         "lineWidth":"100",
         "x": "714",
-        "y": "683",
+        "y": "685",
 	    "outline":"3"
     },
 
@@ -726,8 +726,8 @@
     },
 
    "msgBar": {
-       "x": "208",
-       "y": "650"
+       "x": "124",
+       "y": "636"
     },
 
    "iconWinMsg": {
@@ -740,19 +740,20 @@
 
     "iconsData": {
         "framerate": 1,
-        "image":  ["device/images/symbols/sym1.png","device/images/symbols/sym2.png","device/images/symbols/sym3.png","device/images/symbols/sym4.png","device/images/symbols/sym5.png","device/images/symbols/sym6.png","device/images/symbols/sym7.png","device/images/symbols/sym8.png","device/images/symbols/sym9.png","device/images/symbols/sym10.png","device/images/symbols/sym11.png"],
+        "image":  ["device/images/symbols/sym1.png","device/images/symbols/sym2.png","device/images/symbols/sym3.png","device/images/symbols/sym4.png","device/images/symbols/sym5.png","device/images/symbols/sym6.png","device/images/symbols/sym7.png","device/images/symbols/sym8.png","device/images/symbols/sym9.png","device/images/symbols/sym10.png","device/images/symbols/sym11.png","device/images/symbols/sym12.png"],
         "frames": [
-            [0,0,190,148, 0],
-            [0,0,190,148, 1],
-            [0,0,190,148, 2],
-            [0,0,190,148, 3],
-            [0,0,190,148, 4],
-            [0,0,190,148, 5],
-            [0,0,190,148, 6],
-            [0,0,190,148, 7],
-            [0,0,190,148, 8],
-            [0,0,190,148, 9],
-            [0,0,190,148,10]
+            [0,0,193,156, 0],
+            [0,0,193,156, 1],
+            [0,0,193,156, 2],
+            [0,0,193,156, 3],
+            [0,0,193,148, 4],
+            [0,0,193,148, 5],
+            [0,0,193,148, 6],
+            [0,0,193,148, 7],
+            [0,0,193,148, 8],
+            [0,0,193,148, 9],
+            [0,0,193,148,10],
+            [0,0,193,156,11]
 
         ]
 
@@ -770,7 +771,8 @@
             "device/images/small_symbols/sym8.png",
             "device/images/small_symbols/sym9.png",
             "device/images/small_symbols/sym10.png",
-            "device/images/small_symbols/sym11.png"
+            "device/images/small_symbols/sym11.png",
+            "device/images/small_symbols/sym12.png"
             ],
             "frames": [
                 [0,0,30,30,0],
@@ -783,9 +785,8 @@
                 [0,0,30,30,7],
                 [0,0,30,30,8],
                 [0,0,30,30,9],
-                [0,0,30,30,10]
-
-
+                [0,0,30,30,10],
+                [0,0,30,30,11]
             ]
 
         },
@@ -803,26 +804,26 @@
         "framerate": 1,
         "image": "device/images/Bg_reel.jpg",
         "frames": [
-            [22,128,180,138],
-            [221,53,180,138],
-            [420,53,180,138],
-            [619,53,180,138],
-            [818,128,180,138],
-            [22,276,180,138],
-            [221,201,180,138],
-            [420,201,180,138],
-            [619,201,180,138],
-            [818,276,180,138],
-            [22,424,180,138],
-            [221,349,180,138],
-            [420,349,180,138],
-            [619,349,180,138],
-            [818,424,180,138],            			
-            [22,572,180,138],
-            [221,497,180,138],
-            [420,497,180,138],
-            [619,497,180,138] ,
-			[818,572,180,138]
+            [29,44,183,146],
+            [225,44,183,146],
+            [421,118,183,146],
+            [617,44,183,146],
+            [813,44,183,146],
+            [22,200,183,146],
+            [221,200,183,146],
+            [420,274,183,146],
+            [619,200,183,146],
+            [818,200,183,146],
+            [22,356,183,146],
+            [221,356,183,146],
+            [420,430,183,146],
+            [619,356,183,146],
+            [818,356,183,146], 
+            [22,512,183,146],
+            [221,512,183,146],
+            [420,586,183,146],
+            [619,512,183,146] ,
+			[818,512,183,146]
         ],
         "spacing": 5
     },
@@ -831,26 +832,26 @@
         "framerate": 1,
         "image": "device/images/Freegame.jpg",
         "frames": [
-            [22,128,180,138],
-            [221,53,180,138],
-            [420,53,180,138],
-            [619,53,180,138],
-            [818,128,180,138],
-            [22,276,180,138],
-            [221,201,180,138],
-            [420,201,180,138],
-            [619,201,180,138],
-            [818,276,180,138],
-            [22,424,180,138],
-            [221,349,180,138],
-            [420,349,180,138],
-            [619,349,180,138],
-            [818,424,180,138],            			
-            [22,572,180,138],
-            [221,497,180,138],
-            [420,497,180,138],
-            [619,497,180,138] ,
-			[818,572,180,138]                     
+            [29,44,183,146],
+            [225,44,183,146],
+            [421,118,183,146],
+            [617,44,183,146],
+            [813,44,183,146],
+            [22,200,183,146],
+            [221,200,183,146],
+            [420,274,183,146],
+            [619,200,183,146],
+            [818,200,183,146],
+            [22,356,183,146],
+            [221,356,183,146],
+            [420,430,183,146],
+            [619,356,183,146],
+            [818,356,183,146], 
+            [22,512,183,146],
+            [221,512,183,146],
+            [420,586,183,146],
+            [619,512,183,146] ,
+			[818,512,183,146]                     
         ],
         "spacing": 5
     },
@@ -860,28 +861,28 @@
     },
 
     "reel1": {
-        "x": 17,
-        "y": 123
+        "x": 24,
+        "y": 39
     },
 
     "reel2": {
-        "x": 216,
-        "y": 49
+        "x": 220,
+        "y": 39
     },
 
     "reel3": {
-        "x": 415,
-        "y": 49
+        "x": 416,
+        "y": 113
     },
 
     "reel4": {
-        "x": 614,
-        "y": 49
+        "x": 612,
+        "y": 39
     },
 
     "reel5": {
-        "x": 813,
-        "y": 123
+        "x": 808,
+        "y": 39
     },
 
     "reels": {
@@ -889,29 +890,29 @@
         "y": 0
     },
 
-    "reelAreaMask1":{
-        "SlotBoxLeft":18,
-        "SlotBoxTop":123,
-        "width":198,
-        "height":445,
-        "reelGap":0
+     "reelAreaMask1":{
+       "SlotBoxLeft":24,
+       "SlotBoxTop":39,
+       "width":389,
+       "height":592,
+       "reelGap":3
     },
 
-    "reelAreaMask2":{
-        "SlotBoxLeft":215,
-        "SlotBoxTop":49,
-        "width":590,
-        "height":594,
-        "reelGap":0
-    },
+     "reelAreaMask2":{
+        "SlotBoxLeft":416,
+        "SlotBoxTop":113,
+        "width":193,
+        "height":444,
+        "reelGap":3
+     },
 
-    "reelAreaMask3":{
-        "SlotBoxLeft":804,
-        "SlotBoxTop":123,
-        "width":200,
-        "height":445,
-        "reelGap":0
-    },
+      "reelAreaMask3":{
+         "SlotBoxLeft":609,
+         "SlotBoxTop":39,
+         "width":389,
+         "height":592,
+         "reelGap":3
+      },
 	   
     "hrLineShape":{
 		"Left":200,
@@ -970,8 +971,8 @@
         "animate": true,
         "image": "device/images/animations/sym1_anim.png",
         "frames": {
-            "width":"190",
-            "height":"148",
+            "width":"193",
+            "height":"156",
             "count":"18"
         },
         "animations": {
@@ -987,8 +988,8 @@
         "animate": true,
         "image": "device/images/animations/sym2_anim.png",
         "frames": {
-            "width":"190",
-            "height":"148",
+            "width":"193",
+            "height":"156",
             "count":"18"
         },
         "animations": {
@@ -1004,8 +1005,8 @@
         "animate": true,
         "image": "device/images/animations/sym3_anim.png",
         "frames": {
-            "width":"190",
-            "height":"148",
+            "width":"193",
+            "height":"156",
             "count":"18"
         },
         "animations": {
@@ -1021,8 +1022,8 @@
         "animate": true,
         "image": "device/images/animations/sym4_anim.png",
         "frames": {
-            "width":"190",
-            "height":"148",
+            "width":"193",
+            "height":"156",
             "count":"18"
         },
         "animations": {
@@ -1038,7 +1039,7 @@
         "animate": true,
         "image": "device/images/animations/sym5_anim.png",
         "frames": {
-            "width":"190",
+            "width":"193",
             "height":"148",
             "count":"18"
         },
@@ -1144,8 +1145,8 @@
         "animate": true,
         "image": "device/images/animations/sym12_anim.png",
         "frames": {
-            "width":"190",
-            "height":"148",
+            "width":"193",
+            "height":"156",
             "count":"18"
         },
         "animations": {
@@ -1176,10 +1177,10 @@
     "scatterTriggerData": {
         "framerate": 12,
         "animate": true,
-        "image": "device/images/animations/sym11_anim.png",
+        "image": "device/images/animations/sym12_anim.png",
         "frames": {
-            "width":"190",
-            "height":"148",
+            "width":"193",
+            "height":"156",
             "count":"18"
         },
         "animations": {
@@ -1214,6 +1215,87 @@
             "y":34
         }
      },
+	 
+	 	"stickyWildAnimData":{
+		"framerate": 10,
+		"animate": true,
+		"image": "device/images/animations/sym2_anim.png",
+		"frames": {
+			"width":"193",
+			"height":"156",
+			"count":"18"
+		},
+		"scale": {
+				"x": 1,
+				"y": 1
+			},
+			
+		"animations": {
+			"stickyWildAnim": {
+				"frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+				"next": ""
+			}
+		},
+		
+			"spacing": {
+				"x": 33,
+				"y": 36
+			}
+	},
+
+	"stickyWildLoopData":{
+		"framerate": 10,
+		"animate": true,
+		"image": "device/images/animations/stickyWild.png",
+		"frames": {
+			"width":"193",
+			"height":"156",
+			"count":"12"
+		},
+		"scale": {
+			"x": 1,
+			"y": 1
+		},
+		"animations": {
+			"stickyWildStart": {
+				"frames": [0,1,2,3,4,5,6,7,8,9,10,11],
+				"next": ""
+			}
+		},
+		"spacing": {
+			"x": 33,
+			"y": 36
+		}
+
+	},
+
+	"stickyWildStartData":{
+		"framerate": 10,
+		"animate": true,
+		"image": "device/images/animations/WildMarker.png",
+		"frames": {
+			"width":"193",
+			"height":"156",
+			"count":"12"
+		},
+		"scale": {
+			"x": 1,
+			"y": 1
+		},
+		"animations": {
+			"stickyWildStart": {
+				"frames": [0,1,2,3,4,5,6,7,8,9,10,11],
+				"next": ""
+			}
+		},
+		"spacing": {
+			"x": 33,
+			"y": 36
+		}
+
+
+	},
+
 	
     "blankData": {
         "framerate": 12,

@@ -12,7 +12,7 @@
         "lineWidth":"600",
         "x": 512,
         "y": 625,
-       "outline":"4"
+       "outline":"2"
     },
 
     "tfProgress": {
@@ -27,7 +27,7 @@
         "lineWidth":"600",
         "x": 512,
         "y": 655,
-         "outline":"4"
+         "outline":"2"
     }
 
 }
