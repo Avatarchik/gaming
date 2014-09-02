@@ -1,0 +1,28 @@
+<profileParams>
+    <paramAttribute name="coinValue">
+          <displayName>Coin Values</displayName>
+          <description>One or more coin values delimited by comma (e.g. '0.02,0.05,0.10,1.00,10.00')</description>
+          <value></value>
+    </paramAttribute>
+    <paramAttribute name="level">
+        <displayName>RTP Level</displayName>
+        <description>Return to player (RTP) can only be one of: '1' (RTP=92%), '2'(RTP=94%), or '3' (RTP=95%)</description>
+        <value></value>
+    </paramAttribute>
+    <paramAttribute name="minBet">
+        <displayName>Minimum Bet</displayName>
+        <description>Minimum Bet in dollars and cents.</description>
+        <value></value>
+    </paramAttribute>
+    <paramAttribute name="maxBet">
+        <displayName>Maximum Bet</displayName>
+        <description>Maximum Bet in dollars and cents.</description>
+        <value></value>
+    </paramAttribute>
+    <paramAttribute name="autoSpinValue">
+        <displayName>Auto Spin Values</displayName>
+        <description>One or more auto spin values delimited by comma (e.g. '5,10,20,50')</description>
+        <value></value>
+    </paramAttribute>
+</profileParams>
+

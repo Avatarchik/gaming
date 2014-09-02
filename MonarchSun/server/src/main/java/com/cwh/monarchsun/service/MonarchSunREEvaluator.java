@@ -9,7 +9,7 @@ public class MonarchSunREEvaluator {
 	public static  List<List<String>> EvaluateRE(List<String> rePattern, List<List<String>> symbolDisplay) {
 		for(int i = 0; i < symbolDisplay.size(); i++) {
 			for(int j = 0; j < symbolDisplay.get(i).size(); j++) {
-				if(symbolDisplay.get(i).get(j)== MonarchSunConfig.SYMBOL_RE) {
+				if(symbolDisplay.get(i).get(j).equals(MonarchSunConfig.SYMBOL_RE)) {
                     switch(i)
                     {
                         case 0:

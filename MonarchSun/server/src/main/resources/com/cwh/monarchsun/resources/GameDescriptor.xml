@@ -34,6 +34,12 @@
                     </xs:restriction>
                 </xs:simpleType>
 
+                <xs:simpleType name="autoSpinValue">
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="([0-9]{1,})(([,][ ]*([0-9]{1,}))*)"/>
+                    </xs:restriction>
+                </xs:simpleType>
+
                 <xs:simpleType name="level">
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="1"/>
@@ -46,16 +52,16 @@
     </gameInfo>
     <gameTemplates>
         <gameTemplate curClass="1" suffix="0.02-5.00"  webEnable="true" downloadEnable="false">
-            <param coinValue="0.02,0.05,0.10" minBet="0.02" maxBet="25.00" level="1"/>
+            <param coinValue="0.02,0.05,0.10" minBet="0.02" maxBet="25.00" level="1" autoSpinValue="5,10,20,40,60,70"/>
         </gameTemplate>
         <gameTemplate curClass="2" suffix="0.10-0.50" webEnable="true" downloadEnable="false">
-            <param coinValue="0.10,0.25,0.50" minBet="0.10" maxBet="125.00" level="3"/>
+            <param coinValue="0.10,0.25,0.50" minBet="0.10" maxBet="125.00" level="3" autoSpinValue="5,10,20,40,60,70"/>
         </gameTemplate>
         <gameTemplate curClass="3" suffix="0.25-1.00" webEnable="true" downloadEnable="false">
-            <param coinValue="0.25,0.50,1.00" minBet="0.25" maxBet="250.00" level="2"/>
+            <param coinValue="0.25,0.50,1.00" minBet="0.25" maxBet="250.00" level="2" autoSpinValue="5,10,20,40,60,70"/>
         </gameTemplate>
         <gameTemplate curClass="4" suffix="1.00-3.00" webEnable="true" downloadEnable="false">
-            <param coinValue="1.00,2.00,3.00" minBet="0.25" maxBet="750.00" level="1"/>
+            <param coinValue="1.00,2.00,3.00" minBet="0.25" maxBet="750.00" level="1" autoSpinValue="5,10,20,40,60,70"/>
         </gameTemplate>
     </gameTemplates>
 </gameDescriptor>

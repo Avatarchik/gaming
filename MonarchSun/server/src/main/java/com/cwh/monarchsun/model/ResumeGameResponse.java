@@ -28,7 +28,7 @@ public class ResumeGameResponse extends GameResponse {
     private SpinResults    spinResults       = null;
     private Integer        freeAwardTotal    = null;
     private Integer        freeAwardUsed     = null;
-    private Integer        freeAwardWon      = null;
+    private Long        freeAwardWon      = null;
     private BigDecimal     coinValue         = null;
     private Integer        creditWager    = null;
     private List<Integer> baseGameStops = null;
@@ -69,7 +69,7 @@ public class ResumeGameResponse extends GameResponse {
         this.freeAwardUsed = freeAwardUsed;
     }
 
-    public void setFreeAwardWon(Integer freeAwardWon) {
+    public void setFreeAwardWon(Long freeAwardWon) {
         this.freeAwardWon = freeAwardWon;
     }
 

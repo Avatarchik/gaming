@@ -1433,7 +1433,7 @@
         "celebrationWindowIntroData": {
         "image": "device/images/Celebration_win/Celebration_windowIntro.png",
         "position": {
-        "x": 0,
+        "x": -5,
         "y": 26
         }
         },
@@ -1561,8 +1561,8 @@
         "celebrationOutroWindowData": {
         "image": "device/images/Celebration_win/CelebrationWindowFrame.png",
         "position": {
-        "x": 80,
-        "y": 12
+        "x": 10,
+        "y": 0
         }
         } ,
 

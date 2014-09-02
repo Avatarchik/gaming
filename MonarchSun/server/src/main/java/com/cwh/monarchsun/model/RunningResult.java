@@ -15,14 +15,14 @@ import nu.xom.Node;
  * This class just strictly represents the current balance of the game.
  */
 public class RunningResult {
-    private Integer creditsWon     = null;
+    private Long creditsWon     = null;
     private Integer creditsWagered = null;
 
     public void setCreditsWagered(Integer creditsWagered) {
         this.creditsWagered = creditsWagered;
     }
 
-    public void setCreditsWon(Integer creditsWon) {
+    public void setCreditsWon(Long creditsWon) {
         this.creditsWon = creditsWon;
     }
 

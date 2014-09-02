@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,8 +40,10 @@ public class ValidateProfileParametersActionBean extends BaseActionBean
     public final static String TAG_ATTR_LEVELVALUE = "level";
     public final static String TAG_ATTR_MINBETVALUE = "minBet";
     public final static String TAG_ATTR_MAXBETVALUE = "maxBet";
+    public final static String TAG_ATTR_AUTOSPINVALUE = "autoSpinValue";
 
     public final static String ERROR_ID_INVALID = "INVALID";
+    public final static String ERROR_ID_INVALIDAUTOSPIN = "INVALIDAUTOSPIN";
     public final static String ERROR_ID_TOOMANYDECIMALS = "TOOMANYDECIMALS";
     public final static String ERROR_ID_EMPTY = "EMPTY";
     public final static String ERROR_ID_DUPLICATE = "DUPLICATE";
@@ -76,6 +79,9 @@ public class ValidateProfileParametersActionBean extends BaseActionBean
 
             String maxBetValuesError = null;
             String maxBetValueStr = null;
+
+            String autoSpinValuesError = null;
+            String reformattedAutoSpin = null;
 
 
             // Validate Coin Values ==========================================
@@ -121,6 +127,16 @@ public class ValidateProfileParametersActionBean extends BaseActionBean
             }
             //================================================================
 
+            // Validate AutoSpin Values ==========================================
+            try
+            {
+                String autoSpinValueStr = extractInputAutoSpinValuesFromRequest(requestBodyEle);
+                reformattedAutoSpin = validateAndReformatAutoSpinValues(autoSpinValueStr);
+            } catch (Exception e) {    // in case of exception, we will construct an error response and send back
+                autoSpinValuesError = e.getMessage();
+            }
+            //==========================================================
+
             Element response = new Element("response");
             if (coinValuesError != null || levelValuesError != null || minBetValuesError != null || maxBetValuesError != null)
             {
@@ -131,6 +147,15 @@ public class ValidateProfileParametersActionBean extends BaseActionBean
                     Element current = new Element(TAG_ELEM_PARAMATTRIBUTE);
                     current.addAttribute(new Attribute(TAG_ELEM_NAME, TAG_ATTR_COINVALUE));
                     current.appendChild(coinValuesError);
+                    xmlElement.appendChild(current);
+                    response.addAttribute(new Attribute(TAG_ATTR_STATUS, TAG_STATUS_ERROR));
+                }
+
+                if (autoSpinValuesError != null)
+                {
+                    Element current = new Element(TAG_ELEM_PARAMATTRIBUTE);
+                    current.addAttribute(new Attribute(TAG_ELEM_NAME, TAG_ATTR_AUTOSPINVALUE));
+                    current.appendChild(autoSpinValuesError);
                     xmlElement.appendChild(current);
                     response.addAttribute(new Attribute(TAG_ATTR_STATUS, TAG_STATUS_ERROR));
                 }
@@ -172,6 +197,7 @@ public class ValidateProfileParametersActionBean extends BaseActionBean
                 paramEle.addAttribute(new Attribute(TAG_ATTR_LEVELVALUE, levelValueStr));
                 paramEle.addAttribute(new Attribute(TAG_ATTR_MINBETVALUE, minBetValueStr));
                 paramEle.addAttribute(new Attribute(TAG_ATTR_MAXBETVALUE, maxBetValueStr));
+                paramEle.addAttribute(new Attribute(TAG_ATTR_AUTOSPINVALUE, reformattedAutoSpin));
                 response.appendChild(paramEle);
             }
 
@@ -256,6 +282,80 @@ public class ValidateProfileParametersActionBean extends BaseActionBean
 
         return trimValue;
     }
+    public String extractInputAutoSpinValuesFromRequest(Element requestElem) throws Exception
+    {
+        Elements paramAttributes = requestElem.getChildElements(TAG_ELEM_PARAMATTRIBUTE);
+        int autoSpinValueParameterIndex = RetrieveFirstChildElementIndex(paramAttributes, TAG_ATTR_AUTOSPINVALUE);
+
+        if (autoSpinValueParameterIndex == -1)
+        {
+            throw new Exception("invalid profile param -- no AutoSpin Values in REQUEST=" + requestElem.toXML());
+        }
+
+        Elements value = paramAttributes.get(autoSpinValueParameterIndex).getChildElements(TAG_ELEM_VALUE);
+        if (value == null || value.size() != 1) {
+            throw new Exception("invalid profile param -- not exactly 1 value in REQUEST=" + requestElem.toXML());
+        }
+
+        return value.get(0).getValue();
+    }
+
+    public String validateAndReformatAutoSpinValues(String autoSpinValueList) throws Exception {
+        StringTokenizer valuesList = new StringTokenizer(autoSpinValueList, ",");
+        if (valuesList == null || valuesList.countTokens() < 1) {
+            throw new Exception(getErrorMsg(ERROR_ID_EMPTY, "no autospin value found"));
+        }
+
+        if(valuesList.countTokens() > 10) {
+            throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, "more than 10 autospin values found"));
+        }
+
+        HashSet<String> validatedAutoSpinList = new HashSet<String>();
+        StringBuffer reformattedAutoSpinValueString = new StringBuffer("");
+        int pastValue = 0;
+        do {
+            String value = valuesList.nextToken().trim();
+            Integer autoSpins;
+            BigDecimal autoSpinsDecimal;
+            try {
+                autoSpins = new Integer(value);
+                autoSpinsDecimal = new BigDecimal(value);
+            } catch (Exception e) {
+                throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, value));
+            }
+
+            if(autoSpinsDecimal.compareTo(new BigDecimal(autoSpins)) != 0) {
+                throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, value));
+            }
+
+            if (autoSpins >= 1000) {
+                throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, value));
+            }
+            if (autoSpins <= 0) {
+                throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, value));
+            }
+            if(autoSpins < pastValue) {
+                throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, "values must be ordered in ascending order"));
+            }
+            pastValue = autoSpins;
+
+            if (!reformattedAutoSpinValueString.toString().equals("")) {  // append a comma delimiter unless it's the first autoSpins value in the list
+                reformattedAutoSpinValueString.append(",");
+            }
+
+            reformattedAutoSpinValueString.append(value);
+
+            // check to make sure no repeated autoSpin value -- we can achieve that by checking on the formatted coin value which would be normalized to the same presentation if the value is the same.
+            if (!validatedAutoSpinList.add(value)) {  // if add method failed, it's an indication of repeated value
+                throw new Exception(getErrorMsg(ERROR_ID_INVALIDAUTOSPIN, value));
+            }
+
+            logger.debug("newly formatted autoSpin value string: " + reformattedAutoSpinValueString);
+        } while (valuesList.hasMoreTokens());
+
+        return reformattedAutoSpinValueString.toString();
+    }
+
 
     public String extractInputCoinValuesFromRequest(Element requestElem) throws Exception
     {

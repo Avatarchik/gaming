@@ -7,936 +7,918 @@
 <style>
 
 .container {
-max-width: 900px;
-margin: 0 auto;
-
+	max-width: 900px;
+	margin: 0 auto;
 }
 .selectDisable {-webkit-user-select: none;  -khtml-user-select: none;   -moz-user-select: none; -o-user-select: none;    user-select: none; }
 .header {
-color: #555;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 30px;
-padding-bottom: 10px;
-margin-bottom: 15px;
-text-align: center;
-border-bottom: solid 1px #DDD;
-
+	color: #555;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 30px;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+	border-bottom: solid 1px #DDD;
 }
 
 .logo {
-background-repeat: no-repeat;
-background-image: url('../preload/standard_1.77/images/logo.png');
-background-position: center;
-padding-bottom: 200px;
-margin-top: -5px;
+	background-repeat: no-repeat;
+	background-image: url('../preload/standard_1.77/images/logo.png');
+	background-position: center;
+	padding-bottom: 200px;
+	margin-top: -5px;
 }
 
 .logoCell {
-display: inline-block;
-width: 330px;
-clear: both;
+	display: inline-block;
+	width: 330px;
+	clear: both;
 }
 
 .iconCell {
-background-repeat: no-repeat;
-background-image: url('Box.jpg');
-background-size: cover;
-display: inline-block;
-width: 435px;
-clear: both;
-padding: 10px;
-margin: 10px;
-vertical-align: top;
+	background-repeat: no-repeat;
+	background-image: url('window.png');
+	background-size: cover;
+	display: inline-block;
+	width: 435px;
+	clear: both;
+	padding: 10px;
+	margin: 10px;
+	vertical-align: top;
 }
 .iconCellArrow {
-background-repeat: no-repeat;
-background-image: url('arrow1.png');
-background-position: center;
-display: inline-block;
-width: 430px;
-height: 62px;
-clear: both;
-margin-bottom: 5px;
+	background-repeat: no-repeat;
+	background-image: url('arrow1.png');
+	background-position: center;
+	display: inline-block;
+	width: 430px;
+	height: 62px;
+	clear: both;
+	margin-bottom: 5px;
 }
 
 .arrowValue {
-color: #FFE280;
-font: bold 20px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-padding-top: 25px;
+	color: #FFE280;
+	font: bold 20px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	padding-top: 25px;
 }
 
 .freeCell {
-background-repeat: no-repeat;
-background-image: url('BoxFree.png');
-display: inline-block;
-width: 450px;
-clear: both;
-padding: 10px;
-margin: 10px;
-vertical-align: top;
+	background-repeat: no-repeat;
+	background-image: url('BoxFree.png');
+	display: inline-block;
+	width: 450px;
+	clear: both;
+	padding: 10px;
+	margin: 10px;
+	vertical-align: top;
 }
 
 #square {
-background-repeat: no-repeat;
-background-image:url('Square.png');
-width:150px;
-height:200px;
-float:left;
+	background-repeat: no-repeat;
+	background-image:url('Square.png');
+	width:150px;
+	height:200px;
+	float:left;
 }
 
 #bigScatter{
-background-repeat: no-repeat;
-background-image: url('Big_Scatter.png');
-width:114px;
-height:114px;
-float:left;
-margin-top:37px;
-margin-left:31px;
+	background-repeat: no-repeat;
+	background-image: url('Big_Scatter.png');
+	width:114px;
+	height:114px;
+	float:left;
+	margin-top:37px;
+	margin-left:31px;
 }
 
 .freeCellSub {
-background-repeat: no-repeat;
-background-image: url('BoxFree.png');
-display: inline-block;
-clear: both;
-padding: 5px;
-margin: 10px;
-vertical-align: top;
-width:370px;
+	background-repeat: no-repeat;
+	background-image: url('BoxFree.png');
+	display: inline-block;
+	clear: both;
+	padding: 5px;
+	margin: 10px;
+	vertical-align: top;
+	width:370px;
 }
 
 .iconCellJackpot {
-background-repeat: no-repeat;
-background-image: url('Jackpotbox.png');
-background-position: center;
-display: inline-block;
-width: 341px;
-height: 155px;
-clear: both;
-padding: 10px;
+	background-repeat: no-repeat;
+	background-image: url('Jackpotbox.png');
+	background-position: center;
+	display: inline-block;
+	width: 341px;
+	height: 155px;
+	clear: both;
+	padding: 10px;
 }
 
 .iconBox {
-display: inline-block;
-width: 433px;
-clear: both;
-padding: 0px;
-margin: 0px;
-vertical-align: top;
-text-align: right;
+	display: inline-block;
+	width: 433px;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: top;
+	text-align: right;
 }
 
 .iconBoxWildImg {
-display: inline-block;
-width: 394px;
-clear: both;
-padding: 0px;
-margin: 0px;
-vertical-align: top;
-text-align: left;
+	display: inline-block;
+	width: 394px;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: top;
+	text-align: left;
 }
 
 .iconBoxWildImgSub {
-display: inline-block;
-width: 370px;
-clear: both;
-padding: 0px;
-margin: 0px;
-vertical-align: top;
-text-align: left;
+	display: inline-block;
+	width: 370px;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: top;
+	text-align: left;
 }
 
 .arrowBig{
-background-repeat: no-repeat;
-background-image: url('box.png');
-width: 167px;
-height: 50px;
-margin: 7px;
-margin-left: 96px;
-margin-top: 29px;
-float: center;
+	background-repeat: no-repeat;
+	background-image: url('box.png');
+	width: 167px;
+	height: 50px;
+	margin: 7px;
+	margin-left: 96px;
+	margin-top: 29px;
+	float: center;
 }
 .freeBox {
-display: inline-block;
-clear: both;
-padding: 7px;
-margin: 0px;
-vertical-align: top;
-text-align: left;
+	display: inline-block;
+	clear: both;
+	padding: 7px;
+	margin: 0px;
+	vertical-align: top;
+	text-align: left;
 }
 
 .iconBoxCopy {
-display: inline-block;
-width: 320px;
-clear: both;
-padding: 0px;
-margin: 1px;
-vertical-align: top;
+	display: inline-block;
+	width: 320px;
+	clear: both;
+	padding: 0px;
+	margin: 1px;
+	vertical-align: top;
 }
 #WildFeature{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 0 0 #fc0006;
-font-weight: bold;
-margin: 5px;
-padding: 5px;
-font-size: 26px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 0 0 #fc0006;
+	font-weight: bold;
+	margin: 5px;
+	padding: 5px;
+	font-size: 26px;
+	text-align: center;
 }
 #WildSymbol{
-color: #FF8C00;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-clear: both;
-font-size: 26px;
-text-shadow: 2px 0 0 #000;
-text-align: center;
-border-top: solid 1px #DDD;
-padding-top:10px;
-width: 440px;
+	color: #FF8C00;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	clear: both;
+	font-size: 26px;
+	text-shadow: 2px 0 0 #000;
+	text-align: center;
+	border-top: solid 1px #DDD;
+	padding-top:10px;
+	width: 440px;
 }
 
 #scatterBig1 {
-width: auto;
-height: 110px;
-float: right;
-background-repeat: no-repeat;
-background-image: url('Bonus.png');
-display: inline-block;
-padding-left: 132px;
-margin-top: -63px;
+	width: auto;
+	height: 110px;
+	float: right;
+	background-repeat: no-repeat;
+	background-image: url('Bonus.png');
+	display: inline-block;
+	padding-left: 132px;
+	margin-top: -63px;
 }
 
 
 .wildArrowScatter{
-width: 400px;
-text-align:center;
-padding: 0px;
-display: inline-block;
-margin-left:20px;
+	width: 400px;
+	text-align:center;
+	padding: 0px;
+	display: inline-block;
+	margin-left:20px;
 }
 
 
 .bigWildSymbol{
-background-repeat: no-repeat;
-background-image: url('Wild.png');
-display: inline-block;
-width: 60px;
-height: 61px;
-margin-top: 24px;
-float: left;
-margin-left: 31px;
+	background-repeat: no-repeat;
+	background-image: url('Wild.png');
+	display: inline-block;
+	width: 60px;
+	height: 61px;
+	margin-top: 24px;
+	float: left;
+	margin-left: 31px;
 }
 
 .paylineCell {
-display: inline-block;
-width: 125px;
-min-height: 158px;
-padding:5px;
-margin:5px;
-vertical-align:top;
-clear:both;
+	display: inline-block;
+	width: 125px;
+	min-height: 158px;
+	padding:5px;
+	margin:5px;
+	vertical-align:top;
+	clear:both;
 }
 
 
 #bigWildTxt{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 0 0 #b52932;
-font-weight: bold;
-width: 116px;
-font-size: 13px;
-text-align: center;
-display: inline-block;
-margin: 75px;
-margin-top: 52px;
-padding: 10px;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 0 0 #b52932;
+	font-weight: bold;
+	width: 116px;
+	font-size: 13px;
+	text-align: center;
+	display: inline-block;
+	margin: 75px;
+	margin-top: 52px;
+	padding: 10px;
 }
 
 
 .Line {
-display: inline-block;
-width: 322px;
-height: 4px;
-clear: both;
-margin: -2px;
-padding: 11px 0;
-vertical-align: top;
-text-align: center;
+	display: inline-block;
+	width: 322px;
+	height: 4px;
+	clear: both;
+	margin: -2px;
+	padding: 11px 0;
+	vertical-align: top;
+	text-align: center;
 }
 #evaluationTxt{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 5px #fc0006;
-font-weight: bold;
-margin: 5px;
-padding: 5px;
-font-size: 26px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 5px #fc0006;
+	font-weight: bold;
+	margin: 5px;
+	padding: 5px;
+	font-size: 26px;
+	text-align: center;
 }
 
 #SubstituteTxt{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-text-shadow: 2px 0 0 #fc0006;
-width: 166px;
-font-size: 14px;
-text-align: center;
-display: inline-block;
-margin-left: -14px;
-margin-top: 9px;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	text-shadow: 2px 0 0 #fc0006;
+	width: 166px;
+	font-size: 14px;
+	text-align: center;
+	display: inline-block;
+	margin-left: -14px;
+	margin-top: 9px;
 }
 .iconBoxCopy1 {
-display: inline-block;
-
-clear: both;
-padding: 0px;
-margin: 2px;
-vertical-align: top;
+	display: inline-block;
+	clear: both;
+	padding: 0px;
+	margin: 2px;
+	vertical-align: top;
 }
 
 .bigBonusImg{
-background-repeat: no-repeat;
-background-image: url('Big_Bonus.png');
-width: 130px;
-height: 110px;
-margin: 0px;
-display: inline-block;
-margin-top: 0px;
-float: center;
-margin-top: 19px;
+	background-repeat: no-repeat;
+	background-image: url('Big_Bonus.png');
+	width: 130px;
+	height: 120px;
+	margin: 0px;
+	display: inline-block;
+	margin-top: 0px;
+	float: center;
+	margin-top: 19px;
 }
 
 
 .bigBonusImg1{
-background-repeat: no-repeat;
-background-image: url('X_power_stream.png');
-width: 225px;
-height: 115px;
-margin: 0px;
-display: inline-block;
-margin-top: 0px;
-float: center;
+	background-repeat: no-repeat;
+	background-image: url('X_power_stream.png');
+	width: 225px;
+	height: 115px;
+	margin: 0px;
+	display: inline-block;
+	margin-top: 0px;
+	float: center;
 }
 #freeSpinBonusTxt{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 1px #fc0006;
-font-weight: bold;
-margin: 5px;
-padding: 5px;
-font-size: 26px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 1px #fc0006;
+	font-weight: bold;
+	margin: 5px;
+	padding: 5px;
+	font-size: 26px;
+	text-align: center;
 }
 
 #winningTxt{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 13px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+	text-align: center;
 }
 
 #awardTxt{
-color: #fbc508;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 5px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 15px;
-text-align: center;
+	color: #fbc508;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 5px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 15px;
+	text-align: center;
 }
 
 .FreeSpinTxt{
-color: #57EEFF;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 0 0 #0c3090;
-font-weight: bold;
-display: inline-block;
-font-size: 26px;
-text-align: center;
+	color: #57EEFF;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 0 0 #0c3090;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 26px;
+	text-align: center;
 }
 #freespintxt1{
-color: #fee147;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 1px #fc0006;
-font-weight: bold;
-display: inline-block;
-font-size: 26px;
-text-align: center;
-margin: 0 4px;
+	color: #fee147;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 1px #fc0006;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 26px;
+	text-align: center;
+	margin: 0 4px;
 }
 .FreeSpinTxt2{
-color: #1AF51A;
-font-family: Arial,Helvetica,sans;
-text-shadow: 3px 4px 3px #be01b5;
-font-weight: bold;
-display: inline-block;
-font-size: 40px;
-text-align: center;
+	color: #1AF51A;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 3px 4px 3px #be01b5;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 40px;
+	text-align: center;
 }
 
 #FreeSpinTxt3{
-color: #c31abf;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 1px 0px #FA8709;
-font-weight: bold;
-display: inline-block;
-font-size: 26px;
-text-align: center;
+	color: #c31abf;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 1px 0px #FA8709;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 26px;
+	text-align: center;
 }
 
 
 #maxNumTxt{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 2px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 12px;
-text-align: center;
-margin: 3px 0;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 2px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	text-align: center;
+	margin: 3px 0;
 }
 
 #betText{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 2px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 12px;
-text-align: center;
-margin: 3px 0;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 2px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	text-align: center;
+	margin: 3px 0;
 }
 
 #additionalTxt{
-color: #8CE4EE;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 1px #0245F8;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 12px;
-text-align: center;
+	color: #8CE4EE;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 1px #0245F8;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	text-align: center;
 }
 
 #multipleTxt1{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 14px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: center;
 }
 
 #multipleTxt2{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px auto;
-padding: 0px;
-font-size: 14px;
-width:320px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px auto;
+	padding: 0px;
+	font-size: 14px;
+	width:320px;
+	text-align: center;
 }
 
 #multipleTxt3{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 2px 0;
-font-size: 14px;
-text-align: center;
-
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 2px 0;
+	font-size: 14px;
+	text-align: center;
 }
 
 #multipleTxt4{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 14px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: center;
 }
 #multipleTxt5{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 14px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: center;
 }
 
 #multipleTxt6{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 14px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: center;
 }
 
 #multipleTxt7{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-text-shadow: 1px 1px 1px #fc0006;
-font-weight: bold;
-margin: 0px;
-padding: 0px;
-font-size: 14px;
-text-align: center;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 1px 1px 1px #fc0006;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: center;
 }
 #multipleTxt8{
-color: #FB2F08;
-font-family: Arial,Helvetica,sans;
-text-shadow: 2px 2px 2px #050505;
-font-weight: bold;
-margin-top: 7px;
-padding: 0px;
-font-size: 14px;
-text-align: center;
+	color: #FB2F08;
+	font-family: Arial,Helvetica,sans;
+	text-shadow: 2px 2px 2px #050505;
+	font-weight: bold;
+	margin-top: 7px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: center;
 }
 
 
 .iconBoxWild{
-display: inline-block;
-width: 50px;
-vertical-align: top;
-text-align: left;
+	display: inline-block;
+	width: 50px;
+	vertical-align: top;
+	text-align: left;
 }
 
 .iconBoxWildSub{
-display: inline-block;
-width: 50px;
-vertical-align: top;
-text-align: left;
+	display: inline-block;
+	width: 50px;
+	vertical-align: top;
+	text-align: left;
 }
 
 
 .icon {
-float: left;
-margin: 0 2px;
+	float: left;
+	margin: 0 2px;
 }
 
 .iconCopy {
-float: center;
+	float: center;
 }
 
 .iconValue {
-color: #fbc408;
-font: bold 38px  Arial,Helvetica,Sans-Serif;
-text-shadow: 2px 2px 1px #fc0006;
-display: inline-block;
-text-align: right;
-height: 55px;
-padding-top: 5px;
+	color: #fbc408;
+	font: bold 38px  Arial,Helvetica,Sans-Serif;
+	text-shadow: 2px 2px 1px #fc0006;
+	display: inline-block;
+	text-align: right;
+	height: 55px;
+	padding-top: 5px;
 }
 
 .iconWildImgValue {
-color: #FF8C00;
-font: bold 38px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-text-align: left;
-height: 55px;
-padding-top: 5px;
-padding-left: 5px;
-padding-right: 5px;
+	color: #FF8C00;
+	font: bold 38px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	text-align: left;
+	height: 55px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .iconWildImgValue2 {
-color: #FF8C00;
-font: bold 38px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-text-align: right;
-height: 55px;
-padding-top: 5px;
-padding-left: 30px;
-padding-right: 5px;
+	color: #FF8C00;
+	font: bold 38px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	text-align: right;
+	height: 55px;
+	padding-top: 5px;
+	padding-left: 30px;
+	padding-right: 5px;
 }
 
 .wildruleValue {
-color: #FF8C00;
-font: bold 45px  Arial,Helvetica,Sans-Serif;
-display: inline;
-text-align: left;
-height: 55px;
-padding-top: 5px;
+	color: #FF8C00;
+	font: bold 45px  Arial,Helvetica,Sans-Serif;
+	display: inline;
+	text-align: left;
+	height: 55px;
+	padding-top: 5px;
 }
 
 .LogoImg {
-background-repeat: no-repeat;
-background-image: url('Logo.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('Logo.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .fireWolfImg {
-background-repeat: no-repeat;
-background-image: url('Firewolf.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('Firewolf.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .BlueWolfImg {
-background-repeat: no-repeat;
-background-image: url('BlueWolf.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('BlueWolf.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .EagleImg {
-background-repeat: no-repeat;
-background-image: url('Eagle.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('Eagle.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .ClawImg {
-background-repeat: no-repeat;
-background-image: url('Claw.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('Claw.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .AceImg {
-background-repeat: no-repeat;
-background-image: url('A.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('A.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .KingImg {
-background-repeat: no-repeat;
-background-image: url('K.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('K.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .QueenImg {
-background-repeat: no-repeat;
-background-image: url('Queen.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('Queen.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 .JackImg {
-background-repeat: no-repeat;
-background-image: url('Jack.png');
-display: inline-block;
-width: 70px;
-height: 60px;
-clear: both;
-float: left;
+	background-repeat: no-repeat;
+	background-image: url('Jack.png');
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	clear: both;
+	float: left;
 }
 
 .PayId{
-color: #fbc408;
-font: bold 23px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-text-shadow: 2px 0 0 #fc0006;
-text-align: center;
-clear: both;
-height: 55px;
-padding-left: 23px;
-padding-right: 5px;
+	color: #fbc408;
+	font: bold 23px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	text-shadow: 2px 0 0 #fc0006;
+	text-align: center;
+	clear: both;
+	height: 55px;
+	padding-left: 23px;
+	padding-right: 5px;
 }
 .PayId1{
-color: #66EFFF;
-font: bold 38px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-text-shadow: 2px 0 0 #0c3090;
-text-align: left;
-height: 55px;
-padding-top: 5px;
-padding-left: 5px;
-padding-right: 5px;
+	color: #66EFFF;
+	font: bold 38px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	text-shadow: 2px 0 0 #0c3090;
+	text-align: left;
+	height: 55px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .PayId10{
-color: #66EFFF;
-font: bold 38px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-text-shadow: 2px 0 0 #0c3090;
-text-align: left;
-height: 55px;
-padding-top: 5px;
-padding-left: 5px;
-padding-right: 5px;
+	color: #66EFFF;
+	font: bold 38px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	text-shadow: 2px 0 0 #0c3090;
+	text-align: left;
+	height: 55px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .And{
-color: #fbc408;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-text-shadow: 2px 0 0 #fc0006;
-font-size: 23px;
-text-align: center;
-clear: both;
-display: inline-block;
+	color: #fbc408;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	text-shadow: 2px 0 0 #fc0006;
+	font-size: 23px;
+	text-align: center;
+	clear: both;
+	display: inline-block;
 }
 
 
 
 
 .wildImgValueBlue {
-background-repeat: no-repeat;
-background-image: url('Blue_Wild.png');
-display: inline-block;
-width: 50px;
-height: 50px;
+	background-repeat: no-repeat;
+	background-image: url('Blue_Wild.png');
+	display: inline-block;
+	width: 50px;
+	height: 50px;
 }
 
 .ScatterImg {
-background-repeat: no-repeat;
-background-image: url('Scatter.png');
-display: inline-block;
-width: 45px;
-height: 45px;
-margin-top:5px;
+	background-repeat: no-repeat;
+	background-image: url('Scatter.png');
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	margin-top:5px;
 }
 
 .group {
-text-align: center;
-margin-bottom: 50px;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .note1 {
-color: #555;
-width: 471px;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 16px;
-margin-bottom: 50px;
-text-align: center;
-clear: both;
-display: inline-block;
+	color: #555;
+	width: 471px;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 50px;
+	text-align: center;
+	clear: both;
+	display: inline-block;
 }
 
 .wayNote {
-color: #555;
-font-family:Arial, Helvetica, sans-serif;
-font-weight:bold;
-font-size: 16px;
-padding-top: 2px;
-text-align:center;
-margin-bottom:20px;
+	color: #555;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 16px;
+	padding-top: 2px;
+	text-align:center;
+	margin-bottom:20px;
 }
 
 #Jackpot{
-color: #fbc408;
-font: bold 24px  Arial,Helvetica,Sans-Serif;
-display: inline-block;
-text-shadow: 2px 2px 5px #fc0006;
-margin: 3px 8px;
-padding: 5px;
-text-align: center;
+	color: #fbc408;
+	font: bold 24px  Arial,Helvetica,Sans-Serif;
+	display: inline-block;
+	text-shadow: 2px 2px 5px #fc0006;
+	margin: 3px 8px;
+	padding: 5px;
+	text-align: center;
 }
 
 .iconText {
-color: #fbc408;
-font: bold 18px  Arial,Helvetica,Sans-Serif;
-text-shadow: 2px 0 0 #cc5400;
-display: inline-block;
-text-align: center;
-margin-top: 3px;
+	color: #fbc408;
+	font: bold 18px  Arial,Helvetica,Sans-Serif;
+	text-shadow: 2px 0 0 #cc5400;
+	display: inline-block;
+	text-align: center;
+	margin-top: 3px;
 }
 
 #PayInfo{
-color: #555;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 16px;
-padding-left: 20px;
-padding-right: 20px;
-margin-left: 10px;
-margin-right: 10px;
-text-align: center;
-clear: both;
-display: inline-block;
+	color: #555;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	clear: both;
+	display: inline-block;
 }
-
-
-
 
 #and1{
-color: #FFF;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 16px;
-text-align: center;
-clear: both;
-display: inline-block;
-padding-top: 22px;
-
+	color: #FFF;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	clear: both;
+	display: inline-block;
+	padding-top: 22px;
 }
 
-
-
-
-
-
-
 #add{
-color: #FFF;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 18px;
-padding-top: 25px;
-padding-bottom: 10px;
-text-align: center;
+	color: #FFF;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 18px;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	text-align: center;
 }
 
 .featureText {
-color: #FFF;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 12px;
-text-align: left;
+	color: #FFF;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
 }
 
 .featureTextValue{
-color: #FF8C00;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 15px;
-text-align: left;
+	color: #FF8C00;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: left;
 }
 
-
-
-
 #insert{
-color: #555;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 20px;
-padding-left: 20px;
-padding-right: 20px;
-margin-left: 10px;
-margin-right: 10px;
-text-align: center;
-clear: both;
-display: inline-block;
+	color: #555;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	clear: both;
+	display: inline-block;
 }
 
 #pressBet{
-color: #555;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 20px;
-padding-left: 20px;
-padding-right: 20px;
-margin-left: 10px;
-margin-right: 10px;
-text-align: center;
-clear: both;
-display: inline-block;
+	color: #555;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	clear: both;
+	display: inline-block;
 }
 
 
 #allWins{
-
-float:left;
-height:300px;
-width:151px;
+	float:left;
+	height:300px;
+	width:151px;
 }
 
 #stars{
-background-repeat: no-repeat;
-background-image: url('Star.png');
-width:151px;
-height:185px;
-margin-top:59px;
+	background-repeat: no-repeat;
+	background-image: url('Star.png');
+	width:151px;
+	height:185px;
+	margin-top:59px;
 }
 
 
 
 .lines{
-color: #000;
-font-family: Arial,Helvetica,sans;
-font-weight: bold;
-font-size: 16px;
-text-align: center;
-clear:both;
-width:88px;
+	color: #000;
+	font-family: Arial,Helvetica,sans;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	clear:both;
+	width:88px;
 }
 
 
 .paylineCell {
-display: inline-block;
-width: 125px;
-min-height: 158px;
-padding: 5px;
-margin: 5px;
-vertical-align: top;
-clear: both;
+	display: inline-block;
+	width: 125px;
+	min-height: 158px;
+	padding: 5px;
+	margin: 5px;
+	vertical-align: top;
+	clear: both;
 }
 
 .payline {
-width: 125px;
-min-height: 158px;
-background-repeat: no-repeat;
-float: left;
-border-width: 2px;
+	width: 125px;
+	min-height: 158px;
+	background-repeat: no-repeat;
+	float: left;
+	border-width: 2px;
 }
 
 .payline1 {
-background-image: url('paytable.png');
-background-position: 0px -53px;
+	background-image: url('paytable.png');
+	background-position: 0px -53px;
 }
 
 .payline2 {
-background-image: url('paytable.png');
-background-position: 0px -222px;
+	background-image: url('paytable.png');
+	background-position: 0px -222px;
 }
 .payline3 {
-background-image: url('paytable.png');
-background-position: 0px -390px;
+	background-image: url('paytable.png');
+	background-position: 0px -390px;
 }
 
 .payline4 {
-background-image: url('paytable.png');
-background-position: 0px -559px;
+	background-image: url('paytable.png');
+	background-position: 0px -559px;
 }
 
 .payline5 {
-background-image: url('paytable.png');
-background-position: 0px -755px;
+	background-image: url('paytable.png');
+	background-position: 0px -755px;
 }
 
 
@@ -949,79 +931,48 @@ background-position: 0px -755px;
 <div class="header"><div class="logoCell"><div class="logo"></div></div></div>
 <div class="header"><div id="paytable" class="logoCell"></div></div>
 <div class="group">
-<!--<div class="iconCell">
+
+<div class="iconCell">
     <div class="iconCellJackpot">
         <div class="iconBoxCopy">
             <div id="Jackpot"></div>
         </div>
         <div class="iconBoxCopy">
-            <img class ="iconCopy" src ="sym2.png">
-            <img class ="iconCopy" src ="sym2.png">
-            <img class ="iconCopy" src ="sym2.png">
-            <img class ="iconCopy" src ="sym2.png">
-            <img class ="iconCopy" src ="sym2.png">
+            <img class="iconCopy" src="sym2.png">
+            <img class="iconCopy" src="sym2.png">
+            <img class="iconCopy" src="sym2.png">
+            <img class="iconCopy" src="sym2.png">
+            <img class="iconCopy" src="sym2.png">
         </div>
         <div class="iconBoxCopy">
             <div id="Jackpot_Credit" class="iconText"></div><br>
-            <div class="iconText">125000</div>
         </div>
     </div>
     <div class="iconCellArrow">
-        <div id = "OR" class = "arrowValue"></div>
+        <div id="OR" class="arrowValue"></div>
     </div>
     <div class="iconBox">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <div class="iconValue">400</div>
-    </div>
-</div>-->
-<div class="iconCell">
-<div class="iconBox">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <div class="iconValue">400</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
         <div class="iconValue">100</div>
     </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <img class ="icon" src ="sym2.png">
-        <div class="iconValue">25</div>
-    </div>
-
 </div>
+
 <div class="iconCell">
     <div class="iconBox">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <div class="iconValue">100</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
         <div class="iconValue">40</div>
     </div>
     <div class="iconBox">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
-        <img class ="icon" src ="sym3.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
+        <img class="icon" src="sym2.png">
         <div class="iconValue">20</div>
     </div>
 
@@ -1036,136 +987,136 @@ background-position: 0px -755px;
         <img class ="icon" src ="sym4.png">
         <img class ="icon" src ="sym4.png">
         <img class ="icon" src ="sym4.png">
-        <div class="iconValue">60</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym4.png">
-        <img class ="icon" src ="sym4.png">
-        <img class ="icon" src ="sym4.png">
-        <img class ="icon" src ="sym4.png">
-        <div class="iconValue">30</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym4.png">
-        <img class ="icon" src ="sym4.png">
-        <img class ="icon" src ="sym4.png">
-        <div class="iconValue">15</div>
-    </div>
-
-</div>
-<div class="iconCell">
-    <div class="iconBox">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <div class="iconValue">50</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <div class="iconValue">20</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <img class ="icon" src ="sym5.png">
-        <div class="iconValue">10</div>
-    </div>
-</div>
-<div class="iconCell">
-    <div class="iconBox">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <div class="iconValue">50</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <div class="iconValue">20</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <img class ="icon" src ="sym6.png">
-        <div class="iconValue">10</div>
-    </div>
-</div>
-<div class="iconCell">
-    <div class="iconBox">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <div class="iconValue">30</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <div class="iconValue">15</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <img class ="icon" src ="sym7.png">
-        <div class="iconValue">5</div>
-    </div>
-</div>
-<div class="iconCell">
-    <div class="iconBox">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <div class="iconValue">30</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <div class="iconValue">15</div>
-    </div>
-    <div class="iconBox">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <img class ="icon" src ="sym8.png">
-        <div class="iconValue">5</div>
-    </div>
-</div>
-<div class="iconCell">
-    <div class="iconBox">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
         <div class="iconValue">25</div>
     </div>
     <div class="iconBox">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
-        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym4.png">
+        <img class ="icon" src ="sym4.png">
+        <img class ="icon" src ="sym4.png">
+        <img class ="icon" src ="sym4.png">
         <div class="iconValue">10</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym4.png">
+        <img class ="icon" src ="sym4.png">
+        <img class ="icon" src ="sym4.png">
+        <div class="iconValue">5</div>
+    </div>
+
+</div>
+<div class="iconCell">
+    <div class="iconBox">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <div class="iconValue">20</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <div class="iconValue">10</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <img class ="icon" src ="sym5.png">
+        <div class="iconValue">5</div>
+    </div>
+</div>
+<div class="iconCell">
+    <div class="iconBox">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <div class="iconValue">20</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <div class="iconValue">10</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <img class ="icon" src ="sym6.png">
+        <div class="iconValue">5</div>
+    </div>
+</div>
+<div class="iconCell">
+    <div class="iconBox">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <div class="iconValue">16</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <div class="iconValue">8</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <img class ="icon" src ="sym7.png">
+        <div class="iconValue">4</div>
+    </div>
+</div>
+<div class="iconCell">
+    <div class="iconBox">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <div class="iconValue">16</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <div class="iconValue">8</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <img class ="icon" src ="sym8.png">
+        <div class="iconValue">4</div>
+    </div>
+</div>
+<div class="iconCell">
+    <div class="iconBox">
+        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym9.png">
+        <div class="iconValue">16</div>
     </div>
     <div class="iconBox">
         <img class ="icon" src ="sym9.png">
         <img class ="icon" src ="sym9.png">
         <img class ="icon" src ="sym9.png">
-        <div class="iconValue">5</div>
+        <img class ="icon" src ="sym9.png">
+        <div class="iconValue">8</div>
+    </div>
+    <div class="iconBox">
+        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym9.png">
+        <img class ="icon" src ="sym9.png">
+        <div class="iconValue">4</div>
     </div>
 </div>
 <div class="iconCell">
@@ -1175,20 +1126,20 @@ background-position: 0px -755px;
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
-        <div class="iconValue">25</div>
+        <div class="iconValue">16</div>
     </div>
     <div class="iconBox">
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
-        <div class="iconValue">10</div>
+        <div class="iconValue">8</div>
     </div>
     <div class="iconBox">
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
         <img class ="icon" src ="sym10.png">
-        <div class="iconValue">5</div>
+        <div class="iconValue">4</div>
     </div>
 
 </div>
@@ -1292,9 +1243,10 @@ background-position: 0px -755px;
         var gameServices = new parent.amaya.GameServices ();
         var jsonObject = gameServices.assets.getAsset("lang/MonarchSun_lang.json");
         document.getElementById("paytable").innerHTML = jsonObject.PAYTABLE ;
-
-
+		
         document.getElementById("Jackpot").innerHTML = jsonObject.JACKPOT;
+
+		
         document.getElementById("Jackpot_Credit").innerHTML = jsonObject.JACKPOT_CREDIT;
         document.getElementById("OR").innerHTML = jsonObject.OR1;
         document.getElementById("WildFeature").innerHTML = jsonObject.WILD_FEATURE;

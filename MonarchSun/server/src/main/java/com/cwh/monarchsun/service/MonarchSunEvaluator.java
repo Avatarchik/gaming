@@ -187,9 +187,6 @@ public class MonarchSunEvaluator
 	public static List<Integer> getSymbolPositions(String symbol, List<String> reelDisplay, int reelIndex) {
 		List<Integer> positions = new ArrayList<Integer>();
 		int stopIndex = reelDisplay.size();
-		/*if(reelIndex == 0 || reelIndex == MonarchSunConfig.NUM_REELS-1) {
-			stopIndex--;
-		}*/
         if(reelIndex == 2)
         {
             stopIndex--;

@@ -26,25 +26,45 @@ import java.util.Map;
 import static junit.framework.Assert.*;
 
 public class SpinHandlerTest {
-    @Test//PASSED
+    @Test
     public void main_spin_lose_tc1() {
         try {
+            /*final String sRandomPools =
+                    "<randomPools>\n" +
+                    "    <pool id=\"mainSpinReel921_1_at_0_99\">79</pool>\n" +
+                    "    <pool id=\"mainSpinReel922_1_at_0_98\">76</pool>\n" +
+                    "    <pool id=\"mainSpinReel923_1_at_0_99\">81</pool>\n" +
+                    "    <pool id=\"mainSpinReel924_1_at_0_98\">76</pool>\n" +
+                    "    <pool id=\"mainSpinReel925_1_at_0_99\">79</pool>\n" +
+                    "    <pool id=\"mainSpinReel92RE_1_at_0_98\">0</pool>\n" +
+                    "</randomPools>";*/
+
+            /*final String sRandomPools =
+                    "<randomPools>\n" +
+                    "    <pool id=\"mainSpinReel941_1_at_0_99\">86</pool>\n" +
+                    "    <pool id=\"mainSpinReel942_1_at_0_97\">85</pool>\n" +
+                    "    <pool id=\"mainSpinReel943_1_at_0_99\">82</pool>\n" +
+                    "    <pool id=\"mainSpinReel944_1_at_0_97\">86</pool>\n" +
+                    "    <pool id=\"mainSpinReel945_1_at_0_99\">87</pool>\n" +
+                    "    <pool id=\"mainSpinReel94RE_1_at_0_98\">0</pool>\n" +
+                    "</randomPools>";*/
+
             final String sRandomPools =
                     "<randomPools>\n" +
-                    "    <pool id=\"mainSpinReel921_1_at_0_99\">55</pool>\n" +
-                    "    <pool id=\"mainSpinReel922_1_at_0_98\">65</pool>\n" +
-                    "    <pool id=\"mainSpinReel923_1_at_0_99\">45</pool>\n" +
-                    "    <pool id=\"mainSpinReel924_1_at_0_98\">75</pool>\n" +
-                    "    <pool id=\"mainSpinReel925_1_at_0_99\">1</pool>\n" +
-                    "    <pool id=\"mainSpinReel92RE_1_at_0_98\">99</pool>\n" +
-                    "</randomPools>";
+                            "    <pool id=\"mainSpinReel951_1_at_0_99\">74</pool>\n" +
+                            "    <pool id=\"mainSpinReel952_1_at_0_97\">80</pool>\n" +
+                            "    <pool id=\"mainSpinReel953_1_at_0_99\">81</pool>\n" +
+                            "    <pool id=\"mainSpinReel954_1_at_0_97\">80</pool>\n" +
+                            "    <pool id=\"mainSpinReel955_1_at_0_99\">81</pool>\n" +
+                            "    <pool id=\"mainSpinReel95RE_1_at_0_98\">0</pool>\n" +
+                            "</randomPools>";
 
             final GameState       gameState       = new GameState();
             final PersistentState persistentState = new PersistentState();
             final RandomPools     randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
 
             Map<String, String> parameterMap = new HashMap<String, String>();
-            parameterMap.put("level", "1");
+            parameterMap.put("level", "3");
             Profile profile = new Profile(parameterMap);
             gameState.setCreditWager(1);
 
@@ -2897,14 +2917,15 @@ public class SpinHandlerTest {
     }
 
     @Test
-    @Ignore
+    //@Ignore
     public void main_free_spin_combination_tc53() {
         try {
+            //Win 10 free spins
             String sRandomPools =
                     "<randomPools>\n" +
                             "    <pool id=\"mainSpinReel921_1_at_0_99\">36</pool>\n" +
                             "    <pool id=\"mainSpinReel922_1_at_0_98\">16</pool>\n" +
-                            "    <pool id=\"mainSpinReel923_1_at_0_99\">35</pool>\n" +
+                            "    <pool id=\"mainSpinReel923_1_at_0_99\">36</pool>\n" +
                             "    <pool id=\"mainSpinReel924_1_at_0_98\">17</pool>\n" +
                             "    <pool id=\"mainSpinReel925_1_at_0_99\">47</pool>\n" +
                             "    <pool id=\"mainSpinReel92RE_1_at_0_98\">1</pool>\n" +
@@ -2928,7 +2949,7 @@ public class SpinHandlerTest {
 
             assertEquals(1, gameState.getSpinResults().getPaylineResults().size());
             assertEquals(0, gameState.getCreditWonTotal().intValue());
-            assertEquals(15, gameState.getFreeAwardsTotal().intValue());
+            assertEquals(10, gameState.getFreeAwardsTotal().intValue());
 
             /**************************************************************************/
             //FREE SPINS
@@ -2936,6 +2957,7 @@ public class SpinHandlerTest {
 
             sHandler.getGameState().setPlayState(GameState.PLAY_STATE.FREE);
 
+            //FS #1
             sRandomPools =
                     "<randomPools>\n" +
                             "    <pool id=\"freeSpinReel1_1_at_0_99\">35</pool>\n" +
@@ -2954,6 +2976,8 @@ public class SpinHandlerTest {
             assertEquals(20, sHandler.getGameState().getCreditWonTotal().intValue());
             assertEquals(0, persistentState.getNumBonusSymbols().intValue());
 
+            //FS #2
+            //Same play - Add 20
             sRandomPools =
                     "<randomPools>\n" +
                             "    <pool id=\"freeSpinReel1_1_at_0_99\">35</pool>\n" +
@@ -2972,6 +2996,8 @@ public class SpinHandlerTest {
             assertEquals(40, sHandler.getGameState().getCreditWonTotal().intValue());
             assertEquals(0, persistentState.getNumBonusSymbols().intValue());
 
+            //FS #3
+            //new play
             sRandomPools =
                     "<randomPools>\n" +
                             "    <pool id=\"freeSpinReel1_1_at_0_99\">35</pool>\n" +
@@ -2992,13 +3018,37 @@ public class SpinHandlerTest {
             assertEquals(100, sHandler.getGameState().getCreditWonTotal().intValue());
             assertEquals(0, persistentState.getNumBonusSymbols().intValue());
 
+            //FS #4
+            //No Win (*)
             sRandomPools =
                     "<randomPools>\n" +
-                            "    <pool id=\"freeSpinReel1_1_at_0_99\">35</pool>\n" +
-                            "    <pool id=\"freeSpinReel2_1_at_0_99\">34</pool>\n" +
-                            "    <pool id=\"freeSpinReel3_1_at_0_99\">81</pool>\n" +
-                            "    <pool id=\"freeSpinReel4_1_at_0_99\">80</pool>\n" +
-                            "    <pool id=\"freeSpinReel5_1_at_0_99\">75</pool>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">28</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">26</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(0, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            assertEquals(100, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+            //FS #5
+            //Adding sticky wild
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">28</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">5</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
                             "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
                             "</randomPools>";
             randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
@@ -3009,7 +3059,140 @@ public class SpinHandlerTest {
             //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
 
             assertEquals(1, sHandler.getGameState().getSpinResults().getPaylineResults().size());
-            assertEquals(100, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(740, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+            //FS #6
+            //No win by combination but win with sticky wild
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">28</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">26</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(1, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            //Win 320
+            assertEquals(1060, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+            //FS #7
+            //Overwritten existing sticky wild on 1st position
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">28</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">5</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(1, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            assertEquals(1700, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+            //FS #8
+            //Adding new sticky wild
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">28</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">3</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(1, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            assertEquals(2340, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+            //FS #9
+            //No win
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(0, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            assertEquals(2340, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+            //FS #10
+            //Win ONLY with Sticky wilds
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"freeSpinReel1_1_at_0_99\">37</pool>\n" +
+                            "    <pool id=\"freeSpinReel2_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel3_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel4_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReel5_1_at_0_99\">7</pool>\n" +
+                            "    <pool id=\"freeSpinReelRE_1_at_0_309\">100</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(1, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            assertEquals(2436, sHandler.getGameState().getCreditWonTotal().intValue());
+            assertEquals(0, persistentState.getNumBonusSymbols().intValue());
+
+
+            //Win only with wilds in the middle reel. It should NOT win anything.
+            sRandomPools =
+                    "<randomPools>\n" +
+                            "    <pool id=\"mainSpinReel921_1_at_0_99\">0</pool>\n" +
+                            "    <pool id=\"mainSpinReel922_1_at_0_98\">0</pool>\n" +
+                            "    <pool id=\"mainSpinReel923_1_at_0_99\">0</pool>\n" +
+                            "    <pool id=\"mainSpinReel924_1_at_0_98\">0</pool>\n" +
+                            "    <pool id=\"mainSpinReel925_1_at_0_99\">0</pool>\n" +
+                            "    <pool id=\"mainSpinReel92RE_1_at_0_98\">1</pool>\n" +
+                            "</randomPools>";
+            randomPools     = new RandomPools().unmarshal(new Builder().build(new StringReader(sRandomPools)).getRootElement());
+
+            sHandler.setRandomPools(randomPools);
+            sHandler.processSpin(profile);
+
+            //System.out.println(sHandler.getGameState().getReels().getReelsDisplay().toString());
+
+            assertEquals(0, sHandler.getGameState().getSpinResults().getPaylineResults().size());
+            assertEquals(2436, sHandler.getGameState().getCreditWonTotal().intValue());
             assertEquals(0, persistentState.getNumBonusSymbols().intValue());
 
         } catch(Throwable t) {

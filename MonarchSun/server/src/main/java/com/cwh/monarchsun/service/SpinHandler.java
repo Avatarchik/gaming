@@ -89,7 +89,6 @@ public class SpinHandler {
         //Replace all RE symbols in the symbolDisplay
         List<String> rePattern = reReelsConfig.getPattern(MonarchSunRTP.rtp(profile.getRTPLevel()), createMonarchSunRERandomPool(profile.getRTPLevel()).nextSeq());
         symbolDisplay = MonarchSunREEvaluator.EvaluateRE(rePattern, symbolDisplay);
-        this.gameState.setReelDisplay(symbolDisplay);
 
         if(this.gameState.getPlayState().equals(GameState.PLAY_STATE.FREE))//replace sticky wilds if there's some.
         {
@@ -100,6 +99,7 @@ public class SpinHandler {
             //If is NEW game StickyWilds should be null
             gameState.setStickyWilds(new ArrayList<Integer>());
         }
+        this.gameState.setReelDisplay(symbolDisplay);
         
         List<PowerXStreamPaylineResult> paylineResults = MonarchSunEvaluator.EvaluateL2R(paylinesConfig, symbolDisplay, bet, gameState.isMaxBet(), logger);
         paylineResults.addAll(MonarchSunEvaluator.EvaluateR2L(paylinesConfig, symbolDisplay, bet, logger));

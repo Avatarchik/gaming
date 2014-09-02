@@ -25,8 +25,8 @@ public class GameState {
     private BigDecimal creditValue        = new BigDecimal(0);
     private Integer    creditWager        = 0;
     //private Integer    creditPerLine      = 0;
-    private Integer    creditWonTotal     = 0;
-    private Integer    creditFreeWonTotal = 0;
+    private Long    creditWonTotal     = 0L;
+    private Long    creditFreeWonTotal = 0L;
     private Integer    freeAwardsUsed     = 0;
     private Integer    freeAwardsTotal    = 0;
     private boolean isMaxBet = false;
@@ -55,11 +55,11 @@ public class GameState {
         return creditWager;
     }
 
-    public Integer getCreditWonTotal() {
+    public Long getCreditWonTotal() {
         return creditWonTotal;
     }
 
-    public Integer getCreditFreeWonTotal() {
+    public Long getCreditFreeWonTotal() {
         return creditFreeWonTotal;
     }
 
@@ -97,11 +97,11 @@ public class GameState {
         this.creditWager = creditWager;
     }
 
-    public void setCreditWonTotal(Integer creditWonTotal) {
+    public void setCreditWonTotal(Long creditWonTotal) {
         this.creditWonTotal = creditWonTotal;
     }
 
-    public void setCreditFreeWonTotal(Integer creditFreeWonTotal) {
+    public void setCreditFreeWonTotal(Long creditFreeWonTotal) {
         this.creditFreeWonTotal = creditFreeWonTotal;
     }
 
@@ -134,10 +134,10 @@ public class GameState {
             //this.creditPerLine      = new Integer(eGameState.query("gameContext/currentWager/@creditPerLine").get(0).getValue());
             this.creditWager        = new Integer(eGameState.query("gameContext/currentWager/@creditWager").get(0).getValue());
             this.rtp        		= new Integer(eGameState.query("gameContext/currentWager/@rtp").get(0).getValue());
-            this.creditWonTotal     = new Integer(eGameState.query("gameContext/currentResult/@creditWon").get(0).getValue());
+            this.creditWonTotal     = new Long(eGameState.query("gameContext/currentResult/@creditWon").get(0).getValue());
             this.freeAwardsUsed     = new Integer(eGameState.query("gameContext/currentFreeFeature/@usedSpins").get(0).getValue());
             this.freeAwardsTotal    = new Integer(eGameState.query("gameContext/currentFreeFeature/@totalSpins").get(0).getValue());
-            this.creditFreeWonTotal = new Integer(eGameState.query("gameContext/currentFreeFeature/@totalWon").get(0).getValue());
+            this.creditFreeWonTotal = new Long(eGameState.query("gameContext/currentFreeFeature/@totalWon").get(0).getValue());
 
             Nodes nSticky = eGameState.query("gameContext/stickyWild");
 

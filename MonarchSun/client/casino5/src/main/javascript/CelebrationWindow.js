@@ -188,7 +188,7 @@ amaya.game.CelebrationWindow = function ( container, model ,soundManager) {
         CelebrationIntroScreen.alpha = 0;
         banner.alpha =0;
 
-        CelebrationWindow.addChild(FreeIntroBg);
+        //CelebrationWindow.addChild(FreeIntroBg);
         CelebrationWindow.addChild(CelebrationIntroScreen);
         CelebrationWindow.addChild(banner);
         container.addChild(CelebrationWindow);
@@ -354,7 +354,7 @@ amaya.game.CelebrationWindow = function ( container, model ,soundManager) {
        //CelebrationIntroScreen.alpha = 0;
            summaryBanner.alpha =0;
 
-           CelebrationWindow.addChild(FreeOutroBg);
+           //CelebrationWindow.addChild(FreeOutroBg);
 
            CelebrationWindow.addChild(summaryBanner);
            container.addChild(CelebrationWindow);

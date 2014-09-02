@@ -30,7 +30,7 @@ public class MonarchSunBonusEvaluator
                 //Look for bonus symbols in the center reels
                 for (int reelCounter1 = 1; reelCounter1 < reelsDisplay.size()-1; reelCounter1++)
                 {
-                    List<Integer> positions = getSymbolPositions(currentSymbol,reelsDisplay.get(reelCounter1));
+                    List<Integer> positions = getSymbolPositions(currentSymbol,reelsDisplay.get(reelCounter1), reelCounter1);
                     if(positions.size()>0) {
                         matchingPositions.add(positions);
                     } else {
@@ -95,7 +95,7 @@ public class MonarchSunBonusEvaluator
 				for (int reelCounter1 = 1; reelCounter1 < reelsDisplay.size()-1; reelCounter1++)
 				{
 
-					List<Integer> positions = getSymbolPositions(currentSymbol,reelsDisplay.get(reelCounter1));
+					List<Integer> positions = getSymbolPositions(currentSymbol,reelsDisplay.get(reelCounter1), reelCounter1);
 					if(positions.size()>0) {
 						matchingPositions.add(positions);
                         if(reelCounter1==2)
@@ -202,9 +202,14 @@ public class MonarchSunBonusEvaluator
 	}
 
 	//Returns the list of positions where the symbol is on the reel
-	public static List<Integer> getSymbolPositions(String symbol, List<String> reelDisplay) {
+	public static List<Integer> getSymbolPositions(String symbol, List<String> reelDisplay, int reel) {
 		List<Integer> positions = new ArrayList<Integer>();
-		for (int i = 0; i < reelDisplay.size(); i++)
+        int size = reelDisplay.size();
+        if(reel == 2)
+        {
+            size--;
+        }
+		for (int i = 0; i < size; i++)
 		{
 			if(reelDisplay.get(i).equals(symbol)) {
 				positions.add(i);

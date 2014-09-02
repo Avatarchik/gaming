@@ -27,7 +27,7 @@ import org.junit.Test;
 
 public class ReturnTest {
 	final static int RUNS = 2;
-	final static int SPINS = 100000000;
+	final static int SPINS = 1000000;
 	final static int CREDIT_WAGER = 1;
 
 	final String freeSpinReel1Pool = "freeSpinReel1_1_at_0_99";
@@ -105,7 +105,7 @@ public class ReturnTest {
 		try {
 			System.out.println("Choose the RTP level for the Return to Player Test. Type 1 for 92%, 2 for 94% or 3 for 95%:");
 			//Scanner terminalInput = new Scanner(System.in);
-			String level = "1";//terminalInput.nextLine().trim();
+			String level = "2";//terminalInput.nextLine().trim();
 
 			//terminalInput.close();
 			if(!level.equals("1") && !level.equals("2") && !level.equals("3"))
@@ -154,13 +154,13 @@ public class ReturnTest {
 			{
 				CreateRandomNumberGenerators(level);
 
-				int paylineHits = 0;
-				int freeSpinPaylineHits = 0;
-				int triggerHit = 0;
-				int retriggerHit = 0;
-				int freeSpinHit = 0;
-				int coinOut = 0;
-				int freeSpinWon = 0;
+				long paylineHits = 0;
+                long freeSpinPaylineHits = 0;
+                long triggerHit = 0;
+                long retriggerHit = 0;
+                long freeSpinHit = 0;
+                long coinOut = 0;
+                long freeSpinWon = 0;
 
 
 				System.out.println("********** RUN #" + (r+1) +"/"+RUNS + " **********");

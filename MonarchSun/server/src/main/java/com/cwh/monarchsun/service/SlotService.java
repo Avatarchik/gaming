@@ -48,7 +48,7 @@ public class SlotService {
             this.gameState.setCreditValue(spinGameRequest.getCoinValue());
             this.gameState.setCreditWager(spinGameRequest.getCreditWager());
 
-            this.gameState.setCreditWonTotal(0);
+            this.gameState.setCreditWonTotal(0L);
             this.gameState.setPlayState(GameState.PLAY_STATE.NEW);
         }
     }

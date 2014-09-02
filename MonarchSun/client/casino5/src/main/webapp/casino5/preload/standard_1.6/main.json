@@ -1471,8 +1471,8 @@
      "celebrationWindowIntroData": {
             "image": "device/images/Celebration_win/Celebration_windowIntro.png",
             "position": {
-                "x": 0,
-                "y": 0
+                "x": -6,
+                "y": 10
             }
         },
 

@@ -21,7 +21,7 @@ public class SpinGameResponse extends GameResponse {
     private SpinResults    spinResults       = null;
     private Integer        freeAwardTotal    = null;
     private Integer        freeAwardUsed     = null;
-    private Integer        freeAwardWon      = null;
+    private Long        freeAwardWon      = null;
     List<List<String>> reelDisplay = null;
     List<Integer> stopPositions = null;
     List<String> rePattern = null;
@@ -42,7 +42,7 @@ public class SpinGameResponse extends GameResponse {
         this.freeAwardUsed = freeAwardUsed;
     }
 
-    public void setFreeAwardWon(Integer freeAwardWon) {
+    public void setFreeAwardWon(Long freeAwardWon) {
         this.freeAwardWon = freeAwardWon;
     }
 
